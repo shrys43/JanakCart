@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JanakCart - Admin & Seller Portal</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#9e001f",
+        "primary-container": "#c8102e",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#ffdad8",
+        "primary-fixed": "#ffdad8",
+        "on-primary-fixed": "#410007",
+        surface: "#faf8ff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3ff",
+        "surface-container": "#eaedff",
+        "surface-container-high": "#e2e7ff",
+        "surface-container-highest": "#dae2fd",
+        "on-surface": "#131b2e",
+        "on-surface-variant": "#5c403f",
+        "surface-variant": "#dae2fd",
+        secondary: "#4c5f82",
+        "secondary-container": "#c2d5fe",
+        "secondary-fixed": "#d7e3ff",
+        "on-secondary-fixed": "#041b3b",
+        "on-secondary-container": "#495c7f",
+        tertiary: "#6d4400",
+        "tertiary-fixed": "#ffddb8",
+        "on-tertiary-fixed": "#2a1700",
+        error: "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error-container": "#93000a",
+        background: "#faf8ff",
+        "inverse-surface": "#283044",
+        "inverse-on-surface": "#eef0ff"
+      },
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
+<style>
+  ::-webkit-scrollbar { display: none; }
+  body { overscroll-behavior: none; }
+  .section-view { display: none; }
+  .section-view.active { display: block; animation: fadeIn 0.25s ease-in; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .nav-link.active {
+    background-color: #9e001f;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .nav-link.active .material-symbols-outlined { color: #ffffff; }
+  .nav-link.active .nav-badge { background: rgba(255,255,255,0.25); color: #fff; }
+</style>
+</head>
+
+<body class="bg-background font-sans text-on-surface antialiased">
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SIDEBAR NAVIGATION                                             -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-sm border-r border-surface-container">
+
+  <!-- Brand -->
+  <div class="h-16 px-4 flex items-center justify-between border-b border-surface-container">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-bold text-lg">J</div>
+      <div>
+        <div class="font-bold text-on-surface leading-tight">JanakCart</div>
+        <div class="text-[10px] uppercase tracking-wider text-primary font-bold">Admin Portal</div>
+      </div>
+    </div>
+    <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">v2.4</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="flex-1 overflow-y-auto px-3 py-4 space-y-1">
+
+    <div class="px-3 pb-1 text-[10px] uppercase tracking-wider text-secondary font-bold">Main</div>
+
+    <a href="#dashboard" data-section="dashboard" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all text-sm">
+      <span class="material-symbols-outlined text-[20px]">dashboard</span>
+      <span>Dashboard Overview</span>
+    </a>
+
+    <div class="px-3 pt-3 pb-1 text-[10px] uppercase tracking-wider text-secondary font-bold">Merchants</div>
+
+    <a href="#kyc" data-section="kyc" class="nav-link flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all text-sm">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-[20px]">verified_user</span>
+        <span>Seller Approvals & KYC</span>
+      </div>
+      <span class="nav-badge px-1.5 py-0.5 rounded-full bg-error text-white text-[10px] font-bold">5</span>
+    </a>
+
+    <a href="#commission" data-section="commission" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all text-sm">
+      <span class="material-symbols-outlined text-[20px]">percent</span>
+      <span>Commission & Tiers</span>
+    </a>
+
+    <div class="px-3 pt-3 pb-1 text-[10px] uppercase tracking-wider text-secondary font-bold">Financials</div>
+
+    <a href="#payouts" data-section="payouts" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all text-sm">
+      <span class="material-symbols-outlined text-[20px]">payments</span>
+      <span>Payout Batches</span>
+    </a>
+
+    <div class="px-3 pt-3 pb-1 text-[10px] uppercase tracking-wider text-secondary font-bold">System</div>
+
+    <a href="#staff" data-section="staff" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all text-sm">
+      <span class="material-symbols-outlined text-[20px]">badge</span>
+      <span>Staff & Roles</span>
+    </a>
+
+    <a href="#settings" data-section="settings" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all text-sm">
+      <span class="material-symbols-outlined text-[20px]">settings</span>
+      <span>Settings</span>
+    </a>
+
+  </nav>
+
+  <!-- Gateway status -->
+  <div class="p-3 m-3 rounded-xl bg-surface-container">
+    <div class="flex items-center justify-between mb-1.5">
+      <span class="text-[11px] text-secondary font-bold">Gateway Status</span>
+      <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+    </div>
+    <p class="text-[11px] text-on-surface-variant">eSewa • Khalti • Fonepay</p>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- MAIN CONTENT WRAPPER                                           -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div class="pl-72">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container z-40 px-6 flex items-center justify-between">
+    <div class="flex items-center gap-4 flex-1 max-w-2xl">
+      <div class="relative w-full max-w-lg">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+        <input type="text" placeholder="Search sellers, PAN/VAT, order #..."
+               class="w-full pl-9 pr-4 py-2 bg-surface-container-low rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+      </div>
+      <div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>KTM-BRT Live</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <button class="relative p-2 rounded-lg hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined text-[20px]">notifications</span>
+        <span class="absolute top-1 right-1 w-4 h-4 bg-primary text-white rounded-full text-[10px] flex items-center justify-center font-bold">5</span>
+      </button>
+      <div class="h-8 w-px bg-surface-container"></div>
+      <div class="flex items-center gap-2">
+        <div class="text-right hidden sm:block">
+          <div class="text-xs font-semibold leading-tight">Bikash Adhikari</div>
+          <div class="text-[10px] text-secondary">Super Admin</div>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content area -->
+  <main class="pt-16 min-h-screen bg-surface px-6 py-6">
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- SECTION 1: DASHBOARD                                       -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section id="dashboard" class="section-view active">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold text-on-surface">Marketplace Dashboard</h1>
+        <p class="text-sm text-on-surface-variant mt-1">Real-time overview of JanakCart Nepal operations</p>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] uppercase tracking-wider text-secondary font-bold">Monthly GMV</span>
+            <span class="p-1.5 rounded-lg bg-primary/10 text-primary material-symbols-outlined text-[18px]">payments</span>
+          </div>
+          <div class="text-3xl font-extrabold text-on-surface">Rs. 14.85M</div>
+          <div class="mt-2 text-xs text-emerald-600 font-bold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">trending_up</span> +24.6% vs last cycle
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] uppercase tracking-wider text-secondary font-bold">Net Commission</span>
+            <span class="p-1.5 rounded-lg bg-secondary-container text-on-secondary-container material-symbols-outlined text-[18px]">query_stats</span>
+          </div>
+          <div class="text-3xl font-extrabold text-on-surface">Rs. 1.18M</div>
+          <div class="mt-2 text-xs text-secondary">Avg 8% take-rate</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] uppercase tracking-wider text-secondary font-bold">Active Merchants</span>
+            <span class="p-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed material-symbols-outlined text-[18px]">store</span>
+          </div>
+          <div class="text-3xl font-extrabold text-on-surface">482</div>
+          <div class="mt-2 text-xs text-primary font-bold">12 pending verification</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] uppercase tracking-wider text-secondary font-bold">Orders Today</span>
+            <span class="p-1.5 rounded-lg bg-emerald-100 text-emerald-700 material-symbols-outlined text-[18px]">local_shipping</span>
+          </div>
+          <div class="text-3xl font-extrabold text-on-surface">1,842</div>
+          <div class="mt-2 text-xs text-secondary">68% Valley • 32% Outside</div>
+        </div>
+      </div>
+
+      <!-- Section title -->
+      <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+        <h2 class="text-lg font-bold mb-3">Recent Activity</h2>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span class="text-sm">Batch #NCHL-2081-KTM-084 signed by Sita Sharma</span>
+            </div>
+            <span class="text-xs text-secondary">14 min ago</span>
+          </div>
+          <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="text-sm">New merchant KYC submitted: Lumbini Electronics</span>
+            </div>
+            <span class="text-xs text-secondary">2 hrs ago</span>
+          </div>
+          <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span class="text-sm">IRD TDS filed: Rs. 222,307 submitted to Babarmahal LRO</span>
+            </div>
+            <span class="text-xs text-secondary">Yesterday</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- SECTION 2: SELLER KYC                                      -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section id="kyc" class="section-view">
+      <div class="mb-6 flex items-center justify-between">
+        <div>
+          <h1 class="text-2xl font-bold text-on-surface">Seller Approvals & KYC</h1>
+          <p class="text-sm text-on-surface-variant mt-1">IRD Nepal PAN/VAT & NTA MDMS verification</p>
+        </div>
+        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold flex items-center gap-2 shadow">
+          <span class="material-symbols-outlined text-[18px]">person_add</span>
+          Bulk Approve (3 Verified)
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Verification Queue</div>
+          <div class="text-3xl font-extrabold text-on-surface">5</div>
+          <div class="text-xs text-error font-bold mt-1">3 Expedited pending</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">IRD Auto-Matched</div>
+          <div class="text-3xl font-extrabold text-emerald-700">94.2%</div>
+          <div class="text-xs text-secondary mt-1">48ms API latency</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Avg Verification TAT</div>
+          <div class="text-3xl font-extrabold text-on-surface">3.4 hrs</div>
+          <div class="text-xs text-secondary mt-1">SLA: &lt;24 hours</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Flagged Halt</div>
+          <div class="text-3xl font-extrabold text-error">8</div>
+          <div class="text-xs text-secondary mt-1">PAN mismatch / OCR issue</div>
+        </div>
+      </div>
+
+      <!-- Merchant list -->
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+        <div class="p-4 border-b border-surface-container flex items-center justify-between">
+          <h2 class="font-bold">Pending Applications</h2>
+          <span class="text-xs text-secondary">5 merchants awaiting review</span>
+        </div>
+        <div class="divide-y divide-surface-container">
+          <!-- Merchant 1 -->
+          <div class="p-4 hover:bg-surface-container-low transition-colors flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold">LE</div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2">
+                <span class="font-semibold text-on-surface">Lumbini Electronics & Gadgets</span>
+                <span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+              </div>
+              <div class="text-xs text-secondary mt-0.5">Suresh Ghimire • Butwal, Rupandehi • PAN: 604928102</div>
+            </div>
+            <span class="px-2 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold">98% Match</span>
+            <button class="px-3 py-1.5 bg-primary text-white rounded-lg text-xs font-semibold">Inspect</button>
+          </div>
+          <!-- Merchant 2 -->
+          <div class="p-4 hover:bg-surface-container-low transition-colors flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center font-bold text-secondary">MO</div>
+            <div class="flex-1">
+              <div class="font-semibold text-on-surface">Mustang Organic Herbals & Cashmere</div>
+              <div class="text-xs text-secondary mt-0.5">Dolma Gurung • Jomsom, Mustang • PAN: 301984210</div>
+            </div>
+            <span class="px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold">Artisan Subsidized</span>
+            <button class="px-3 py-1.5 bg-emerald-600 text-white rounded-lg text-xs font-semibold">Quick Approve</button>
+          </div>
+          <!-- Merchant 3 (Flagged) -->
+          <div class="p-4 hover:bg-surface-container-low transition-colors flex items-center gap-4 bg-error-container/20">
+            <div class="w-12 h-12 rounded-lg bg-error-container text-error flex items-center justify-center font-bold">AM</div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2">
+                <span class="font-semibold text-on-surface">Annapurna Mobile & IT Center</span>
+                <span class="material-symbols-outlined text-error text-[16px]">warning</span>
+              </div>
+              <div class="text-xs text-error mt-0.5 font-semibold">IRD name mismatch — Reg name: "Baral Traders"</div>
+              <div class="text-xs text-secondary mt-0.5">Roshan Baral • Pokhara-8, Kaski • PAN: 609823412</div>
+            </div>
+            <span class="px-2 py-1 rounded-full bg-error-container text-error text-[11px] font-bold">Name Mismatch</span>
+            <button class="px-3 py-1.5 bg-surface-container text-on-surface rounded-lg text-xs font-semibold">Audit</button>
+          </div>
+          <!-- Merchant 4 -->
+          <div class="p-4 hover:bg-surface-container-low transition-colors flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center font-bold text-secondary">MA</div>
+            <div class="flex-1">
+              <div class="font-semibold text-on-surface">Mithila Art & Clay Crafts</div>
+              <div class="text-xs text-secondary mt-0.5">Sunita Yadav • Janakpurdham, Madhesh • PAN: 305819204</div>
+            </div>
+            <span class="px-2 py-1 rounded-full bg-surface-container-high text-[11px] font-bold">OCR Passed</span>
+            <button class="px-3 py-1.5 bg-primary text-white rounded-lg text-xs font-semibold">Review</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- SECTION 3: COMMISSION & TIERS                              -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section id="commission" class="section-view">
+      <div class="mb-6 flex items-center justify-between flex-wrap gap-3">
+        <div>
+          <h1 class="text-2xl font-bold text-on-surface">Commission & Category Rules</h1>
+          <p class="text-sm text-on-surface-variant mt-1">Configure marketplace take-rate & IRD Nepal VAT splits</p>
+        </div>
+        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold flex items-center gap-2 shadow">
+          <span class="material-symbols-outlined text-[18px]">add_circle</span>
+          Add Category Rule
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Blended Take-Rate</div>
+          <div class="text-3xl font-extrabold text-primary">8.24%</div>
+          <div class="text-xs text-emerald-600 font-bold mt-1">+0.4% this month</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Projected Commission</div>
+          <div class="text-2xl font-extrabold text-on-surface">Rs. 1.22M</div>
+          <div class="text-xs text-secondary mt-1">Ashwin 2081</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">IRD VAT + TDS</div>
+          <div class="text-2xl font-extrabold text-on-surface">13% + 1.5%</div>
+          <div class="text-xs text-primary font-bold mt-1">Automated filing</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Merchant Tiers</div>
+          <div class="text-2xl font-extrabold text-on-surface">4 Tiers</div>
+          <div class="text-xs text-secondary mt-1">246 active sellers</div>
+        </div>
+      </div>
+
+      <!-- Commission table -->
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+        <div class="p-4 border-b border-surface-container">
+          <h2 class="font-bold">Category Commission Matrix</h2>
+        </div>
+        <table class="w-full text-sm">
+          <thead class="bg-surface-container-low text-[11px] uppercase tracking-wider text-secondary">
+            <tr>
+              <th class="py-3 px-4 text-left">Category</th>
+              <th class="py-3 px-4 text-left">Base %</th>
+              <th class="py-3 px-4 text-left">Surcharge</th>
+              <th class="py-3 px-4 text-left">Effective Rate</th>
+              <th class="py-3 px-4 text-left">Min / Cap</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-surface-container">
+            <tr>
+              <td class="py-3 px-4 font-semibold">Mobile Phones & Tablets</td>
+              <td class="py-3 px-4">8.0%</td>
+              <td class="py-3 px-4"><span class="text-xs bg-surface-container px-2 py-0.5 rounded-full">+0.5% MDMS</span></td>
+              <td class="py-3 px-4 font-bold text-primary">8.5%</td>
+              <td class="py-3 px-4 text-secondary">Rs. 350 / Rs. 3,500</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold">Electronics & Appliances</td>
+              <td class="py-3 px-4">7.5%</td>
+              <td class="py-3 px-4"><span class="text-xs bg-surface-container px-2 py-0.5 rounded-full">7-Day Escrow</span></td>
+              <td class="py-3 px-4 font-bold text-on-surface">7.5%</td>
+              <td class="py-3 px-4 text-secondary">Rs. 500 / Rs. 5,000</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold">Nepali Handloom & Crafts</td>
+              <td class="py-3 px-4">4.5%</td>
+              <td class="py-3 px-4"><span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">-3.0% Subsidy</span></td>
+              <td class="py-3 px-4 font-bold text-emerald-700">4.5%</td>
+              <td class="py-3 px-4 text-secondary">Rs. 0 / Rs. 800</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold">Fashion & Apparels</td>
+              <td class="py-3 px-4">12.0%</td>
+              <td class="py-3 px-4"><span class="text-xs bg-error-container text-error px-2 py-0.5 rounded-full">+1.5% RTO</span></td>
+              <td class="py-3 px-4 font-bold text-error">13.5%</td>
+              <td class="py-3 px-4 text-secondary">Rs. 80 / Rs. 2,200</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold">Organic Agro & Herbs</td>
+              <td class="py-3 px-4">5.0%</td>
+              <td class="py-3 px-4"><span class="text-xs bg-surface-container px-2 py-0.5 rounded-full">Cold-Chain</span></td>
+              <td class="py-3 px-4 font-bold text-on-surface">5.0%</td>
+              <td class="py-3 px-4 text-secondary">Rs. 50 / Rs. 1,200</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold">Beauty & Personal Care</td>
+              <td class="py-3 px-4">11.0%</td>
+              <td class="py-3 px-4"><span class="text-xs bg-surface-container px-2 py-0.5 rounded-full">Expiry Audit</span></td>
+              <td class="py-3 px-4 font-bold text-on-surface">11.0%</td>
+              <td class="py-3 px-4 text-secondary">Rs. 90 / Rs. 1,800</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- SECTION 4: PAYOUT BATCHES                                  -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section id="payouts" class="section-view">
+      <div class="mb-6 flex items-center justify-between flex-wrap gap-3">
+        <div>
+          <h1 class="text-2xl font-bold text-on-surface">Settlement & Payout Batches</h1>
+          <p class="text-sm text-on-surface-variant mt-1">NCHL-IPS clearinghouse & IRD 1.5% TDS withholding</p>
+        </div>
+        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold flex items-center gap-2 shadow">
+          <span class="material-symbols-outlined text-[18px]">add_card</span>
+          Create Settlement Batch
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Queued for Disbursal</div>
+          <div class="text-2xl font-extrabold text-on-surface">NPR 14.82M</div>
+          <div class="text-xs text-primary font-bold mt-1">342 merchants pending</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Settled (Ashwin)</div>
+          <div class="text-2xl font-extrabold text-emerald-700">NPR 48.65M</div>
+          <div class="text-xs text-secondary mt-1">1,280 transfers</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">IRD TDS Withheld</div>
+          <div class="text-2xl font-extrabold text-on-surface">NPR 222,307</div>
+          <div class="text-xs text-secondary mt-1">Auto-credited to PAN ledger</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Exceptions Held</div>
+          <div class="text-2xl font-extrabold text-error">NPR 415,200</div>
+          <div class="text-xs text-error mt-1">5 merchants on hold</div>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+        <div class="p-4 border-b border-surface-container flex items-center justify-between">
+          <h2 class="font-bold">Settlement Batches</h2>
+          <div class="flex gap-2">
+            <button class="px-3 py-1.5 bg-primary text-white rounded-lg text-xs font-semibold">All (18)</button>
+            <button class="px-3 py-1.5 bg-surface-container rounded-lg text-xs">Pending (2)</button>
+            <button class="px-3 py-1.5 bg-surface-container rounded-lg text-xs">In-Flight (1)</button>
+            <button class="px-3 py-1.5 bg-surface-container rounded-lg text-xs">Completed (14)</button>
+          </div>
+        </div>
+        <table class="w-full text-sm">
+          <thead class="bg-surface-container-low text-[11px] uppercase tracking-wider text-secondary">
+            <tr>
+              <th class="py-3 px-4 text-left">Batch ID</th>
+              <th class="py-3 px-4 text-left">Merchants</th>
+              <th class="py-3 px-4 text-left">Net Disbursal</th>
+              <th class="py-3 px-4 text-left">TDS (1.5%)</th>
+              <th class="py-3 px-4 text-left">Status</th>
+              <th class="py-3 px-4 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-surface-container">
+            <tr class="hover:bg-surface-container-low">
+              <td class="py-3 px-4">
+                <div class="font-semibold">#NCHL-2081-KTM-084</div>
+                <div class="text-xs text-secondary">Festive Bi-Weekly • Ashwin 26</div>
+              </td>
+              <td class="py-3 px-4 font-semibold">248 sellers</td>
+              <td class="py-3 px-4 font-bold text-primary">NPR 12,420,000</td>
+              <td class="py-3 px-4 text-secondary">NPR 186,300</td>
+              <td class="py-3 px-4">
+                <span class="px-2 py-1 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold">Ready Signoff</span>
+              </td>
+              <td class="py-3 px-4 text-right">
+                <button class="px-3 py-1.5 bg-primary text-white rounded-lg text-xs font-semibold">Sign</button>
+              </td>
+            </tr>
+            <tr class="hover:bg-surface-container-low">
+              <td class="py-3 px-4">
+                <div class="font-semibold">#NCHL-2081-KTM-083</div>
+                <div class="text-xs text-secondary">Weekly Express • Ashwin 24</div>
+              </td>
+              <td class="py-3 px-4 font-semibold">84 sellers</td>
+              <td class="py-3 px-4 font-bold">NPR 3,790,400</td>
+              <td class="py-3 px-4 text-secondary">NPR 56,856</td>
+              <td class="py-3 px-4">
+                <span class="px-2 py-1 rounded-full bg-emerald-100 text-emerald-900 text-[11px] font-bold">Settled</span>
+              </td>
+              <td class="py-3 px-4 text-right">
+                <button class="px-3 py-1.5 bg-surface-container rounded-lg text-xs">NACHA</button>
+              </td>
+            </tr>
+            <tr class="hover:bg-surface-container-low">
+              <td class="py-3 px-4">
+                <div class="font-semibold">#NCHL-2081-KTM-082</div>
+                <div class="text-xs text-secondary">Electronics Direct • Ashwin 22</div>
+              </td>
+              <td class="py-3 px-4 font-semibold">14 sellers</td>
+              <td class="py-3 px-4 font-bold">NPR 1,177,600</td>
+              <td class="py-3 px-4 text-secondary">NPR 17,664</td>
+              <td class="py-3 px-4">
+                <span class="px-2 py-1 rounded-full bg-blue-100 text-blue-900 text-[11px] font-bold">Switch In-Flight</span>
+              </td>
+              <td class="py-3 px-4 text-right">
+                <button class="px-3 py-1.5 bg-surface-container rounded-lg text-xs">Monitor</button>
+              </td>
+            </tr>
+            <tr class="hover:bg-surface-container-low bg-error-container/10">
+              <td class="py-3 px-4">
+                <div class="font-semibold">#NCHL-2081-KTM-080</div>
+                <div class="text-xs text-secondary">Western Terai • Ashwin 18</div>
+              </td>
+              <td class="py-3 px-4 font-semibold">29 sellers</td>
+              <td class="py-3 px-4 font-bold text-error">NPR 901,600</td>
+              <td class="py-3 px-4 text-secondary">NPR 13,524</td>
+              <td class="py-3 px-4">
+                <span class="px-2 py-1 rounded-full bg-red-100 text-red-900 text-[11px] font-bold">Flagged</span>
+              </td>
+              <td class="py-3 px-4 text-right">
+                <button class="px-3 py-1.5 bg-error text-white rounded-lg text-xs font-semibold">Investigate</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- SECTION 5: STAFF & ROLES                                   -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section id="staff" class="section-view">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold text-on-surface">Staff Roles & Permissions</h1>
+        <p class="text-sm text-on-surface-variant mt-1">RBAC security, maker-checker limits & provincial jurisdiction</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Total Active Staff</div>
+          <div class="text-3xl font-extrabold text-on-surface">48</div>
+          <div class="text-xs text-emerald-700 font-bold mt-1">+3 this month</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Configured Roles</div>
+          <div class="text-3xl font-extrabold text-on-surface">8</div>
+          <div class="text-xs text-secondary mt-1">5 custom, 3 system</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Maker-Checker Limit</div>
+          <div class="text-2xl font-extrabold text-on-surface">NPR 500K</div>
+          <div class="text-xs text-secondary mt-1">Dual 2FA threshold</div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <div class="text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">Security Status</div>
+          <div class="text-3xl font-extrabold text-emerald-700">0</div>
+          <div class="text-xs text-secondary mt-1">Breaches this quarter</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Roles list -->
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm p-4">
+          <h2 class="font-bold mb-3">Configured Roles</h2>
+          <div class="space-y-2">
+            <div class="p-3 rounded-lg bg-primary/5 border-l-4 border-primary">
+              <div class="font-bold text-primary">Finance Controller & Payout Checker</div>
+              <div class="text-xs text-secondary mt-0.5">NCHL-IPS batch auth, IRD TDS filing • 4 members</div>
+            </div>
+            <div class="p-3 rounded-lg bg-surface-container-low">
+              <div class="font-semibold">Super Admin</div>
+              <div class="text-xs text-secondary mt-0.5">Full infrastructure access • 3 members</div>
+            </div>
+            <div class="p-3 rounded-lg bg-surface-container-low">
+              <div class="font-semibold">Merchant KYC & IRD Officer</div>
+              <div class="text-xs text-secondary mt-0.5">PAN/VAT OCR validation • 7 members</div>
+            </div>
+            <div class="p-3 rounded-lg bg-surface-container-low">
+              <div class="font-semibold">Catalog & Dispute Arbitrator</div>
+              <div class="text-xs text-secondary mt-0.5">Listing moderation • 12 members</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Permission matrix -->
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm p-4">
+          <h2 class="font-bold mb-3">Granular Permissions Matrix</h2>
+          <div class="space-y-2 text-sm">
+            <div class="p-3 rounded-lg bg-surface-container-low">
+              <div class="flex items-center justify-between">
+                <span class="font-semibold">Settlement Batches (NCHL-IPS)</span>
+                <div class="flex gap-1 text-[10px]">
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">View</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">Create</span>
+                  <span class="px-2 py-0.5 rounded bg-primary text-white font-bold">Approve</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-surface-container-low">
+              <div class="flex items-center justify-between">
+                <span class="font-semibold">IRD Tax & TDS Ledgers</span>
+                <div class="flex gap-1 text-[10px]">
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">View</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">Export</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-surface-container-low">
+              <div class="flex items-center justify-between">
+                <span class="font-semibold">Seller Payout Hold</span>
+                <div class="flex gap-1 text-[10px]">
+                  <span class="px-2 py-0.5 rounded bg-primary text-white font-bold">Full Permission</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-surface-container-low">
+              <div class="flex items-center justify-between">
+                <span class="font-semibold">Staff Access Modification</span>
+                <div class="flex gap-1 text-[10px]">
+                  <span class="px-2 py-0.5 rounded bg-surface-container text-secondary line-through">No Access</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- SECTION 6: SETTINGS                                        -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section id="settings" class="section-view">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold text-on-surface">Platform Settings</h1>
+        <p class="text-sm text-on-surface-variant mt-1">System configuration & compliance policies</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <h2 class="font-bold mb-3">Tax & Compliance</h2>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+              <div>
+                <div class="font-semibold">13% IRD VAT on Commission</div>
+                <div class="text-xs text-secondary">Auto-generate VAT invoice</div>
+              </div>
+              <span class="px-2 py-1 bg-emerald-100 text-emerald-800 rounded-full text-[11px] font-bold">Mandatory</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+              <div>
+                <div class="font-semibold">TDS Withholding Rate</div>
+                <div class="text-xs text-secondary">At NCHL-IPS bank disbursal</div>
+              </div>
+              <span class="px-2 py-1 bg-surface-container-high rounded-full text-[11px] font-bold">1.5% PAN</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+              <div>
+                <div class="font-semibold">Gateway MDR Split</div>
+                <div class="text-xs text-secondary">eSewa / Khalti / Fonepay</div>
+              </div>
+              <span class="px-2 py-1 bg-surface-container-high rounded-full text-[11px] font-bold">Seller 100%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+          <h2 class="font-bold mb-3">Security</h2>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+              <div>
+                <div class="font-semibold">Hardware FIDO2 / SMS 2FA</div>
+                <div class="text-xs text-secondary">High-value disbursements</div>
+              </div>
+              <span class="px-2 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-[11px] font-bold">Enforced</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+              <div>
+                <div class="font-semibold">Idle Session Termination</div>
+                <div class="text-xs text-secondary">Auto-revoke after inactivity</div>
+              </div>
+              <span class="px-2 py-1 bg-surface-container-high rounded-full text-[11px] font-bold">15 mins</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+              <div>
+                <div class="font-semibold">Whitelisted NOC Subnets</div>
+                <div class="text-xs text-secondary">Babarmahal / Baluwatar</div>
+              </div>
+              <span class="px-2 py-1 bg-emerald-50 text-emerald-800 rounded-full text-[11px] font-bold">2 Locked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SECTION ROUTER                                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<script>
+  // 1. Get all nav links and section views
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('.section-view');
+
+  // 2. Switch function
+  function showSection(sectionId) {
+    // Hide all sections
+    sections.forEach(s => s.classList.remove('active'));
+
+    // Show target
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.classList.add('active');
+      // Scroll to top of content
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Update active nav styling
+    navLinks.forEach(link => {
+      if (link.dataset.section === sectionId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    // Update URL hash (without jumping)
+    history.replaceState(null, '', '#' + sectionId);
+  }
+
+  // 3. Attach click handlers to all nav links
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSection(link.dataset.section);
+    });
+  });
+
+  // 4. On page load, respect URL hash if present
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+      showSection(hash);
+    } else {
+      showSection('dashboard');
+    }
+  });
+
+  // 5. Handle back/forward browser buttons
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) showSection(hash);
+  });
+</script>
+
+</body>
+</html>
