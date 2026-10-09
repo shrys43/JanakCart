@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#ffb3b1","surface-container-high":"#e2e7ff","on-error":"#ffffff","surface-dim":"#d2d9f4","tertiary-container":"#8e5900","on-secondary":"#ffffff","primary-container":"#c8102e","tertiary":"#6d4400","surface":"#faf8ff","surface-variant":"#dae2fd","secondary-fixed-dim":"#b4c7ef","surface-tint":"#bf0229","tertiary-fixed":"#ffddb8","on-primary-fixed":"#410007","on-secondary-container":"#495c7f","on-tertiary":"#ffffff","inverse-surface":"#283044","on-background":"#131b2e","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#ffb95f","on-secondary-fixed":"#041b3b","secondary":"#4c5f82","on-primary":"#ffffff","on-tertiary-container":"#ffddb8","inverse-on-surface":"#eef0ff","on-primary-container":"#ffdad8","surface-container-highest":"#dae2fd","primary":"#9e001f","surface-bright":"#faf8ff","primary-fixed":"#ffdad8","secondary-fixed":"#d7e3ff","on-tertiary-fixed-variant":"#653e00","error-container":"#ffdad6","background":"#faf8ff","primary-fixed-dim":"#ffb3b1","outline":"#906f6e","on-primary-fixed-variant":"#92001c","surface-container-low":"#f2f3ff","error":"#ba1a1a","on-secondary-fixed-variant":"#344769","on-surface":"#131b2e","outline-variant":"#e5bdbb","on-error-container":"#93000a","surface-container":"#eaedff","secondary-container":"#c2d5fe","on-surface-variant":"#5c403f","on-tertiary-fixed":"#2a1700"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","gutter":"1rem","gutter-mobile":"0.5rem","margin":"1.5rem","space-md":"1rem","margin-mobile":"0.75rem","space-lg":"1.5rem","space-xs":"0.25rem","space-xl":"2rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"price-strikethrough":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"700"}],"price-display":["22px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"800"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","fontWeight":"700"}],"title-lg":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"800"}],"price-strikethrough":["13px",{"lineHeight":"16px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md tracking-tight shadow-[0_2px_6px_rgba(200,16,46,0.25)]">J</div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface tracking-tight leading-none">JanakCart</span><span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider mt-0.5">Admin Portal</span></div></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Ops v2.4</span></div><nav class="flex flex-col px-space-sm py-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-label-md rounded-lg shadow-[0_2px_8px_rgba(158,0,31,0.2)]"><div class="px-space-sm pt-space-xs pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Main • मुख्य</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard Overview (ड्यासबोर्ड)</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="platform-analytics" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Platform Analytics (विश्लेषण)</span></a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Merchants • विक्रेता</p></div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="seller-approvals-and-kyc" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Seller Approvals &amp; KYC</span></div><span class="px-1.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold">5</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="seller-directory" href="#"><span class="material-symbols-outlined text-[18px]">storefront</span><span>Seller Directory (सूची)</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="commission-and-tier-rules" href="#"><span class="material-symbols-outlined text-[18px]">percent</span><span>Commission &amp; Tiers</span></a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Catalog &amp; Orders • सामान र अर्डर</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="product-moderation" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Product Moderation</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="orders-and-shipments" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Orders &amp; Shipments</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="returns-and-disputes" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span>Returns &amp; Disputes</span></a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Financials • वित्तीय</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="payment-gateway-settlement" href="#"><span class="material-symbols-outlined text-[18px]">account_balance_wallet</span><span>Payment Gateways</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="payout-batches" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span>Payout Batches (निकासा)</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="tax-and-ird-nepal-audit" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>IRD Tax &amp; Audit</span></a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">System • प्रणाली</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="staff-access-and-roles" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Staff Access &amp; Roles</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span>Audit Logs (लगहरू)</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="platform-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings (सेटिङहरू)</span></a></nav></div><div class="p-space-sm m-space-sm rounded-xl bg-surface-container"><div class="flex items-center justify-between mb-1.5"><span class="font-label-sm text-label-sm text-secondary font-bold">Cluster Gateway</span><span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span></div><p class="font-body-sm text-body-sm text-on-surface-variant">eSewa • Khalti • Fonepay • NCHL IPS</p><div class="mt-2 pt-2 border-t border-surface-dim flex items-center justify-between text-secondary font-label-sm text-label-sm"><span>Sync Status</span><span class="text-primary font-bold">Normal</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative w-full max-w-lg"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search sellers, PAN/VAT, transaction ID, order #..." type="text"/></div><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span>Nepal Cloud: KTM-BRT Live</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center p-0.5 rounded-lg bg-surface-container"><button class="px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.05)]" type="button">EN</button><button class="px-2 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">🇳🇵 नेपाली</button></div><a class="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-[0_2px_6px_rgba(158,0,31,0.2)]" data-path="seller-approvals-and-kyc" href="#"><span class="material-symbols-outlined text-[16px]">person_add</span><span>+ Invite Merchant</span></a><a class="hidden lg:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors" data-path="tax-and-ird-nepal-audit" href="#"><span class="material-symbols-outlined text-[16px]">download</span><span>Export Audit</span></a><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary rounded-full font-label-sm text-[10px] flex items-center justify-center font-bold leading-none">5</span></button><div class="h-8 w-px bg-surface-dim mx-0.5"></div><div class="flex items-center gap-2 pl-1"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight">Bikash Adhikari</div><div class="font-label-sm text-label-sm text-secondary">Super Admin (Ops)</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 min-h-screen bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Toast / Draft Alert Bar -->
+<div class="mb-space-lg p-space-md rounded-xl bg-surface-container flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface" data-en="Unpublished Fee Matrix Changes" data-ne="अप्रकाशित कमिसन परिमार्जन सूची">Unpublished Fee Matrix Changes</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm" data-en="3 Draft Rules Pending Audit" data-ne="३ वटा नियम स्वीकृत हुन बाँकी">3 Draft Rules Pending Audit</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate" data-en="Updates to 'Nepali Handloom' and 'Smartphones MDMS' fee schedules require super admin confirmation." data-ne="हस्तकला र स्मार्टफोन एमडिएमएस सम्बन्धी नयाँ दर सुपर-एडमिन प्रमाणीकरणको पर्खाइमा छन्।">Updates to 'Nepali Handloom' and 'Smartphones MDMS' fee schedules require super admin confirmation.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors" data-en="Review Diffs (३)" data-ne="परिवर्तन जाँच्नुहोस् (३)" type="button">Review Diffs (3)</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container shadow-sm flex items-center gap-1.5 transition-transform active:scale-95" data-en="Commit to Production" data-ne="लागू गर्नुहोस्" type="button">
+<span class="material-symbols-outlined text-[16px]">cloud_done</span>
+<span data-en="Commit to Production" data-ne="प्रणालीमा लागू गर्नुहोस्">Commit to Production</span>
+</button>
+</div>
+</div>
+<!-- Header & Context Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm mb-1">
+<span data-en="Admin Portal" data-ne="व्यवस्थापक पोर्टल">Admin Portal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span data-en="Financials &amp; Rates" data-ne="वित्तीय तथा दरहरू">Financials &amp; Rates</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold" data-en="Commission &amp; Category Rules" data-ne="कमिसन तथा वर्ग नियम">Commission &amp; Category Rules</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" data-en="Commission &amp; Category Rules Configuration" data-ne="कमिसन तथा वर्ग नियम व्यवस्थापन">Commission &amp; Category Rules Configuration</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" data-en="Configure marketplace cut, Inland Revenue Department (IRD) Nepal VAT splits, and merchant tier rebates." data-ne="बजार हिस्सा, आन्तरिक राजस्व विभाग (IRD) भ्याट कट्टी, तथा बिक्रेता स्तर छुट नियम निर्धारण गर्नुहोस्।">Configure marketplace cut, Inland Revenue Department (IRD) Nepal VAT splits, and merchant tier rebates.</p>
+</div>
+<!-- Quick Action Toolbars -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Language Switcher Specific to View -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-high shadow-sm">
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold transition-all shadow-sm" id="lang-btn-en" onclick="setDashboardLang('en')">EN</button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="lang-btn-ne" onclick="setDashboardLang('ne')">🇳🇵 नेपाली</button>
+</div>
+<button class="px-3 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-variant flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span data-en="Export Rate Card" data-ne="दर सूची डाउनलोड">Export Rate Card</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container shadow-sm flex items-center gap-1.5 transition-transform active:scale-95" onclick="openAddRuleModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span data-en="+ Add Category Tier Rule" data-ne="+ नयाँ वर्ग नियम थप्नुहोस्">+ Add Category Tier Rule</span>
+</button>
+</div>
+</div>
+<!-- KPI Analytics Overview -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Blended Take-Rate -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" data-en="Blended Marketplace Take-Rate" data-ne="औसत बजार कमिसन दर">Blended Marketplace Take-Rate</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">percent</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface" data-en="8.24%" data-ne="८.२४%">8.24%</span>
+<span class="font-label-sm text-label-sm text-primary font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +0.4%
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" data-en="Across 18 Active Product Verticals" data-ne="१८ वटा सक्रिय वर्गहरूमा लागू">Across 18 Active Product Verticals</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span data-en="Lowest: Handloom (4.5%)" data-ne="न्यूनतम: हस्तकला (४.५%)">Lowest: Handloom (4.5%)</span>
+<span data-en="Highest: Fashion (13.5%)" data-ne="अधिकतम: फेसन (१३.५%)">Highest: Fashion (13.5%)</span>
+</div>
+</div>
+<!-- Card 2: Projected Monthly Commission -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" data-en="Projected Monthly Commission" data-ne="अनुमानित मासिक कमिसन आम्दानी">Projected Monthly Commission</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface" data-en="Rs. 1,225,000" data-ne="रु १२,२५,०००">Rs. 1,225,000</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">Ashwin 2081</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" data-en="Based on Rs. 14.8M Projected GMV" data-ne="रु १.४८ करोड अनुमानित कारोबार अनुसार">Based on Rs. 14.8M Projected GMV</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span data-en="Settled MTD: Rs. 840,200" data-ne="हालसम्म भुक्तान: रु ८,४०,२००">Settled MTD: Rs. 840,200</span>
+<span class="text-primary font-bold">68.5% Achieved</span>
+</div>
+</div>
+<!-- Card 3: IRD Nepal Compliance -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" data-en="IRD Nepal VAT &amp; TDS Ledger" data-ne="आन्तरिक राजस्व भ्याट तथा टीडीएस">IRD Nepal VAT &amp; TDS Ledger</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface">13% + 1.5%</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm" data-en="Automated" data-ne="स्वचालित">Automated</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" data-en="13% Statutory VAT on Fee + 1.5% Payout TDS" data-ne="१३% कमिसन भ्याट + १.५% अग्रिम कर कट्टी">13% Statutory VAT on Fee + 1.5% Payout TDS</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span data-en="VAT Accountable: Rs. 159,250" data-ne="भ्याट दायित्व: रु १,५९,२५०">VAT Accountable: Rs. 159,250</span>
+<span class="text-primary font-bold" data-en="Compliant" data-ne="प्रमाणित">Compliant</span>
+</div>
+</div>
+<!-- Card 4: Active Merchant Tiers -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" data-en="Merchant Tier Distribution" data-ne="बिक्रेता वर्गीकरण स्थिति">Merchant Tier Distribution</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">military_tech</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface" data-en="4 Tiers" data-ne="४ तहहरू">4 Tiers</span>
+<span class="font-label-sm text-label-sm text-secondary" data-en="246 Active Sellers" data-ne="२४६ बिक्रेता">246 Active Sellers</span>
+</div>
+<!-- Visual Distribution Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex mt-2">
+<div class="h-full bg-primary" style="width: 14%;" title="Platinum (14%)"></div>
+<div class="h-full bg-tertiary" style="width: 28%;" title="Gold (28%)"></div>
+<div class="h-full bg-secondary" style="width: 46%;" title="Standard (46%)"></div>
+<div class="h-full bg-surface-variant" style="width: 12%;" title="Probation (12%)"></div>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Platinum: -2.0%</span>
+<span>Gold: -1.0%</span>
+<span>Std: 0%</span>
+<span class="text-error">Prob: +1.5%</span>
+</div>
+</div>
+</div>
+<!-- Main Dual Column Workspace: Matrix Table (Left 8 cols) & Overrides / Tax Policies (Right 4 cols) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- LEFT PANEL: Main Category Commission Rule Matrix (8 Columns) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<!-- Table Controls & Filter Rail -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-lg text-title-lg text-on-surface" data-en="Category Commission Matrix" data-ne="वर्ग कमिसन तालिका">Category Commission Matrix</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary" data-en="6 Categories Configured" data-ne="६ वर्गहरू सूचिकृत">6 Categories Configured</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative min-w-[200px]">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-secondary text-[16px]">filter_list</span>
+<input class="w-full pl-8 pr-3 py-1 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-all" id="categoryFilter" onkeyup="filterCategories()" placeholder="Filter category..." type="text"/>
+</div>
+<select class="px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm focus:outline-none">
+<option data-en="All Fee Types" data-ne="सबै प्रकार">All Fee Types</option>
+<option data-en="Subsidized Only" data-ne="अनुदान मात्र">Subsidized Only</option>
+<option data-en="Special Surcharge" data-ne="विशेष शुल्क मात्र">Special Surcharge</option>
+</select>
+</div>
+</div>
+<!-- Matrix Table Container -->
+<div class="overflow-x-auto -mx-space-md px-space-md">
+<table class="w-full text-left font-body-sm text-body-sm" id="rulesTable">
+<thead>
+<tr class="bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg" data-en="Category Vertical" data-ne="उत्पादन वर्ग">Category Vertical</th>
+<th class="py-2.5 px-3" data-en="Base %" data-ne="आधार %">Base %</th>
+<th class="py-2.5 px-3" data-en="Surcharges / Escrow" data-ne="थप शुल्क / रोक्का">Surcharges / Escrow</th>
+<th class="py-2.5 px-3 font-bold text-on-surface" data-en="Effective Take-Rate" data-ne="लागू हुने दर">Effective Take-Rate</th>
+<th class="py-2.5 px-3" data-en="Min / Max Cap" data-ne="न्यूनतम / अधिकतम">Min / Max Cap</th>
+<th class="py-2.5 px-3" data-en="Gateway Split" data-ne="गेटवे हिस्सा">Gateway Split</th>
+<th class="py-2.5 px-3 text-right rounded-r-lg" data-en="Actions" data-ne="कार्य">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-dim">
+<!-- Row 1: Mobile & Smartphones -->
+<tr class="hover:bg-surface-container-low transition-colors group rule-row" data-category="mobile smartphone">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface flex items-center gap-1.5">
+<span data-en="Mobile Phones &amp; Tablets" data-ne="स्मार्टफोन तथा ट्याब्लेट">Mobile Phones &amp; Tablets</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant text-[10px] font-bold">NTA</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary" data-en="Smartphones, Wearables, iPads" data-ne="स्मार्टफोन, स्मार्टवाच, ट्याब">Smartphones, Wearables, iPads</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface">8.0%</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span data-en="+0.5% MDMS Anti-Grey" data-ne="+०.५% MDMS शुल्क">+0.5% MDMS Anti-Grey</span>
+</div>
+</td>
+<td class="py-3 px-3 font-headline-md text-headline-md text-primary font-bold">8.5%</td>
+<td class="py-3 px-3 text-secondary">
+<div><span class="font-medium text-on-surface">Rs. 350</span> min</div>
+<div><span class="font-medium text-on-surface">Rs. 3,500</span> cap</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm" data-en="1.2% Seller Paid" data-ne="१.२% बिक्रेता भुक्तान">1.2% Seller Paid</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-primary hover:bg-surface-container transition-colors" onclick="editRuleModal('Mobile Phones', 8.0, 0.5, 350, 3500)" title="Edit Rule" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded text-emerald-600 hover:bg-surface-container transition-colors" onclick="toggleRowStatus(this)" title="Active" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Electronics & Appliances -->
+<tr class="hover:bg-surface-container-low transition-colors group rule-row" data-category="electronics appliance">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-secondary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">tv</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface" data-en="Electronics &amp; Home Appliances" data-ne="इलेक्ट्रोनिक्स तथा घरायसी उपकरण">Electronics &amp; Home Appliances</div>
+<span class="font-body-sm text-body-sm text-secondary" data-en="ACs, Televisions, Refrigerators" data-ne="टिभी, फ्रिज, वासिङ मेसिन">ACs, Televisions, Refrigerators</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface">7.5%</td>
+<td class="py-3 px-3">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[13px] text-tertiary">lock_clock</span>
+<span data-en="7-Day Escrow Hold" data-ne="७-दिन रकम रोक्का">7-Day Escrow Hold</span>
+</div>
+</td>
+<td class="py-3 px-3 font-headline-md text-headline-md text-on-surface font-bold">7.5%</td>
+<td class="py-3 px-3 text-secondary">
+<div><span class="font-medium text-on-surface">Rs. 500</span> min</div>
+<div><span class="font-medium text-on-surface">Rs. 5,000</span> cap</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm" data-en="50/50 Shared" data-ne="५०/५० साझेदारी">50/50 Shared</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-primary hover:bg-surface-container transition-colors" onclick="editRuleModal('Electronics', 7.5, 0.0, 500, 5000)" title="Edit Rule" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded text-emerald-600 hover:bg-surface-container transition-colors" onclick="toggleRowStatus(this)" title="Active" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Nepali Handloom & Cottage Crafts (Subsidized) -->
+<tr class="hover:bg-surface-container-low transition-colors group rule-row" data-category="handloom cottage nepal craft">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">handyman</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface" data-en="Nepali Handloom &amp; Crafts" data-ne="हस्तकला तथा घरेलु उत्पादन">Nepali Handloom &amp; Crafts</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-primary font-label-sm text-[10px] font-bold" data-en="Make In Nepal" data-ne="नेपालमै उत्पादित">Make In Nepal</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary" data-en="Pashmina, Dhaka Weaves, Pottery" data-ne="पश्मिना, ढाका टोपी, माटोका भाँडा">Pashmina, Dhaka Weaves, Pottery</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface">4.5%</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[13px]">eco</span>
+<span data-en="Artisan Subsidy (-3.0%)" data-ne="घरेलु उद्योग अनुदान (-३%)">Artisan Subsidy (-3.0%)</span>
+</span>
+</td>
+<td class="py-3 px-3 font-headline-md text-headline-md text-emerald-700 font-bold">4.5%</td>
+<td class="py-3 px-3 text-secondary">
+<div><span class="font-medium text-on-surface">Rs. 0</span> min</div>
+<div><span class="font-medium text-on-surface">Rs. 800</span> cap</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm" data-en="100% Platform Absorb" data-ne="कम्पनीले व्यहोर्ने">100% Platform Absorb</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-primary hover:bg-surface-container transition-colors" onclick="editRuleModal('Nepali Handloom', 4.5, 0.0, 0, 800)" title="Edit Rule" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded text-emerald-600 hover:bg-surface-container transition-colors" onclick="toggleRowStatus(this)" title="Active" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Fashion, Apparels & Shoes -->
+<tr class="hover:bg-surface-container-low transition-colors group rule-row" data-category="fashion apparels clothes">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-secondary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">apparel</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface" data-en="Fashion, Apparels &amp; Footwear" data-ne="पहिरन, फेसन तथा जुत्ता">Fashion, Apparels &amp; Footwear</div>
+<span class="font-body-sm text-body-sm text-secondary" data-en="Kurtas, Sneaker lines, Winter Wear" data-ne="कुर्था, जुत्ता, ज्याकेट">Kurtas, Sneaker lines, Winter Wear</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface">12.0%</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[13px] text-error">replay</span>
+<span data-en="+1.5% High RTO Risk" data-ne="+१.५% फिर्ता जोखिम शुल्क">+1.5% High RTO Risk</span>
+</span>
+</td>
+<td class="py-3 px-3 font-headline-md text-headline-md text-error font-bold">13.5%</td>
+<td class="py-3 px-3 text-secondary">
+<div><span class="font-medium text-on-surface">Rs. 80</span> min</div>
+<div><span class="font-medium text-on-surface">Rs. 2,200</span> cap</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm" data-en="1.2% Seller Paid" data-ne="१.२% बिक्रेता भुक्तान">1.2% Seller Paid</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-primary hover:bg-surface-container transition-colors" onclick="editRuleModal('Fashion &amp; Apparels', 12.0, 1.5, 80, 2200)" title="Edit Rule" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded text-emerald-600 hover:bg-surface-container transition-colors" onclick="toggleRowStatus(this)" title="Active" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Organic Agro & Mountain Herbs -->
+<tr class="hover:bg-surface-container-low transition-colors group rule-row" data-category="organic agro herbs apple mustang jumla">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-tertiary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface" data-en="Organic Agro &amp; Mountain Herbs" data-ne="अर्गानिक कृषि तथा हिमाली जडीबुटी">Organic Agro &amp; Mountain Herbs</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px]">Cold-Chain</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary" data-en="Jumla Apples, Mustang Yarsagumba, Tea" data-ne="जुम्ला स्याउ, मुस्ताङ चिया, जडीबुटी">Jumla Apples, Mustang Yarsagumba, Tea</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface">5.0%</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[13px] text-tertiary">ac_unit</span>
+<span data-en="Cold-Chain Verified" data-ne="शीत-भण्डार प्रमाणित">Cold-Chain Verified</span>
+</span>
+</td>
+<td class="py-3 px-3 font-headline-md text-headline-md text-on-surface font-bold">5.0%</td>
+<td class="py-3 px-3 text-secondary">
+<div><span class="font-medium text-on-surface">Rs. 50</span> min</div>
+<div><span class="font-medium text-on-surface">Rs. 1,200</span> cap</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm" data-en="50/50 Shared" data-ne="५०/५० साझेदारी">50/50 Shared</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-primary hover:bg-surface-container transition-colors" onclick="editRuleModal('Organic Agro', 5.0, 0.0, 50, 1200)" title="Edit Rule" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded text-emerald-600 hover:bg-surface-container transition-colors" onclick="toggleRowStatus(this)" title="Active" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Beauty, Health & Personal Care -->
+<tr class="hover:bg-surface-container-low transition-colors group rule-row" data-category="beauty health cosmetics">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">health_and_beauty</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface" data-en="Beauty, Health &amp; Personal Care" data-ne="सौन्दर्य, स्वास्थ्य तथा स्याहार">Beauty, Health &amp; Personal Care</div>
+<span class="font-body-sm text-body-sm text-secondary" data-en="Skincare, Ayurvedic oils, Fragrances" data-ne="छाला स्याहार, आयुर्वेदिक तेल, अत्तर">Skincare, Ayurvedic oils, Fragrances</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface">11.0%</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[13px] text-primary">event_busy</span>
+<span data-en="Expiry Audit Passed" data-ne="म्याद समाप्ति जाँच">Expiry Audit Passed</span>
+</span>
+</td>
+<td class="py-3 px-3 font-headline-md text-headline-md text-on-surface font-bold">11.0%</td>
+<td class="py-3 px-3 text-secondary">
+<div><span class="font-medium text-on-surface">Rs. 90</span> min</div>
+<div><span class="font-medium text-on-surface">Rs. 1,800</span> cap</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm" data-en="1.2% Seller Paid" data-ne="१.२% बिक्रेता भुक्तान">1.2% Seller Paid</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-primary hover:bg-surface-container transition-colors" onclick="editRuleModal('Beauty &amp; Health', 11.0, 0.0, 90, 1800)" title="Edit Rule" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded text-emerald-600 hover:bg-surface-container transition-colors" onclick="toggleRowStatus(this)" title="Active" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footnote / Audit Metadata -->
+<div class="mt-space-md pt-3 bg-surface-container-low p-space-sm rounded-lg flex flex-wrap items-center justify-between text-secondary font-body-sm text-[12px] gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span data-en="Rule Base: FY 2081/82 Circular No. 14 (Nepal Ministry of Finance Gazette aligned)" data-ne="नियम आधार: आ.व. २०८१/८२ परिपत्र नं १४ अनुसार">Rule Base: FY 2081/82 Circular No. 14 (Nepal Ministry of Finance Gazette aligned)</span>
+</div>
+<span data-en="Last revised: Bikash A. (2 days ago)" data-ne="अन्तिम संशोधन: विकास अ. (२ दिन अघि)">Last revised: Bikash A. (2 days ago)</span>
+</div>
+</div>
+<!-- Festive / Campaign Overrides Banner Card -->
+<div class="p-space-md rounded-xl bg-gradient-to-r from-primary/10 via-surface-container to-surface-container-high shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">celebration</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-lg text-title-lg text-on-surface" data-en="Dashain Mega Dhamaka 2081 Commission Subsidy" data-ne="दशैं मेगा धमाका २०८१ कमिसन छुट योजना">Dashain Mega Dhamaka 2081 Commission Subsidy</span>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[10px] uppercase font-bold" data-en="Active Event" data-ne="सक्रिय योजना">Active Event</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" data-en="Flat 1.5% commission reduction applied automatically for merchants committing to 24-hr Valley dispatch." data-ne="उपत्यकाभित्र २४ घन्टाभित्र सामान पठाउने बिक्रेताहरूका लागि १.५% कमिसन स्वतः घटाइनेछ।">Flat 1.5% commission reduction applied automatically for merchants committing to 24-hr Valley dispatch.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-variant transition-colors" data-en="Modify Promo Window" data-ne="म्याद परिवर्तन गर्नुहोस्" type="button">Modify Promo Window</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Tier Incentive Structure & Tax Surcharge Controls (4 Columns) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Panel 1: Merchant Volume Tiers -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">workspace_premium</span>
+<span class="font-title-lg text-title-lg text-on-surface" data-en="Merchant Tier Rebates" data-ne="बिक्रेता स्तर छुटहरू">Merchant Tier Rebates</span>
+</div>
+<button class="text-primary font-label-sm text-label-sm hover:underline" data-en="Edit Tiers" data-ne="तह सम्पादन" type="button">Edit Tiers</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md" data-en="Volume multipliers deduct automatically from the base category rates at end-of-month settlement." data-ne="महिनाको अन्त्यमा कारोबारका आधारमा कमिसनबाट स्वतः छुट घट्नेछ।">Volume multipliers deduct automatically from the base category rates at end-of-month settlement.</p>
+<!-- Tier Stack -->
+<div class="space-y-space-sm">
+<!-- Tier 1: Platinum -->
+<div class="p- space-sm p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">P</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface" data-en="Platinum Tier" data-ne="प्लाटिनम तह">Platinum Tier</div>
+<div class="font-body-sm text-[11px] text-secondary" data-en="GMV &gt; Rs. 15 Lakhs / mo" data-ne="मासिक कारोबार &gt; १५ लाख">GMV &gt; Rs. 15 Lakhs / mo</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold">-2.0% Rebate</span>
+<div class="font-body-sm text-[10px] text-secondary mt-0.5">34 Merchants</div>
+</div>
+</div>
+<!-- Tier 2: Gold -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-[12px]">G</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface" data-en="Gold Tier" data-ne="गोल्ड तह">Gold Tier</div>
+<div class="font-body-sm text-[11px] text-secondary" data-en="GMV &gt; Rs. 5 Lakhs / mo" data-ne="मासिक कारोबार &gt; ५ लाख">GMV &gt; Rs. 5 Lakhs / mo</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold">-1.0% Rebate</span>
+<div class="font-body-sm text-[10px] text-secondary mt-0.5">68 Merchants</div>
+</div>
+</div>
+<!-- Tier 3: Standard -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[12px]">S</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface" data-en="Standard Merchant" data-ne="साधारण बिक्रेता">Standard Merchant</div>
+<div class="font-body-sm text-[11px] text-secondary" data-en="Default Onboarding" data-ne="नयाँ सूचीकृत दर">Default Onboarding</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Base Rate</span>
+<div class="font-body-sm text-[10px] text-secondary mt-0.5">114 Merchants</div>
+</div>
+</div>
+<!-- Tier 4: Probation -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-error text-on-error flex items-center justify-center font-bold text-[12px]">!</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface" data-en="Probation &amp; High-Cancel" data-ne="परीक्षण तथा उच्च रद्द तह">Probation &amp; High-Cancel</div>
+<div class="font-body-sm text-[11px] text-error" data-en="Cancellation &gt; 5.0%" data-ne="रद्द दर &gt; ५.०%">Cancellation &gt; 5.0%</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">+1.5% Penalty</span>
+<div class="font-body-sm text-[10px] text-secondary mt-0.5">30 Merchants</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel 2: Nepal IRD & Payment Gateway Settlement Rules -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance</span>
+<span class="font-title-lg text-title-lg text-on-surface" data-en="Nepal IRD &amp; Tax Policies" data-ne="नेपाल कर तथा राजस्व नियम">Nepal IRD &amp; Tax Policies</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-[11px] font-bold">2081/82</span>
+</div>
+<!-- Setting 1: IRD VAT Split -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="font-label-md text-label-md text-on-surface" data-en="13% IRD VAT on Commission" data-ne="कमिसनमा १३% भ्याट कट्टी">13% IRD VAT on Commission</div>
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-[11px] font-bold" data-en="Mandatory" data-ne="अनिवार्य">Mandatory</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" data-en="Auto-generates JanakCart VAT invoice to the seller for the marketplace commission fee taken." data-ne="कमिसन वापत बिक्रेतालाई प्रणालीबाट स्वतः १३% भ्याट बिल जारी हुन्छ।">Auto-generates JanakCart VAT invoice to the seller for the marketplace commission fee taken.</p>
+</div>
+<!-- Setting 2: Payout TDS -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="font-label-md text-label-md text-on-surface" data-en="TDS Withholding on Payout" data-ne="भुक्तानीमा १.५% अग्रिम कर (TDS)">TDS Withholding on Payout</div>
+<select class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm focus:outline-none">
+<option selected="">1.5% (PAN Verified)</option>
+<option>15.0% (Unregistered)</option>
+<option>0% (Tax Exempted)</option>
+</select>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" data-en="Deducted at source prior to NCHL IPS bank disbursement, submitted directly to IRD portal." data-ne="NCHL IPS मार्फत बैंक खातामा पठाउनु अघि काटिने अग्रिम कर।">Deducted at source prior to NCHL IPS bank disbursement, submitted directly to IRD portal.</p>
+</div>
+<!-- Setting 3: Digital Gateway Surcharge Split -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="font-label-md text-label-md text-on-surface" data-en="Gateway MDR Split (eSewa / Khalti / Fonepay)" data-ne="डिजिटल भुक्तानी गेटवे शुल्क बाँडफाँड">Gateway MDR Split (eSewa / Khalti / Fonepay)</div>
+<div class="grid grid-cols-3 gap-1.5 pt-1">
+<label class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="accent-primary" name="mdr_split" type="radio" value="seller"/>
+<span class="font-label-sm text-label-sm text-on-surface mt-1" data-en="Seller 100%" data-ne="बिक्रेता शतप्रतिशत">Seller 100%</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer hover:bg-surface-container transition-colors">
+<input class="accent-primary" name="mdr_split" type="radio" value="platform"/>
+<span class="font-label-sm text-label-sm text-on-surface mt-1" data-en="Platform" data-ne="प्लेटफर्म">Platform</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer hover:bg-surface-container transition-colors">
+<input class="accent-primary" name="mdr_split" type="radio" value="split"/>
+<span class="font-label-sm text-label-sm text-on-surface mt-1" data-en="50 / 50" data-ne="बराबर">50 / 50</span>
+</label>
+</div>
+</div>
+<!-- Save Button for Policy Panel -->
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container shadow-sm flex items-center justify-center gap-1.5 transition-transform active:scale-98" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span data-en="Save Tax &amp; Settlement Policies" data-ne="कर तथा भुक्तानी नीति सुरक्षित गर्नुहोस्">Save Tax &amp; Settlement Policies</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal for Editing/Adding Category Rule -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="ruleModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl max-w-lg w-full p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h3 class="font-title-lg text-title-lg text-on-surface" id="modalTitle">Edit Category Rule</h3>
+</div>
+<button class="text-secondary hover:text-on-surface" onclick="closeRuleModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm font-body-sm">
+<div>
+<label class="font-label-sm text-label-sm text-secondary" data-en="Category Name" data-ne="वर्गको नाम">Category Name</label>
+<input class="w-full mt-1 p-2 rounded-lg bg-surface-container text-on-surface font-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="modalCategoryName" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm text-secondary" data-en="Base Commission (%)" data-ne="आधार कमिसन (%)">Base Commission (%)</label>
+<input class="w-full mt-1 p-2 rounded-lg bg-surface-container text-on-surface font-body-md focus:outline-none" id="modalBaseRate" step="0.1" type="number"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-secondary" data-en="Surcharge / Fee (%)" data-ne="थप शुल्क (%)">Surcharge / Fee (%)</label>
+<input class="w-full mt-1 p-2 rounded-lg bg-surface-container text-on-surface font-body-md focus:outline-none" id="modalSurcharge" step="0.1" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm text-secondary" data-en="Min Fee Floor (Rs.)" data-ne="न्यूनतम सीमा (रु)">Min Fee Floor (Rs.)</label>
+<input class="w-full mt-1 p-2 rounded-lg bg-surface-container text-on-surface font-body-md focus:outline-none" id="modalMinFee" type="number"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-secondary" data-en="Max Cap Ceiling (Rs.)" data-ne="अधिकतम सीमा (रु)">Max Cap Ceiling (Rs.)</label>
+<input class="w-full mt-1 p-2 rounded-lg bg-surface-container text-on-surface font-body-md focus:outline-none" id="modalMaxCap" type="number"/>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm" data-en="Effective Computed Take-Rate" data-ne="जम्मा लागू हुने दर">Effective Computed Take-Rate</span>
+<span class="font-headline-md text-headline-md text-primary font-bold" id="modalComputedTotal">8.5%</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-colors" data-en="Cancel" data-ne="रद्द गर्नुहोस्" onclick="closeRuleModal()" type="button">Cancel</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container shadow-sm transition-transform active:scale-95" data-en="Apply Draft Change" data-ne="परिवर्तन सुरक्षित गर्नुहोस्" onclick="saveRuleFromModal()" type="button">Apply Draft Change</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dual-Language Interactive Switcher
+  let currentLanguage = 'en';
+
+  function setDashboardLang(lang) {
+    currentLanguage = lang;
+    
+    // Toggle Button visual states
+    const btnEn = document.getElementById('lang-btn-en');
+    const btnNe = document.getElementById('lang-btn-ne');
+
+    if (lang === 'ne') {
+      btnEn.className = 'px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all';
+      btnNe.className = 'px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold transition-all shadow-sm';
+    } else {
+      btnEn.className = 'px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold transition-all shadow-sm';
+      btnNe.className = 'px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all';
+    }
+
+    // Switch all data-en / data-ne elements
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const val = lang === 'ne' ? el.getAttribute('data-ne') : el.getAttribute('data-en');
+      if (val) {
+        el.textContent = val;
+      }
+    });
+  }
+
+  // Row filtering by search term
+  function filterCategories() {
+    const input = document.getElementById('categoryFilter').value.toLowerCase();
+    const rows = document.querySelectorAll('.rule-row');
+    rows.forEach(row => {
+      const cat = row.getAttribute('data-category') || '';
+      const text = row.innerText.toLowerCase();
+      if (cat.includes(input) || text.includes(input)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Row status toggle
+  function toggleRowStatus(btn) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (icon.innerText === 'toggle_on') {
+      icon.innerText = 'toggle_off';
+      btn.classList.remove('text-emerald-600');
+      btn.classList.add('text-secondary');
+    } else {
+      icon.innerText = 'toggle_on';
+      btn.classList.remove('text-secondary');
+      btn.classList.add('text-emerald-600');
+    }
+  }
+
+  // Rule Modal logic
+  function editRuleModal(name, base, surcharge, minFee, maxCap) {
+    document.getElementById('modalTitle').innerText = currentLanguage === 'ne' ? 'वर्ग नियम सम्पादन' : 'Edit Category Rule: ' + name;
+    document.getElementById('modalCategoryName').value = name;
+    document.getElementById('modalBaseRate').value = base;
+    document.getElementById('modalSurcharge').value = surcharge;
+    document.getElementById('modalMinFee').value = minFee;
+    document.getElementById('modalMaxCap').value = maxCap;
+    
+    updateModalComputed();
+    document.getElementById('ruleModal').classList.remove('hidden');
+  }
+
+  function openAddRuleModal() {
+    document.getElementById('modalTitle').innerText = currentLanguage === 'ne' ? 'नयाँ वर्ग नियम थप्नुहोस्' : 'Add New Category Tier Rule';
+    document.getElementById('modalCategoryName').value = '';
+    document.getElementById('modalBaseRate').value = '7.0';
+    document.getElementById('modalSurcharge').value = '0.0';
+    document.getElementById('modalMinFee').value = '100';
+    document.getElementById('modalMaxCap').value = '2000';
+    
+    updateModalComputed();
+    document.getElementById('ruleModal').classList.remove('hidden');
+  }
+
+  function closeRuleModal() {
+    document.getElementById('ruleModal').classList.add('hidden');
+  }
+
+  function updateModalComputed() {
+    const base = parseFloat(document.getElementById('modalBaseRate').value) || 0;
+    const surcharge = parseFloat(document.getElementById('modalSurcharge').value) || 0;
+    const total = (base + surcharge).toFixed(1) + '%';
+    document.getElementById('modalComputedTotal').innerText = total;
+  }
+
+  document.getElementById('modalBaseRate').addEventListener('input', updateModalComputed);
+  document.getElementById('modalSurcharge').addEventListener('input', updateModalComputed);
+
+  function saveRuleFromModal() {
+    closeRuleModal();
+    // Flash brief feedback if desired
+  }
+</script></main></div></body></html>

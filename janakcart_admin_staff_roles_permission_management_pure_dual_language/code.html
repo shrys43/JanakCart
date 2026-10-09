@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#ffb3b1","surface-container-high":"#e2e7ff","on-error":"#ffffff","surface-dim":"#d2d9f4","tertiary-container":"#8e5900","on-secondary":"#ffffff","primary-container":"#c8102e","tertiary":"#6d4400","surface":"#faf8ff","surface-variant":"#dae2fd","secondary-fixed-dim":"#b4c7ef","surface-tint":"#bf0229","tertiary-fixed":"#ffddb8","on-primary-fixed":"#410007","on-secondary-container":"#495c7f","on-tertiary":"#ffffff","inverse-surface":"#283044","on-background":"#131b2e","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#ffb95f","on-secondary-fixed":"#041b3b","secondary":"#4c5f82","on-primary":"#ffffff","on-tertiary-container":"#ffddb8","inverse-on-surface":"#eef0ff","on-primary-container":"#ffdad8","surface-container-highest":"#dae2fd","primary":"#9e001f","surface-bright":"#faf8ff","primary-fixed":"#ffdad8","secondary-fixed":"#d7e3ff","on-tertiary-fixed-variant":"#653e00","error-container":"#ffdad6","background":"#faf8ff","primary-fixed-dim":"#ffb3b1","outline":"#906f6e","on-primary-fixed-variant":"#92001c","surface-container-low":"#f2f3ff","error":"#ba1a1a","on-secondary-fixed-variant":"#344769","on-surface":"#131b2e","outline-variant":"#e5bdbb","on-error-container":"#93000a","surface-container":"#eaedff","secondary-container":"#c2d5fe","on-surface-variant":"#5c403f","on-tertiary-fixed":"#2a1700"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","gutter":"1rem","gutter-mobile":"0.5rem","margin":"1.5rem","space-md":"1rem","margin-mobile":"0.75rem","space-lg":"1.5rem","space-xs":"0.25rem","space-xl":"2rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"price-strikethrough":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"700"}],"price-display":["22px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"800"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","fontWeight":"700"}],"title-lg":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"800"}],"price-strikethrough":["13px",{"lineHeight":"16px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md tracking-tight shadow-[0_2px_6px_rgba(200,16,46,0.25)]">J</div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface tracking-tight leading-none">JanakCart</span><span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider mt-0.5" data-i18n="portal_sub">Admin Portal</span></div></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm" data-i18n="ops_version">Ops v2.4</span></div><nav class="flex flex-col px-space-sm py-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-label-md rounded-lg shadow-[0_2px_8px_rgba(158,0,31,0.2)]"><div class="px-space-sm pt-space-xs pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold" data-i18n="nav_main_group">Main • मुख्य</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_dashboard" data-path="dashboard-overview" href="#">Dashboard Overview (ड्यासबोर्ड)</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_analytics" data-path="platform-analytics" href="#">Platform Analytics (विश्लेषण)</a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold" data-i18n="nav_merchants_group">Merchants • विक्रेता</p></div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="seller-approvals-and-kyc" href="#"><span data-i18n="nav_approvals">Seller Approvals &amp; KYC</span><span class="px-1.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold" data-i18n="badge_approvals">5</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_directory" data-path="seller-directory" href="#">Seller Directory (सूची)</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_commission" data-path="commission-and-tier-rules" href="#">Commission &amp; Tiers</a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold" data-i18n="nav_catalog_group">Catalog &amp; Orders • सामान र अर्डर</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_moderation" data-path="product-moderation" href="#">Product Moderation</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_orders" data-path="orders-and-shipments" href="#">Orders &amp; Shipments</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_disputes" data-path="returns-and-disputes" href="#">Returns &amp; Disputes</a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold" data-i18n="nav_financials_group">Financials • वित्तीय</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_gateways" data-path="payment-gateway-settlement" href="#">Payment Gateways</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_payouts" data-path="payout-batches" href="#">Payout Batches (निकासा)</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_tax" data-path="tax-and-ird-nepal-audit" href="#">IRD Tax &amp; Audit</a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold" data-i18n="nav_system_group">System • प्रणाली</p></div><a class="flex items-center px-space-sm py-2 rounded-lg bg-primary text-on-primary font-label-md shadow-[0_2px_8px_rgba(158,0,31,0.2)]" data-i18n="nav_staff" data-path="staff-access-and-roles" href="#">Staff Access &amp; Roles</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_audit" data-path="audit-logs" href="#">Audit Logs (लगहरू)</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-i18n="nav_settings" data-path="platform-settings" href="#">Settings (सेटिङहरू)</a></nav></div><div class="p-space-sm m-space-sm rounded-xl bg-surface-container"><div class="flex items-center justify-between mb-1.5"><span class="font-label-sm text-label-sm text-secondary font-bold" data-i18n="cluster_gateway">Cluster Gateway</span><span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span></div><p class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="gateways_list">eSewa • Khalti • Fonepay • NCHL IPS</p><div class="mt-2 pt-2 border-t border-surface-dim flex items-center justify-between text-secondary font-label-sm text-label-sm"><span data-i18n="sync_status_label">Sync Status</span><span class="text-primary font-bold" data-i18n="sync_status_val">Normal</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative w-full max-w-lg"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-all" data-i18n-placeholder="search_placeholder" placeholder="Search staff, role permissions, PAN/VAT, audit logs..." type="text"/></div><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span data-i18n="cluster_latency">Cluster Latency: 18ms (KTM-DC01)</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center p-0.5 rounded-lg bg-surface-container" id="lang-switch-container"><button class="px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.05)] transition-all font-bold" id="lang-btn-en" onclick="setLanguage('en')" type="button">EN</button><button class="px-2 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="lang-btn-ne" onclick="setLanguage('ne')" type="button">🇳🇵 नेपाली</button></div><button class="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-[0_2px_6px_rgba(158,0,31,0.2)]" type="button"><span class="material-symbols-outlined text-[16px]">person_add</span><span data-i18n="invite_staff_btn">+ Invite Staff</span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary rounded-full font-label-sm text-[10px] flex items-center justify-center font-bold leading-none" data-i18n="notif_count">3</span></button><div class="h-8 w-px bg-surface-dim mx-0.5"></div><div class="flex items-center gap-2 pl-1"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight" data-i18n="user_name">Bikash Adhikari</div><div class="font-label-sm text-label-sm text-secondary" data-i18n="user_role">Super Admin (Ops)</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-md font-bold" data-i18n="user_initials">BA</div></div></div></header><main class="relative pt-16 min-h-screen bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary mb-1">
+<span data-i18n="bread_portal">Admin Portal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span data-i18n="bread_security">System &amp; Security</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold" data-i18n="bread_current">Staff Access &amp; Role Management (कर्मचारी भूमिका तथा पहुँच व्यवस्थापन)</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" data-i18n="page_title">Staff Roles &amp; Permission Management</h1>
+<span class="font-label-md text-label-md px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium" data-i18n="rbac_badge">RBAC Security Engine v4.2</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+<span data-i18n="nchl_badge">NCHL-IPS 2FA Active</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-4xl" data-i18n="page_subtitle">
+        Configure role-based access control (RBAC), multi-factor maker-checker authorization limits, provincial ops jurisdiction, and session security policies across JanakCart operations.
+      </p>
+</div>
+<!-- Top Action Buttons -->
+<div class="flex items-center gap-space-sm self-start md:self-center shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span data-i18n="btn_export_audit">Export Security Audit Log</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span data-i18n="btn_create_role">+ Create Custom Role</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm hover:bg-primary transition-all shadow-[0_2px_8px_rgba(200,16,46,0.25)]" type="button">
+<span class="material-symbols-outlined text-[16px]">group_add</span>
+<span data-i18n="btn_invite_member">+ Invite Staff Member</span>
+</button>
+</div>
+</div>
+<!-- KPI Summary Cards (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1: Total Active Staff -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" data-i18n="kpi1_title">Total Active Staff</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium" data-i18n="kpi1_nepali">कुल सक्रिय कर्मचारी</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-secondary-container/50 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" data-i18n="kpi1_val">48 Members</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.5 rounded" data-i18n="kpi1_badge">+3 Ashwin</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">verified_user</span>
+<span data-i18n="kpi1_desc">12 Security Cleared 2FA • 6 Departments</span>
+</p>
+</div>
+</div>
+<!-- Stat 2: Roles Configured -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" data-i18n="kpi2_title">Configured Roles</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium" data-i18n="kpi2_nepali">प्रणालीगत भूमिकाहरू</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed/60 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" data-i18n="kpi2_val">8 RBAC Roles</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-container px-1.5 py-0.5 rounded font-bold" data-i18n="kpi2_badge">5 Custom</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">lock</span>
+<span data-i18n="kpi2_desc">3 System Predefined (Locked)</span>
+</p>
+</div>
+</div>
+<!-- Stat 3: Maker-Checker Threshold -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-amber-500/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" data-i18n="kpi3_title">Dual Maker-Checker Limit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium" data-i18n="kpi3_nepali">भुक्तानी अनुमोदन सीमा</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" data-i18n="kpi3_val">NPR 500,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-600">gavel</span>
+<span data-i18n="kpi3_desc">NCHL-IPS dual 2FA signoff threshold</span>
+</p>
+</div>
+</div>
+<!-- Stat 4: Security Posture -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-emerald-500/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" data-i18n="kpi4_title">Privilege &amp; Access Status</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium" data-i18n="kpi4_nepali">सुरक्षा अडिट स्थिति</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-800">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-emerald-700" data-i18n="kpi4_val">0 Breaches</span>
+<span class="font-label-sm text-label-sm text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded font-bold" data-i18n="kpi4_badge">Optimal</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-600">pending</span>
+<span data-i18n="kpi4_desc">TLS 1.3 Strict • 2 PW rotations due</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Main 2-Column Workspace Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Roles & Staff Directory (5 cols ~ 41.6%) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- List Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<!-- Tab Selector -->
+<div class="flex items-center justify-between p-1 bg-surface-container rounded-lg mb-space-md">
+<button class="flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface shadow-sm font-bold" data-i18n="tab_roles" id="tab-roles-btn" onclick="switchLeftTab('roles')">
+            Configured Roles (8)
+          </button>
+<button class="flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all text-secondary hover:text-on-surface" data-i18n="tab_staff" id="tab-staff-btn" onclick="switchLeftTab('staff')">
+            Staff Directory (48)
+          </button>
+</div>
+<!-- Filter & Search within Roles -->
+<div class="relative mb-space-sm">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-secondary text-[16px]">filter_list</span>
+<input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-all" data-i18n-placeholder="filter_placeholder" placeholder="Filter by permission tag, title, or Nepali alias..." type="text"/>
+</div>
+<!-- Role List Items Container -->
+<div class="flex flex-col gap-1.5 max-h-[580px] overflow-y-auto pr-1" id="roles-list-container">
+<!-- Role 1: Super Admin -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield_person</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors" data-i18n="role1_title">Super Admin</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold" data-i18n="role1_badge">System Predefined</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm" data-i18n="role1_subtitle">पूर्ण प्रशासक • 3 Members</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono" data-i18n="role1_tag">ALL_MUTATIONS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1" data-i18n="role1_desc">Unrestricted infrastructure access across all database clusters, auth secrets, &amp; IRD keys.</p>
+</div>
+<!-- Role 2: Finance Controller & Payout Checker (ACTIVE SELECTED) -->
+<div class="p-3 rounded-lg bg-primary/5 shadow-sm transition-all cursor-pointer relative overflow-hidden flex flex-col gap-1.5">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">account_balance</span>
+<span class="font-title-md text-title-md text-primary font-bold" data-i18n="role2_title">Finance Controller &amp; Payout Checker</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold" data-i18n="role2_badge">Active Role</span>
+</div>
+<div class="flex items-center justify-between text-secondary pl-1">
+<span class="font-body-sm text-body-sm font-medium text-on-surface" data-i18n="role2_subtitle">वित्तीय नियन्त्रक तथा भुक्तानी चेकर • 4 Members</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 font-bold" data-i18n="role2_tag">Maker-Checker</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-1" data-i18n="role2_desc">NCHL-IPS batch authorization, IRD 1.5% TDS statutory filing, escrow releases &gt; NPR 500k.</p>
+<div class="flex items-center gap-2 mt-0.5 pl-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold" data-i18n="role2_subbadge1">Dual 2FA Signoff</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-secondary-container" data-i18n="role2_subbadge2">Nationwide Scope</span>
+</div>
+</div>
+<!-- Role 3: Merchant KYC & IRD Compliance Officer -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors" data-i18n="role3_title">Merchant KYC &amp; IRD Officer</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold" data-i18n="role3_badge">Province-Scoped</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm" data-i18n="role3_subtitle">विक्रेता प्रमाणीकरण अधिकृत • 7 Members</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono" data-i18n="role3_tag">PAN_VAT_OCR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1" data-i18n="role3_desc">PAN/VAT OCR validation, NTA MDMS inspection, merchant seller agreement approvals.</p>
+</div>
+<!-- Role 4: Catalog & Dispute Arbitrator -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">balance</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors" data-i18n="role4_title">Catalog &amp; Dispute Arbitrator</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary font-medium" data-i18n="role4_badge">Custom Role</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm" data-i18n="role4_subtitle">सामग्री तथा विवाद मध्यस्थ • 12 Members</span>
+<span class="font-label-sm text-label-sm text-secondary" data-i18n="role4_tag">Limit: ≤ NPR 25,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1" data-i18n="role4_desc">Product listing moderation, IMEI grey-market check, buyer return approvals.</p>
+</div>
+<!-- Role 5: Logistics & Hub Dispatch Operator -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_shipping</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors" data-i18n="role5_title">Logistics &amp; Hub Dispatch Operator</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary font-medium" data-i18n="role5_badge">Ops Level-2</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm" data-i18n="role5_subtitle">ढुवानी तथा हब सञ्चालक • 15 Members</span>
+<span class="font-label-sm text-label-sm text-secondary" data-i18n="role5_tag">3 Main Hubs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1" data-i18n="role5_desc">Baluwatar, Pokhara, Butwal manifests, rider delivery OTP override and sorting bags.</p>
+</div>
+<!-- Role 6: Read-Only Auditor / IRD Tax Inspector -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">receipt_long</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors" data-i18n="role6_title">Read-Only Auditor / IRD Inspector</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold" data-i18n="role6_badge">Read-Only</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm" data-i18n="role6_subtitle">लेखापरीक्षक • 3 Members</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono" data-i18n="role6_tag">AUDIT_RO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1" data-i18n="role6_desc">External compliance auditors, statutory VAT ledger exports without mutation privileges.</p>
+</div>
+<!-- Role 7: Regional Terai Ops Lead -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">pin_drop</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors" data-i18n="role7_title">Regional Terai Ops Lead</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold" data-i18n="role7_badge">Province 1 &amp; 2</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm" data-i18n="role7_subtitle">प्रदेश २ / मधेश अपरेसन • 2 Members</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono" data-i18n="role7_tag">MADHESH_KOSHI</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1" data-i18n="role7_desc">Janakpur &amp; Biratnagar dispatch network, local merchant tier exceptions.</p>
+</div>
+<!-- Role 8: Junior Customer Support Tier-1 -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">support_agent</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors" data-i18n="role8_title">Junior Customer Support Tier-1</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary font-medium" data-i18n="role8_badge">Restricted</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm" data-i18n="role8_subtitle">ग्राहक सहायता • 2 Members</span>
+<span class="font-label-sm text-label-sm text-secondary" data-i18n="role8_tag">Ticket PII Masked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1" data-i18n="role8_desc">Basic ticketing inquiries, masked customer tracking lookup, zero wallet disbursal rights.</p>
+</div>
+</div>
+<!-- Staff Directory Hidden Panel (switchable via tabs) -->
+<div class="hidden flex-col gap-2 max-h-[580px] overflow-y-auto pr-1" id="staff-list-container">
+<div class="p-3 rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs" data-i18n="staff1_avatar">SS</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold" data-i18n="staff1_name">Sita Sharma</p>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="staff1_role">Finance Controller • Babarmahal NOC</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold" data-i18n="staff1_status">2FA FIDO2 Active</span>
+</div>
+<div class="p-3 rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-xs" data-i18n="staff2_avatar">BA</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold" data-i18n="staff2_name">Bikash Adhikari</p>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="staff2_role">Super Admin &amp; Co-Checker</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold" data-i18n="staff2_status">2FA FIDO2 Active</span>
+</div>
+<div class="p-3 rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs" data-i18n="staff3_avatar">PK</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold" data-i18n="staff3_name">Pradeep Karki</p>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="staff3_role">Treasury Analyst (Payout Checker)</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold" data-i18n="staff3_status">Hardware Token</span>
+</div>
+<div class="p-3 rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center font-bold text-xs" data-i18n="staff4_avatar">RT</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold" data-i18n="staff4_name">Ritu Thapa</p>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="staff4_role">Senior Reconciliation Specialist</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-bold" data-i18n="staff4_status">SMS OTP (Upgrade Due)</span>
+</div>
+</div>
+</div>
+<!-- Bottom Card: Session Security & 2FA Enforcement -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">security_update_good</span>
+<span class="font-title-md text-title-md text-on-surface font-bold" data-i18n="sec_title">Session &amp; Token Enforcement</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold" data-i18n="sec_iso">ISO-27001 Aligned</span>
+</div>
+<div class="space-y-2.5">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium" data-i18n="sec_item1_title">Hardware FIDO2 / Sparrow SMS 2FA</span>
+<span class="font-body-sm text-body-sm text-secondary" data-i18n="sec_item1_desc">Mandatory for high-value NCHL disbursements</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold" data-i18n="sec_item1_badge">Strictly Enforced</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium" data-i18n="sec_item2_title">Idle Session Auto-Termination</span>
+<span class="font-body-sm text-body-sm text-secondary" data-i18n="sec_item2_desc">Revokes auth cookies after 15 minutes of inactivity</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold" data-i18n="sec_item2_badge">15 Mins</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium" data-i18n="sec_item3_title">Whitelisted NOC CIDR Blocks</span>
+<span class="font-body-sm text-body-sm text-secondary" data-i18n="sec_item3_desc">Babarmahal NOC, Baluwatar Central Server</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold" data-i18n="sec_item3_badge">2 Subnets Locked</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Granular Permission Matrix & Policy Inspector (7 cols ~ 58.3%) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Role Specification Card Header -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<!-- Header Info & Actions -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm pb-space-sm bg-surface-container-low/50 p-space-md rounded-lg">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-md text-headline-md font-bold text-on-surface" data-i18n="role_detail_title">Finance Controller &amp; Payout Checker</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold" data-i18n="role_detail_level">Level 4 Governance</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold" data-i18n="role_detail_dual">Maker-Checker Dual Signoff</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1" data-i18n="role_detail_desc">
+              Authorizes electronic fund transfers via NCHL-IPS, verifies statutory IRD 1.5% TDS withholding, and overrides disputed escrow reserves.
+            </p>
+<div class="flex items-center gap-4 mt-2 text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">groups</span>
+<span class="font-bold text-on-surface" data-i18n="role_detail_assigned_label">4 Assigned Staff:</span>
+<span data-i18n="role_detail_assigned_names">Sita Sharma, Bikash Adhikari, Pradeep Karki, Ritu Thapa</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0 self-start">
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" title="Edit Definition" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" title="Duplicate as Custom Role" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-error hover:bg-error-container transition-colors" title="Deactivate Role" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</div>
+<!-- Maker-Checker Governance Rail Highlight -->
+<div class="p-space-md rounded-xl bg-amber-500/10 flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-700 text-[20px]">verified_user</span>
+<span class="font-title-md text-title-md font-bold text-amber-900" data-i18n="guardrail_title">Maker-Checker Financial Guardrail Active</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-amber-200 text-amber-900 font-bold" data-i18n="guardrail_nrb">NRB Regulatory Standard</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm text-on-surface">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest/80 shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold" data-i18n="guardrail1_label">Segregation of Duties</span>
+<span class="font-body-sm text-body-sm font-semibold mt-0.5 text-on-surface" data-i18n="guardrail1_val">Cannot authorize self-initiated batches</span>
+<span class="font-label-sm text-label-sm text-emerald-700 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> <span data-i18n="guardrail1_sub">Strict Enforced</span>
+</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest/80 shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold" data-i18n="guardrail2_label">Single-Batch Ceiling</span>
+<span class="font-body-sm text-body-sm font-semibold mt-0.5 text-on-surface" data-i18n="guardrail2_val">NPR 25,000,000 per Release</span>
+<span class="font-label-sm text-label-sm text-secondary mt-1" data-i18n="guardrail2_sub">Exceeding requires Super Admin key</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest/80 shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold" data-i18n="guardrail3_label">Authorization Cryptography</span>
+<span class="font-body-sm text-body-sm font-semibold mt-0.5 text-on-surface" data-i18n="guardrail3_val">FIDO2 Hardware or Sparrow OTP</span>
+<span class="font-label-sm text-label-sm text-emerald-700 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> <span data-i18n="guardrail3_sub">Hardware Preferred</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Granular Module Permissions Matrix -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg font-bold text-on-surface" data-i18n="perm_matrix_title">Granular Module Permissions Matrix</h2>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary" data-i18n="cap_keys_label">Capability Keys:</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono" data-i18n="cap_v">V: View</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono" data-i18n="cap_c">C: Create</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono" data-i18n="cap_a">A: Approve</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono" data-i18n="cap_d">D: Delete</span>
+</div>
+</div>
+<!-- Section 1: Financials & Payouts -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">attach_money</span>
+<span class="font-title-md text-title-md text-on-surface font-bold" data-i18n="perm_sec1_title">1. Financials &amp; Payouts (वित्तीय तथा भुक्तानी)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold" data-i18n="perm_sec1_badge">Primary Scope</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<!-- Item 1.1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm1_1_title">Settlement Batches (NCHL-IPS)</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-bold" data-i18n="perm1_1_badge">2FA Dual Signoff</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm1_1_desc">Execute automated clearinghouse batches to commercial bank partner accounts</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> <span data-i18n="btn_view">View</span>
+</span>
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> <span data-i18n="btn_create">Create</span>
+</span>
+<span class="px-2 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">fingerprint</span> <span data-i18n="btn_approve">Approve</span>
+</span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium line-through" data-i18n="btn_delete">
+                    Delete
+                  </span>
+</div>
+</div>
+<!-- Item 1.2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm1_2_title">IRD Tax &amp; TDS Ledgers (आन्तरिक राजस्व)</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container text-on-secondary-container" data-i18n="perm1_2_badge">1.5% TDS Rule</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm1_2_desc">Export compliant withholding reports for Inland Revenue Department Nepal audits</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> <span data-i18n="btn_view">View</span>
+</span>
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">download</span> <span data-i18n="btn_export">Export</span>
+</span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium line-through" data-i18n="btn_amend">
+                    Amend
+                  </span>
+</div>
+</div>
+<!-- Item 1.3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm1_3_title">Gateway Reconciliation (eSewa / Khalti / Fonepay)</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm1_3_desc">Match IPN callback webhook logs against merchant escrow wallets</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> <span data-i18n="btn_view">View</span>
+</span>
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span> <span data-i18n="btn_reconcile">Reconcile</span>
+</span>
+</div>
+</div>
+<!-- Item 1.4 -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm1_4_title">Commission Matrix Overrides</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container text-error font-bold" data-i18n="perm1_4_badge">Super Admin Reserved</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm1_4_desc">Adjust standard category commission % (e.g. 8% Electronics to 5%)</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> <span data-i18n="btn_view">View</span>
+</span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium line-through" data-i18n="btn_edit">
+                    Edit
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Merchant Operations & KYC -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">store</span>
+<span class="font-title-md text-title-md text-on-surface font-bold" data-i18n="perm_sec2_title">2. Merchant Operations &amp; KYC (विक्रेता सञ्चालन)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-medium" data-i18n="perm_sec2_badge">Secondary Audit</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm2_1_title">Merchant Bank Account Modification</span>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm2_1_desc">Approve seller payout IBAN/account update requests</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> <span data-i18n="btn_approve_2fa">Approve (2FA Req)</span>
+</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm2_2_title">Seller Payout Hold / Dispute Freeze</span>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm2_2_desc">Halt immediate payouts upon fraud alerts or consumer court filings</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> <span data-i18n="btn_full_perm">Full Permission</span>
+</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm2_3_title">Merchant Business KYC Verification</span>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm2_3_desc">Validate company registration certificate &amp; VAT documents</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> <span data-i18n="btn_view_only">View Only</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Catalog & Orders -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">shopping_bag</span>
+<span class="font-title-md text-title-md text-on-surface font-bold" data-i18n="perm_sec3_title">3. Catalog &amp; Orders (सामग्री तथा अर्डरहरू)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-medium" data-i18n="perm_sec3_badge">Scoped Disbursals</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm3_1_title">Order Disbursals &amp; High-Value Refund Releases</span>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm3_1_desc">Authorize customer bank transfers above NPR 50,000 for canceled orders</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> <span data-i18n="btn_full_auth_50k">Full Authority (&gt; NPR 50k)</span>
+</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm3_2_title">Product Catalog Editing &amp; Moderation</span>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm3_2_desc">Price adjustments, title corrections, inventory overrides</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium" data-i18n="btn_no_access_hidden">
+                    No Access (Hidden)
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: System & Security Administration -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock_person</span>
+<span class="font-title-md text-title-md text-on-surface font-bold" data-i18n="perm_sec4_title">4. System &amp; Security Administration (प्रणाली तथा सुरक्षा)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-medium" data-i18n="perm_sec4_badge">Audit Only</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm4_1_title">Staff Access &amp; Permission Modification</span>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm4_1_desc">Create or grant staff roles, reset 2FA hardware devices</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium" data-i18n="btn_no_access">
+                    No Access
+                  </span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold" data-i18n="perm4_2_title">Security Audit Logs (प्रणाली अडिट लग)</span>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="perm4_2_desc">Review cryptographic hash chains and IP session trail</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> <span data-i18n="btn_view_only">View Only</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Provincial Jurisdiction Scope -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<span class="font-title-md text-title-md font-bold text-on-surface" data-i18n="prov_title">Regional Provincial Jurisdiction Scope (प्रादेशिक क्षेत्राधिकार)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-bold shadow-sm" data-i18n="prov_badge">All 7 Provinces (Nationwide Clearing)</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="prov_desc">
+            Finance Controllers hold nationwide clearance for settlement clearing batches across all administrative hubs and banks in Nepal.
+          </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 mt-2">
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1" data-i18n="prov_p1_en">Koshi</span>
+<span class="font-body-sm text-[10px] text-secondary" data-i18n="prov_p1_ne">कोशी प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1" data-i18n="prov_p2_en">Madhesh</span>
+<span class="font-body-sm text-[10px] text-secondary" data-i18n="prov_p2_ne">मधेश प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1" data-i18n="prov_p3_en">Bagmati</span>
+<span class="font-body-sm text-[10px] text-secondary" data-i18n="prov_p3_ne">बागमती प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1" data-i18n="prov_p4_en">Gandaki</span>
+<span class="font-body-sm text-[10px] text-secondary" data-i18n="prov_p4_ne">गण्डकी प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1" data-i18n="prov_p5_en">Lumbini</span>
+<span class="font-body-sm text-[10px] text-secondary" data-i18n="prov_p5_ne">लुम्बिनी प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1" data-i18n="prov_p6_en">Karnali</span>
+<span class="font-body-sm text-[10px] text-secondary" data-i18n="prov_p6_ne">कर्णाली प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1" data-i18n="prov_p7_en">Sudurpashchim</span>
+<span class="font-body-sm text-[10px] text-secondary" data-i18n="prov_p7_ne">सुदूरपश्चिम</span>
+</div>
+</div>
+</div>
+<!-- Recent Audit Trail for this role -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-bold text-on-surface" data-i18n="audit_trail_title">Recent Role Mutations &amp; Approvals (हालैका अडिट गतिविधि)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold hover:underline cursor-pointer" data-i18n="audit_view_chain">View Complete Hash Chain</span>
+</div>
+<div class="space-y-2 mt-1">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-start justify-between gap-2 shadow-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-emerald-600 text-[20px] mt-0.5">verified</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold" data-i18n="audit1_title">
+                    NCHL Batch Approval Release: #NCHL-2081-KTM-084 (NPR 12.42M)
+                  </div>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="audit1_desc">
+                    Authorized by <span class="text-on-surface font-semibold">Sita Sharma</span> via FIDO2 Token 2FA • IP: 103.235.192.4 (Babarmahal NOC)
+                  </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary whitespace-nowrap" data-i18n="audit1_time">14 mins ago</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-start justify-between gap-2 shadow-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">tune</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold" data-i18n="audit2_title">
+                    Ceiling Calibration: Adjusted Batch Release Cap to NPR 25,000,000
+                  </div>
+<p class="font-body-sm text-body-sm text-secondary" data-i18n="audit2_desc">
+                    Configured by <span class="text-on-surface font-semibold">Bikash Adhikari</span> (Super Admin dual sign-off confirmed)
+                  </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary whitespace-nowrap" data-i18n="audit2_time">Yesterday 16:42</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentLanguage = 'en';
+
+  const translations = {
+    en: {
+      portal_sub: "Admin Portal",
+      ops_version: "Ops v2.4",
+      nav_main_group: "Main • मुख्य",
+      nav_dashboard: "Dashboard Overview (ड्यासबोर्ड)",
+      nav_analytics: "Platform Analytics (विश्लेषण)",
+      nav_merchants_group: "Merchants • विक्रेता",
+      nav_approvals: "Seller Approvals & KYC",
+      badge_approvals: "5",
+      nav_directory: "Seller Directory (सूची)",
+      nav_commission: "Commission & Tiers",
+      nav_catalog_group: "Catalog & Orders • सामान र अर्डर",
+      nav_moderation: "Product Moderation",
+      nav_orders: "Orders & Shipments",
+      nav_disputes: "Returns & Disputes",
+      nav_financials_group: "Financials • वित्तीय",
+      nav_gateways: "Payment Gateways",
+      nav_payouts: "Payout Batches (निकासा)",
+      nav_tax: "IRD Tax & Audit",
+      nav_system_group: "System • प्रणाली",
+      nav_staff: "Staff Access & Roles",
+      nav_audit: "Audit Logs (लगहरू)",
+      nav_settings: "Settings (सेटिङहरू)",
+      cluster_gateway: "Cluster Gateway",
+      gateways_list: "eSewa • Khalti • Fonepay • NCHL IPS",
+      sync_status_label: "Sync Status",
+      sync_status_val: "Normal",
+      search_placeholder: "Search staff, role permissions, PAN/VAT, audit logs...",
+      cluster_latency: "Cluster Latency: 18ms (KTM-DC01)",
+      invite_staff_btn: "+ Invite Staff",
+      notif_count: "3",
+      user_name: "Bikash Adhikari",
+      user_role: "Super Admin (Ops)",
+      user_initials: "BA",
+      bread_portal: "Admin Portal",
+      bread_security: "System & Security",
+      bread_current: "Staff Access & Role Management (कर्मचारी भूमिका तथा पहुँच व्यवस्थापन)",
+      page_title: "Staff Roles & Permission Management",
+      rbac_badge: "RBAC Security Engine v4.2",
+      nchl_badge: "NCHL-IPS 2FA Active",
+      page_subtitle: "Configure role-based access control (RBAC), multi-factor maker-checker authorization limits, provincial ops jurisdiction, and session security policies across JanakCart operations.",
+      btn_export_audit: "Export Security Audit Log",
+      btn_create_role: "+ Create Custom Role",
+      btn_invite_member: "+ Invite Staff Member",
+      kpi1_title: "Total Active Staff",
+      kpi1_nepali: "कुल सक्रिय कर्मचारी",
+      kpi1_val: "48 Members",
+      kpi1_badge: "+3 Ashwin",
+      kpi1_desc: "12 Security Cleared 2FA • 6 Departments",
+      kpi2_title: "Configured Roles",
+      kpi2_nepali: "प्रणालीगत भूमिकाहरू",
+      kpi2_val: "8 RBAC Roles",
+      kpi2_badge: "5 Custom",
+      kpi2_desc: "3 System Predefined (Locked)",
+      kpi3_title: "Dual Maker-Checker Limit",
+      kpi3_nepali: "भुक्तानी अनुमोदन सीमा",
+      kpi3_val: "NPR 500,000",
+      kpi3_desc: "NCHL-IPS dual 2FA signoff threshold",
+      kpi4_title: "Privilege & Access Status",
+      kpi4_nepali: "सुरक्षा अडिट स्थिति",
+      kpi4_val: "0 Breaches",
+      kpi4_badge: "Optimal",
+      kpi4_desc: "TLS 1.3 Strict • 2 PW rotations due",
+      tab_roles: "Configured Roles (8)",
+      tab_staff: "Staff Directory (48)",
+      filter_placeholder: "Filter by permission tag, title, or Nepali alias...",
+      role1_title: "Super Admin",
+      role1_badge: "System Predefined",
+      role1_subtitle: "पूर्ण प्रशासक • 3 Members",
+      role1_tag: "ALL_MUTATIONS",
+      role1_desc: "Unrestricted infrastructure access across all database clusters, auth secrets, & IRD keys.",
+      role2_title: "Finance Controller & Payout Checker",
+      role2_badge: "Active Role",
+      role2_subtitle: "वित्तीय नियन्त्रक तथा भुक्तानी चेकर • 4 Members",
+      role2_tag: "Maker-Checker",
+      role2_desc: "NCHL-IPS batch authorization, IRD 1.5% TDS statutory filing, escrow releases > NPR 500k.",
+      role2_subbadge1: "Dual 2FA Signoff",
+      role2_subbadge2: "Nationwide Scope",
+      role3_title: "Merchant KYC & IRD Officer",
+      role3_badge: "Province-Scoped",
+      role3_subtitle: "विक्रेता प्रमाणीकरण अधिकृत • 7 Members",
+      role3_tag: "PAN_VAT_OCR",
+      role3_desc: "PAN/VAT OCR validation, NTA MDMS inspection, merchant seller agreement approvals.",
+      role4_title: "Catalog & Dispute Arbitrator",
+      role4_badge: "Custom Role",
+      role4_subtitle: "सामग्री तथा विवाद मध्यस्थ • 12 Members",
+      role4_tag: "Limit: ≤ NPR 25,000",
+      role4_desc: "Product listing moderation, IMEI grey-market check, buyer return approvals.",
+      role5_title: "Logistics & Hub Dispatch Operator",
+      role5_badge: "Ops Level-2",
+      role5_subtitle: "ढुवानी तथा हब सञ्चालक • 15 Members",
+      role5_tag: "3 Main Hubs",
+      role5_desc: "Baluwatar, Pokhara, Butwal manifests, rider delivery OTP override and sorting bags.",
+      role6_title: "Read-Only Auditor / IRD Inspector",
+      role6_badge: "Read-Only",
+      role6_subtitle: "लेखापरीक्षक • 3 Members",
+      role6_tag: "AUDIT_RO",
+      role6_desc: "External compliance auditors, statutory VAT ledger exports without mutation privileges.",
+      role7_title: "Regional Terai Ops Lead",
+      role7_badge: "Province 1 & 2",
+      role7_subtitle: "प्रदेश २ / मधेश अपरेसन • 2 Members",
+      role7_tag: "MADHESH_KOSHI",
+      role7_desc: "Janakpur & Biratnagar dispatch network, local merchant tier exceptions.",
+      role8_title: "Junior Customer Support Tier-1",
+      role8_badge: "Restricted",
+      role8_subtitle: "ग्राहक सहायता • 2 Members",
+      role8_tag: "Ticket PII Masked",
+      role8_desc: "Basic ticketing inquiries, masked customer tracking lookup, zero wallet disbursal rights.",
+      staff1_avatar: "SS",
+      staff1_name: "Sita Sharma",
+      staff1_role: "Finance Controller • Babarmahal NOC",
+      staff1_status: "2FA FIDO2 Active",
+      staff2_avatar: "BA",
+      staff2_name: "Bikash Adhikari",
+      staff2_role: "Super Admin & Co-Checker",
+      staff2_status: "2FA FIDO2 Active",
+      staff3_avatar: "PK",
+      staff3_name: "Pradeep Karki",
+      staff3_role: "Treasury Analyst (Payout Checker)",
+      staff3_status: "Hardware Token",
+      staff4_avatar: "RT",
+      staff4_name: "Ritu Thapa",
+      staff4_role: "Senior Reconciliation Specialist",
+      staff4_status: "SMS OTP (Upgrade Due)",
+      sec_title: "Session & Token Enforcement",
+      sec_iso: "ISO-27001 Aligned",
+      sec_item1_title: "Hardware FIDO2 / Sparrow SMS 2FA",
+      sec_item1_desc: "Mandatory for high-value NCHL disbursements",
+      sec_item1_badge: "Strictly Enforced",
+      sec_item2_title: "Idle Session Auto-Termination",
+      sec_item2_desc: "Revokes auth cookies after 15 minutes of inactivity",
+      sec_item2_badge: "15 Mins",
+      sec_item3_title: "Whitelisted NOC CIDR Blocks",
+      sec_item3_desc: "Babarmahal NOC, Baluwatar Central Server",
+      sec_item3_badge: "2 Subnets Locked",
+      role_detail_title: "Finance Controller & Payout Checker",
+      role_detail_level: "Level 4 Governance",
+      role_detail_dual: "Maker-Checker Dual Signoff",
+      role_detail_desc: "Authorizes electronic fund transfers via NCHL-IPS, verifies statutory IRD 1.5% TDS withholding, and overrides disputed escrow reserves.",
+      role_detail_assigned_label: "4 Assigned Staff:",
+      role_detail_assigned_names: "Sita Sharma, Bikash Adhikari, Pradeep Karki, Ritu Thapa",
+      guardrail_title: "Maker-Checker Financial Guardrail Active",
+      guardrail_nrb: "NRB Regulatory Standard",
+      guardrail1_label: "Segregation of Duties",
+      guardrail1_val: "Cannot authorize self-initiated batches",
+      guardrail1_sub: "Strict Enforced",
+      guardrail2_label: "Single-Batch Ceiling",
+      guardrail2_val: "NPR 25,000,000 per Release",
+      guardrail2_sub: "Exceeding requires Super Admin key",
+      guardrail3_label: "Authorization Cryptography",
+      guardrail3_val: "FIDO2 Hardware or Sparrow OTP",
+      guardrail3_sub: "Hardware Preferred",
+      perm_matrix_title: "Granular Module Permissions Matrix",
+      cap_keys_label: "Capability Keys:",
+      cap_v: "V: View",
+      cap_c: "C: Create",
+      cap_a: "A: Approve",
+      cap_d: "D: Delete",
+      perm_sec1_title: "1. Financials & Payouts (वित्तीय तथा भुक्तानी)",
+      perm_sec1_badge: "Primary Scope",
+      perm1_1_title: "Settlement Batches (NCHL-IPS)",
+      perm1_1_badge: "2FA Dual Signoff",
+      perm1_1_desc: "Execute automated clearinghouse batches to commercial bank partner accounts",
+      btn_view: "View",
+      btn_create: "Create",
+      btn_approve: "Approve",
+      btn_delete: "Delete",
+      perm1_2_title: "IRD Tax & TDS Ledgers (आन्तरिक राजस्व)",
+      perm1_2_badge: "1.5% TDS Rule",
+      perm1_2_desc: "Export compliant withholding reports for Inland Revenue Department Nepal audits",
+      btn_export: "Export",
+      btn_amend: "Amend",
+      perm1_3_title: "Gateway Reconciliation (eSewa / Khalti / Fonepay)",
+      perm1_3_desc: "Match IPN callback webhook logs against merchant escrow wallets",
+      btn_reconcile: "Reconcile",
+      perm1_4_title: "Commission Matrix Overrides",
+      perm1_4_badge: "Super Admin Reserved",
+      perm1_4_desc: "Adjust standard category commission % (e.g. 8% Electronics to 5%)",
+      btn_edit: "Edit",
+      perm_sec2_title: "2. Merchant Operations & KYC (विक्रेता सञ्चालन)",
+      perm_sec2_badge: "Secondary Audit",
+      perm2_1_title: "Merchant Bank Account Modification",
+      perm2_1_desc: "Approve seller payout IBAN/account update requests",
+      btn_approve_2fa: "Approve (2FA Req)",
+      perm2_2_title: "Seller Payout Hold / Dispute Freeze",
+      perm2_2_desc: "Halt immediate payouts upon fraud alerts or consumer court filings",
+      btn_full_perm: "Full Permission",
+      perm2_3_title: "Merchant Business KYC Verification",
+      perm2_3_desc: "Validate company registration certificate & VAT documents",
+      btn_view_only: "View Only",
+      perm_sec3_title: "3. Catalog & Orders (सामग्री तथा अर्डरहरू)",
+      perm_sec3_badge: "Scoped Disbursals",
+      perm3_1_title: "Order Disbursals & High-Value Refund Releases",
+      perm3_1_desc: "Authorize customer bank transfers above NPR 50,000 for canceled orders",
+      btn_full_auth_50k: "Full Authority (> NPR 50k)",
+      perm3_2_title: "Product Catalog Editing & Moderation",
+      perm3_2_desc: "Price adjustments, title corrections, inventory overrides",
+      btn_no_access_hidden: "No Access (Hidden)",
+      perm_sec4_title: "4. System & Security Administration (प्रणाली तथा सुरक्षा)",
+      perm_sec4_badge: "Audit Only",
+      perm4_1_title: "Staff Access & Permission Modification",
+      perm4_1_desc: "Create or grant staff roles, reset 2FA hardware devices",
+      btn_no_access: "No Access",
+      perm4_2_title: "Security Audit Logs (प्रणाली अडिट लग)",
+      perm4_2_desc: "Review cryptographic hash chains and IP session trail",
+      prov_title: "Regional Provincial Jurisdiction Scope (प्रादेशिक क्षेत्राधिकार)",
+      prov_badge: "All 7 Provinces (Nationwide Clearing)",
+      prov_desc: "Finance Controllers hold nationwide clearance for settlement clearing batches across all administrative hubs and banks in Nepal.",
+      prov_p1_en: "Koshi",
+      prov_p1_ne: "कोशी प्रदेश",
+      prov_p2_en: "Madhesh",
+      prov_p2_ne: "मधेश प्रदेश",
+      prov_p3_en: "Bagmati",
+      prov_p3_ne: "बागमती प्रदेश",
+      prov_p4_en: "Gandaki",
+      prov_p4_ne: "गण्डकी प्रदेश",
+      prov_p5_en: "Lumbini",
+      prov_p5_ne: "लुम्बिनी प्रदेश",
+      prov_p6_en: "Karnali",
+      prov_p6_ne: "कर्णाली प्रदेश",
+      prov_p7_en: "Sudurpashchim",
+      prov_p7_ne: "सुदूरपश्चिम",
+      audit_trail_title: "Recent Role Mutations & Approvals (हालैका अडिट गतिविधि)",
+      audit_view_chain: "View Complete Hash Chain",
+      audit1_title: "NCHL Batch Approval Release: #NCHL-2081-KTM-084 (NPR 12.42M)",
+      audit1_desc: "Authorized by Sita Sharma via FIDO2 Token 2FA • IP: 103.235.192.4 (Babarmahal NOC)",
+      audit1_time: "14 mins ago",
+      audit2_title: "Ceiling Calibration: Adjusted Batch Release Cap to NPR 25,000,000",
+      audit2_desc: "Configured by Bikash Adhikari (Super Admin dual sign-off confirmed)",
+      audit2_time: "Yesterday 16:42"
+    },
+    ne: {
+      portal_sub: "प्रशासक पोर्टल",
+      ops_version: "सञ्चालन सं २.४",
+      nav_main_group: "मुख्य नेभिगेसन",
+      nav_dashboard: "ड्यासबोर्ड अवलोकन",
+      nav_analytics: "प्लेटफर्म विश्लेषण",
+      nav_merchants_group: "विक्रेता व्यवस्थापन",
+      nav_approvals: "विक्रेता प्रमाणीकरण तथा केवाइसी",
+      badge_approvals: "५",
+      nav_directory: "विक्रेता निर्देशिका सूची",
+      nav_commission: "कमिशन तथा तह नियमहरू",
+      nav_catalog_group: "सामग्री तथा अर्डर व्यवस्थापन",
+      nav_moderation: "उत्पादन सामग्री मध्यस्थता",
+      nav_orders: "अर्डर तथा ढुवानी विवरण",
+      nav_disputes: "फिर्ता तथा विवाद समाधान",
+      nav_financials_group: "वित्तीय व्यवस्थापन",
+      nav_gateways: "भुक्तानी गेटवे सेटलमेन्ट",
+      nav_payouts: "निकासा लटहरू (ब्याच)",
+      nav_tax: "आन्तरिक राजस्व कर तथा अडिट",
+      nav_system_group: "प्रणाली तथा सुरक्षा",
+      nav_staff: "कर्मचारी पहुँच तथा भूमिकाहरू",
+      nav_audit: "प्रणाली अडिट लगहरू",
+      nav_settings: "प्लेटफर्म सेटिङहरू",
+      cluster_gateway: "गेटवे क्लस्टर प्रणाली",
+      gateways_list: "ईसेवा • खल्ती • फोनपे • एनसीएचएल-आईपीएस",
+      sync_status_label: "सिङ्क स्थिति",
+      sync_status_val: "सामान्य",
+      search_placeholder: "कर्मचारी, भूमिका अधिकार, प्यान/भ्याट, अडिट लग खोज्नुहोस्...",
+      cluster_latency: "क्लस्टर विलम्बता: १८ मिलिसेकेन्ड (काठमाण्डौ-डिसी०१)",
+      invite_staff_btn: "+ कर्मचारी आमन्त्रण",
+      notif_count: "३",
+      user_name: "बिकेश अधिकारी",
+      user_role: "प्रमुख प्रशासक (अप्स)",
+      user_initials: "बिए",
+      bread_portal: "प्रशासक पोर्टल",
+      bread_security: "प्रणाली तथा सुरक्षा",
+      bread_current: "कर्मचारी भूमिका तथा पहुँच व्यवस्थापन",
+      page_title: "कर्मचारी भूमिका तथा पहुँच अधिकार व्यवस्थापन",
+      rbac_badge: "आरबीएसी सुरक्षा इन्जिन सं ४.२",
+      nchl_badge: "एनसीएचएल-आईपीएस २एफए सक्रिय",
+      page_subtitle: "जनककार्ट सञ्चालनभरि भूमिकामा आधारित पहुँच नियन्त्रण (RBAC), दोहोरो मेकर-चेकर वित्तीय सीमा, प्रादेशिक अधिकार क्षेत्र र सत्र सुरक्षा नीतिहरू कन्फिगर गर्नुहोस्।",
+      btn_export_audit: "सुरक्षा अडिट लग निर्यात गर्नुहोस्",
+      btn_create_role: "+ नयाँ अनुकूलित भूमिका थप्नुहोस्",
+      btn_invite_member: "+ कर्मचारी सदस्य आमन्त्रण गर्नुहोस्",
+      kpi1_title: "कुल सक्रिय कर्मचारी",
+      kpi1_nepali: "सबै विभागहरू",
+      kpi1_val: "४८ सदस्य",
+      kpi1_badge: "+३ आश्विन",
+      kpi1_desc: "१२ सुरक्षा प्रमाणित २एफए • ६ विभागहरू",
+      kpi2_title: "कन्फिगर गरिएका भूमिकाहरू",
+      kpi2_nepali: "आरबीएसी संरचना",
+      kpi2_val: "८ भूमिकाहरू",
+      kpi2_badge: "५ अनुकूलित",
+      kpi2_desc: "३ प्रणालीगत पूर्वनिर्धारित (लक गरिएको)",
+      kpi3_title: "दोहोरो मेकर-चेकर सीमा",
+      kpi3_nepali: "भुक्तानी अनुमोदन थ्रेसहोल्ड",
+      kpi3_val: "रु ५,००,०००",
+      kpi3_desc: "एनसीएचएल-आईपीएस दोहोरो २एफए हस्ताक्षर सीमा",
+      kpi4_title: "सुरक्षा स्थिति तथा अडिट",
+      kpi4_nepali: "प्रणाली निष्ठा",
+      kpi4_val: "० उल्लंघन",
+      kpi4_badge: "उत्कृष्ट",
+      kpi4_desc: "TLS १.३ कडा • २ पासवर्ड नवीकरण बाँकी",
+      tab_roles: "कन्फिगर गरिएका भूमिकाहरू (८)",
+      tab_staff: "कर्मचारी निर्देशिका (४८)",
+      filter_placeholder: "अधिकार ट्याग, पद वा नेपाली नामद्वारा खोज्नुहोस्...",
+      role1_title: "सुपर एडमिन (पूर्ण प्रशासक)",
+      role1_badge: "प्रणाली पूर्वनिर्धारित",
+      role1_subtitle: "पूर्ण प्रशासकीय पहुँच • ३ सदस्यहरू",
+      role1_tag: "सबै_अधिकार",
+      role1_desc: "सबै डाटाबेस क्लस्टरहरू, प्रमाणीकरण गोप्यता र आन्तरिक राजस्व कुञ्जीहरूमा अप्रतिबन्धित पहुँच।",
+      role2_title: "वित्तीय नियन्त्रक तथा भुक्तानी चेकर",
+      role2_badge: "सक्रिय भूमिका",
+      role2_subtitle: "वित्तीय नियन्त्रण विभाग • ४ सदस्यहरू",
+      role2_tag: "मेकर-चेकर",
+      role2_desc: "एनसीएचएल-आईपीएस ब्याच प्रमाणीकरण, १.५% टिडिएस वैधानिक दाखिला, रु ५ लाखभन्दा माथिको एस्क्रो निकासा।",
+      role2_subbadge1: "दोहोरो २एफए हस्ताक्षर",
+      role2_subbadge2: "देशव्यापी दायरा",
+      role3_title: "विक्रेता केवाइसी तथा राजस्व अधिकृत",
+      role3_badge: "प्रादेशिक दायरा",
+      role3_subtitle: "विक्रेता प्रमाणीकरण • ७ सदस्यहरू",
+      role3_tag: "प्यान_भ्याट_ओसीआर",
+      role3_desc: "प्यान/भ्याट ओसीआर प्रमाणीकरण, एमडिएमएस जाँच, र विक्रेता सम्झौता स्वीकृति।",
+      role4_title: "उत्पादन सामग्री तथा विवाद मध्यस्थ",
+      role4_badge: "अनुकूलित भूमिका",
+      role4_subtitle: "सामग्री मध्यस्थता • १२ सदस्यहरू",
+      role4_tag: "सीमा: ≤ रु २५,०००",
+      role4_desc: "उत्पादन सूची मध्यस्थता, आइएमइआई ग्रे-मार्केट परीक्षण, र ग्राहक फिर्ता स्वीकृति।",
+      role5_title: "ढुवानी तथा हब सञ्चालन अधिकृत",
+      role5_badge: "अप्स तह-२",
+      role5_subtitle: "हब व्यवस्थापन • १५ सदस्यहरू",
+      role5_tag: "३ मुख्य हबहरू",
+      role5_desc: "बालुवाटार, पोखरा, बुटवल चलानी, राइडर डेलिभरी ओटीपी ओभरराइड र झोला क्रमबद्धता।",
+      role6_title: "निरीक्षक अडिटर / राजस्व परीक्षक",
+      role6_badge: "पढ्न-मात्र पहुँच",
+      role6_subtitle: "बाह्य लेखापरीक्षक • ३ सदस्यहरू",
+      role6_tag: "अडिट_आरओ",
+      role6_desc: "बाह्य अनुपालन अडिटरहरू, कुनै फेरबदल बिनाको वैधानिक भ्याट खाता निकासा।",
+      role7_title: "क्षेत्रीय मधेश अपरेसन प्रमुख",
+      role7_badge: "प्रदेश १ र २",
+      role7_subtitle: "मधेश तथा कोशी • २ सदस्यहरू",
+      role7_tag: "मधेश_कोशी",
+      role7_desc: "जनकपुर तथा विराटनगर ढुवानी सञ्जाल, स्थानीय विक्रेता तह अपवादहरू।",
+      role8_title: "कनिष्ठ ग्राहक सेवा तह-१",
+      role8_badge: "प्रतिबन्धित",
+      role8_subtitle: "ग्राहक सहयोग • २ सदस्यहरू",
+      role8_tag: "गोप्य डाटा मास्क",
+      role8_desc: "आधारभूत टिकट सोधपुछ, मास्क गरिएको ट्र्याकिङ, शून्य वालेट निकासा अधिकार।",
+      staff1_avatar: "सीश",
+      staff1_name: "सीता शर्मा",
+      staff1_role: "वित्तीय नियन्त्रक • बबरमहल एनओसी",
+      staff1_status: "२एफए FIDO2 सक्रिय",
+      staff2_avatar: "बिए",
+      staff2_name: "बिकेश अधिकारी",
+      staff2_role: "सुपर एडमिन तथा सह-चेकर",
+      staff2_status: "२एफए FIDO2 सक्रिय",
+      staff3_avatar: "प्रका",
+      staff3_name: "प्रदीप कार्की",
+      staff3_role: "कोषागार विश्लेषक (भुक्तानी चेकर)",
+      staff3_status: "हार्डवेयर टोकन",
+      staff4_avatar: "रीथा",
+      staff4_name: "रीतु थापा",
+      staff4_role: "वरिष्ठ हिसाब-मिलान विशेषज्ञ",
+      staff4_status: "एसएमएस ओटीपी (नवीकरण बाँकी)",
+      sec_title: "सत्र तथा टोकन कडा सुरक्षा",
+      sec_iso: "ISO-२७००१ मापदण्ड",
+      sec_item1_title: "हार्डवेयर FIDO2 / स्प्यारो एसएमएस २एफए",
+      sec_item1_desc: "उच्च मूल्यको एनसीएचएल निकासाका लागि अनिवार्य",
+      sec_item1_badge: "कडा लागु",
+      sec_item2_title: "निष्क्रिय सत्र स्वतः समाप्त",
+      sec_item2_desc: "१५ मिनेट निष्क्रियता पछि प्रमाणीकरण कुकीहरू खारेज हुन्छन्",
+      sec_item2_badge: "१५ मिनेट",
+      sec_item3_title: "स्वीकृत एनओसी सीआईडीआर ब्लकहरू",
+      sec_item3_desc: "बबरमहल एनओसी, बालुवाटार केन्द्रीय सर्भर",
+      sec_item3_badge: "२ सबनेटहरू सुरक्षित",
+      role_detail_title: "वित्तीय नियन्त्रक तथा भुक्तानी चेकर",
+      role_detail_level: "तह ४ सुशासन",
+      role_detail_dual: "मेकर-चेकर दोहोरो हस्ताक्षर",
+      role_detail_desc: "एनसीएचएल-आईपीएस मार्फत विद्युतीय रकम स्थानान्तरण अधिकृत गर्दछ, आन्तरिक राजस्व १.५% टिडिएस कट्टी प्रमाणित गर्दछ, र विवादित एस्क्रो रकम फुकुवा गर्दछ।",
+      role_detail_assigned_label: "४ तोकिएका कर्मचारीहरू:",
+      role_detail_assigned_names: "सीता शर्मा, बिकेश अधिकारी, प्रदीप कार्की, रीतु थापा",
+      guardrail_title: "मेकर-चेकर वित्तीय सुरक्षा घेरा सक्रिय",
+      guardrail_nrb: "नेपाल राष्ट्र बैंक नियामक मापदण्ड",
+      guardrail1_label: "कामको बाँडफाँड सिद्धान्त",
+      guardrail1_val: "आफैंले सुरु गरेको ब्याच आफैं स्वीकृत गर्न नसकिने",
+      guardrail1_sub: "कडाइका साथ लागु",
+      guardrail2_label: "एकल-ब्याच अधिकतम सीमा",
+      guardrail2_val: "रु २,५०,००,००० प्रति निकासा",
+      guardrail2_sub: "नाघेमा सुपर एडमिन कुञ्जी आवश्यक पर्नेछ",
+      guardrail3_label: "प्रमाणीकरण क्रिप्टोग्राफी",
+      guardrail3_val: "FIDO2 हार्डवेयर वा स्प्यारो ओटीपी",
+      guardrail3_sub: "हार्डवेयरलाई प्राथमिकता",
+      perm_matrix_title: "विस्तृत मोड्युल पहुँच अधिकार म्याट्रिक्स",
+      cap_keys_label: "अधिकार कुञ्जीहरू:",
+      cap_v: "दे: हेर्ने",
+      cap_c: "सृ: सिर्जना",
+      cap_a: "स्व: स्वीकृत",
+      cap_d: "ह: हटाउने",
+      perm_sec1_title: "१. वित्तीय तथा भुक्तानी व्यवस्थापन",
+      perm_sec1_badge: "मुख्य क्षेत्राधिकार",
+      perm1_1_title: "सेटलमेन्ट ब्याचहरू (एनसीएचएल-आईपीएस)",
+      perm1_1_badge: "२एफए दोहोरो हस्ताक्षर",
+      perm1_1_desc: "वाणिज्य बैंक साझेदार खाताहरूमा स्वचालित क्लियरिङहाउस ब्याचहरू कार्यान्वयन गर्नुहोस्",
+      btn_view: "हेर्नुहोस्",
+      btn_create: "सिर्जना",
+      btn_approve: "स्वीकृत गर्नुहोस्",
+      btn_delete: "हटाउनुहोस्",
+      perm1_2_title: "आन्तरिक राजस्व कर तथा टिडिएस खाताहरू",
+      perm1_2_badge: "१.५% टिडिएस नियम",
+      perm1_2_desc: "नेपाल आन्तरिक राजस्व विभाग अडिटका लागि अनुपालन कट्टी प्रतिवेदन निर्यात गर्नुहोस्",
+      btn_export: "निर्यात",
+      btn_amend: "संशोधन",
+      perm1_3_title: "गेटवे हिसाब-मिलान (ईसेवा / खल्ती / फोनपे)",
+      perm1_3_desc: "विक्रेता एस्क्रो वालेटहरू विरुद्ध आईपीएन कलब्याक वेबहुक लगहरू मिलान गर्नुहोस्",
+      btn_reconcile: "हिसाब मिलाउनुहोस्",
+      perm1_4_title: "कमिशन दर ओभरराइड",
+      perm1_4_badge: "सुपर एडमिन मात्र",
+      perm1_4_desc: "मानक वर्ग कमिशन प्रतिशत समायोजन गर्नुहोस् (जस्तै इलेक्ट्रोनिक्स ८% बाट ५%)",
+      btn_edit: "सम्पादन",
+      perm_sec2_title: "२. विक्रेता सञ्चालन तथा केवाइसी",
+      perm_sec2_badge: "द्वितीयक अडिट",
+      perm2_1_title: "विक्रेता बैंक खाता परिवर्तन",
+      perm2_1_desc: "विक्रेता भुक्तानी बैंक खाता अद्यावधिक अनुरोधहरू स्वीकृत गर्नुहोस्",
+      btn_approve_2fa: "स्वीकृत (२एफए अनिवार्य)",
+      perm2_2_title: "विक्रेता भुक्तानी रोक्का / विवाद फ्रिज",
+      perm2_2_desc: "धोखाधडी वा उपभोक्ता अदालत दर्ता भएमा तुरुन्त भुक्तानी रोक्नुहोस्",
+      btn_full_perm: "पूर्ण अधिकार",
+      perm2_3_title: "विक्रेता व्यवसाय केवाइसी प्रमाणीकरण",
+      perm2_3_desc: "कम्पनी दर्ता प्रमाणपत्र र भ्याट कागजातहरू रुजु गर्नुहोस्",
+      btn_view_only: "हेर्न मात्र",
+      perm_sec3_title: "३. सामग्री तथा अर्डर व्यवस्थापन",
+      perm_sec3_badge: "सीमित निकासा",
+      perm3_1_title: "अर्डर निकासा तथा उच्च मूल्य फिर्ता फुकुवा",
+      perm3_1_desc: "रद्द गरिएका अर्डरहरूका लागि रु ५०,००० भन्दा माथिको बैंक फिर्ता अधिकृत गर्नुहोस्",
+      btn_full_auth_50k: "पूर्ण अधिकार (> रु ५० हजार)",
+      perm3_2_title: "उत्पादन क्याटलग सम्पादन तथा मध्यस्थता",
+      perm3_2_desc: "मूल्य समायोजन, शीर्षक सुधार, मौज्दात ओभरराइड",
+      btn_no_access_hidden: "पहुँच छैन (लुकाइएको)",
+      perm_sec4_title: "४. प्रणाली तथा सुरक्षा प्रशासन",
+      perm_sec4_badge: "अडिट मात्र",
+      perm4_1_title: "कर्मचारी पहुँच तथा भूमिका संशोधन",
+      perm4_1_desc: "कर्मचारी भूमिका सिर्जना वा प्रदान गर्ने, २एफए हार्डवेयर रिसेट गर्ने",
+      btn_no_access: "पहुँच छैन",
+      perm4_2_title: "सुरक्षा अडिट लगहरू",
+      perm4_2_desc: "क्रिप्टोग्राफिक ह्यास चेन र आईपी सत्र ट्रेल समीक्षा गर्नुहोस्",
+      prov_title: "प्रादेशिक क्षेत्राधिकार दायरा",
+      prov_badge: "सबै ७ प्रदेशहरू (देशव्यापी क्लियरिङ)",
+      prov_desc: "वित्तीय नियन्त्रकहरूसँग नेपालका सबै प्रशासनिक हब र बैंकहरूमा ब्याच सेटलमेन्टको देशव्यापी अधिकार हुन्छ।",
+      prov_p1_en: "कोशी",
+      prov_p1_ne: "प्रदेश नं. १",
+      prov_p2_en: "मधेश",
+      prov_p2_ne: "प्रदेश नं. २",
+      prov_p3_en: "बागमती",
+      prov_p3_ne: "प्रदेश नं. ३",
+      prov_p4_en: "गण्डकी",
+      prov_p4_ne: "प्रदेश नं. ४",
+      prov_p5_en: "लुम्बिनी",
+      prov_p5_ne: "प्रदेश नं. ५",
+      prov_p6_en: "कर्णाली",
+      prov_p6_ne: "प्रदेश नं. ६",
+      prov_p7_en: "सुदूरपश्चिम",
+      prov_p7_ne: "प्रदेश नं. ७",
+      audit_trail_title: "हालैका भूमिका परिवर्तन तथा स्वीकृति अडिट गतिविधि",
+      audit_view_chain: "पूर्ण ह्यास चेन हेर्नुहोस्",
+      audit1_title: "एनसीएचएल ब्याच स्वीकृति निकासा: #NCHL-२०८१-काठ-०८४ (रु १ करोड २४ लाख)",
+      audit1_desc: "सीता शर्मा द्वारा FIDO2 टोकन २एफए मार्फत अधिकृत • आईपी: १०३.२३५.१९२.४ (बबरमहल एनओसी)",
+      audit1_time: "१४ मिनेट अघि",
+      audit2_title: "सीमा क्यालिब्रेसन: ब्याच निकासा सीमा रु २,५०,००,००० मा समायोजन",
+      audit2_desc: "बिकेश अधिकारी द्वारा कन्फिगर (सुपर एडमिन दोहोरो हस्ताक्षर प्रमाणित)",
+      audit2_time: "हिजो १६:४२"
+    }
+  };
+
+  function setLanguage(lang) {
+    currentLanguage = lang;
+    const btnEn = document.getElementById('lang-btn-en');
+    const btnNe = document.getElementById('lang-btn-ne');
+
+    if (lang === 'en') {
+      btnEn.className = "px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.05)] transition-all font-bold";
+      btnNe.className = "px-2 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all";
+      document.documentElement.lang = "en";
+    } else {
+      btnNe.className = "px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.05)] transition-all font-bold";
+      btnEn.className = "px-2 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all";
+      document.documentElement.lang = "ne";
+    }
+
+    const dict = translations[lang];
+
+    // Update text content
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) {
+        el.textContent = dict[key];
+      }
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] !== undefined) {
+        el.placeholder = dict[key];
+      }
+    });
+  }
+
+  function switchLeftTab(tab) {
+    const rolesBtn = document.getElementById('tab-roles-btn');
+    const staffBtn = document.getElementById('tab-staff-btn');
+    const rolesList = document.getElementById('roles-list-container');
+    const staffList = document.getElementById('staff-list-container');
+
+    if (tab === 'roles') {
+      rolesBtn.className = 'flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface shadow-sm font-bold';
+      staffBtn.className = 'flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all text-secondary hover:text-on-surface';
+      rolesList.classList.remove('hidden');
+      rolesList.classList.add('flex');
+      staffList.classList.add('hidden');
+      staffList.classList.remove('flex');
+    } else {
+      staffBtn.className = 'flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface shadow-sm font-bold';
+      rolesBtn.className = 'flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all text-secondary hover:text-on-surface';
+      staffList.classList.remove('hidden');
+      staffList.classList.add('flex');
+      rolesList.classList.add('hidden');
+      rolesList.classList.remove('flex');
+    }
+  }
+</script></main></div></body></html>

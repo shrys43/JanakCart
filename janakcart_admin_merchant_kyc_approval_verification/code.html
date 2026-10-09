@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#ffb3b1","surface-container-high":"#e2e7ff","on-error":"#ffffff","surface-dim":"#d2d9f4","tertiary-container":"#8e5900","on-secondary":"#ffffff","primary-container":"#c8102e","tertiary":"#6d4400","surface":"#faf8ff","surface-variant":"#dae2fd","secondary-fixed-dim":"#b4c7ef","surface-tint":"#bf0229","tertiary-fixed":"#ffddb8","on-primary-fixed":"#410007","on-secondary-container":"#495c7f","on-tertiary":"#ffffff","inverse-surface":"#283044","on-background":"#131b2e","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#ffb95f","on-secondary-fixed":"#041b3b","secondary":"#4c5f82","on-primary":"#ffffff","on-tertiary-container":"#ffddb8","inverse-on-surface":"#eef0ff","on-primary-container":"#ffdad8","surface-container-highest":"#dae2fd","primary":"#9e001f","surface-bright":"#faf8ff","primary-fixed":"#ffdad8","secondary-fixed":"#d7e3ff","on-tertiary-fixed-variant":"#653e00","error-container":"#ffdad6","background":"#faf8ff","primary-fixed-dim":"#ffb3b1","outline":"#906f6e","on-primary-fixed-variant":"#92001c","surface-container-low":"#f2f3ff","error":"#ba1a1a","on-secondary-fixed-variant":"#344769","on-surface":"#131b2e","outline-variant":"#e5bdbb","on-error-container":"#93000a","surface-container":"#eaedff","secondary-container":"#c2d5fe","on-surface-variant":"#5c403f","on-tertiary-fixed":"#2a1700"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","gutter":"1rem","gutter-mobile":"0.5rem","margin":"1.5rem","space-md":"1rem","margin-mobile":"0.75rem","space-lg":"1.5rem","space-xs":"0.25rem","space-xl":"2rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"price-strikethrough":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"700"}],"price-display":["22px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"800"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","fontWeight":"700"}],"title-lg":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"800"}],"price-strikethrough":["13px",{"lineHeight":"16px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md tracking-tight shadow-[0_2px_6px_rgba(200,16,46,0.25)]">J</div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface tracking-tight leading-none">JanakCart</span><span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider mt-0.5">Admin Portal</span></div></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Ops v2.4</span></div><nav class="flex flex-col px-space-sm py-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-label-md rounded-lg shadow-[0_2px_8px_rgba(158,0,31,0.2)]"><div class="px-space-sm pt-space-xs pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Main • मुख्य</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard Overview (ड्यासबोर्ड)</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="platform-analytics" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Platform Analytics (विश्लेषण)</span></a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Merchants • विक्रेता</p></div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="seller-approvals-and-kyc" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Seller Approvals &amp; KYC</span></div><span class="px-1.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold">5</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="seller-directory" href="#"><span class="material-symbols-outlined text-[18px]">storefront</span><span>Seller Directory (सूची)</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="commission-and-tier-rules" href="#"><span class="material-symbols-outlined text-[18px]">percent</span><span>Commission &amp; Tiers</span></a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Catalog &amp; Orders • सामान र अर्डर</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="product-moderation" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Product Moderation</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="orders-and-shipments" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Orders &amp; Shipments</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="returns-and-disputes" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span>Returns &amp; Disputes</span></a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Financials • वित्तीय</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="payment-gateway-settlement" href="#"><span class="material-symbols-outlined text-[18px]">account_balance_wallet</span><span>Payment Gateways</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="payout-batches" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span>Payout Batches (निकासा)</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="tax-and-ird-nepal-audit" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>IRD Tax &amp; Audit</span></a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">System • प्रणाली</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="staff-access-and-roles" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Staff Access &amp; Roles</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span>Audit Logs (लगहरू)</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm font-label-md text-label-md" data-path="platform-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings (सेटिङहरू)</span></a></nav></div><div class="p-space-sm m-space-sm rounded-xl bg-surface-container"><div class="flex items-center justify-between mb-1.5"><span class="font-label-sm text-label-sm text-secondary font-bold">Cluster Gateway</span><span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span></div><p class="font-body-sm text-body-sm text-on-surface-variant">eSewa • Khalti • Fonepay • NCHL IPS</p><div class="mt-2 pt-2 border-t border-surface-dim flex items-center justify-between text-secondary font-label-sm text-label-sm"><span>Sync Status</span><span class="text-primary font-bold">Normal</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative w-full max-w-lg"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search sellers, PAN/VAT, transaction ID, order #..." type="text"/></div><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span>Nepal Cloud: KTM-BRT Live</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center p-0.5 rounded-lg bg-surface-container"><button class="px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.05)]" type="button">EN</button><button class="px-2 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">🇳🇵 नेपाली</button></div><a class="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-[0_2px_6px_rgba(158,0,31,0.2)]" data-path="seller-approvals-and-kyc" href="#"><span class="material-symbols-outlined text-[16px]">person_add</span><span>+ Invite Merchant</span></a><a class="hidden lg:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors" data-path="tax-and-ird-nepal-audit" href="#"><span class="material-symbols-outlined text-[16px]">download</span><span>Export Audit</span></a><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary rounded-full font-label-sm text-[10px] flex items-center justify-center font-bold leading-none">5</span></button><div class="h-8 w-px bg-surface-dim mx-0.5"></div><div class="flex items-center gap-2 pl-1"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight">Bikash Adhikari</div><div class="font-label-sm text-label-sm text-secondary">Super Admin (Ops)</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 min-h-screen bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Command & Breadcrumb Context -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Admin Portal</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Merchants &amp; Sellers</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Seller Approvals &amp; KYC</span>
+</div>
+<div class="flex items-baseline gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Merchant KYC &amp; Business Compliance</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+          नेपाल सरकार IRD Live Sync
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl mt-1">
+        Automated verification against Inland Revenue Department (IRD Nepal) PAN/VAT database, OCR entity extraction, and NTA MDMS mobile telecommunications import audits.
+      </p>
+</div>
+<!-- Actions & Filter Strip -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center rounded-lg bg-surface-container-low p-1">
+<button class="px-2.5 py-1 text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>All 7 Provinces</span>
+</button>
+<span class="text-surface-dim">|</span>
+<button class="px-2 py-1 text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5" type="button">
+<span>Priority Queue</span>
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</button>
+</div>
+<button class="px-3 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export IRD Audit Log</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all flex items-center gap-1.5 shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Bulk Approve (3 Verified)</span>
+</button>
+</div>
+</div>
+<!-- Metric KPI Summary Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- KPI 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute right-0 top-0 w-24 h-24 bg-primary/5 rounded-full -mr-8 -mt-8 pointer-events-none"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Verification Queue</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">5 Pending</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface">5</span>
+<span class="font-label-md text-label-md text-primary font-bold">Merchants</span>
+</div>
+<div class="mt-3 pt-2.5 bg-surface-container-low -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">electric_bolt</span> 3 Expedited
+        </span>
+<span>+2 arrived today</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">IRD Automated Sync</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Live API
+        </span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface">94.2%</span>
+<span class="font-label-md text-label-md text-emerald-700 font-bold">Auto-Matched</span>
+</div>
+<div class="mt-3 pt-2.5 bg-surface-container-low -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="truncate">Babarmahal &amp; Butwal LRO Pings</span>
+<span class="text-on-surface font-medium">48ms latency</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Avg. Verification TAT</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">SLA: &lt;24h</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface">3.4</span>
+<span class="font-label-md text-label-md text-secondary font-bold">Hours avg.</span>
+</div>
+<div class="mt-3 pt-2.5 bg-surface-container-low -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="text-emerald-700 font-semibold">Valley 24h Assurance</span>
+<span>42 sellers verified/wk</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Flagged / Fraud Halts</span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold">Ashwin 2081</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-error">8</span>
+<span class="font-label-md text-label-md text-error font-bold">Discrepancies</span>
+</div>
+<div class="mt-3 pt-2.5 bg-surface-container-low -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="truncate">Top: Inactive PAN / OCR Mismatch</span>
+<span class="material-symbols-outlined text-[16px] text-error">gavel</span>
+</div>
+</div>
+</div>
+<!-- Workspace Container: Queue Grid (Left) + Inspection Panel (Right) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Application Queue (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col space-y-space-md">
+<!-- Tabs Filter Bar -->
+<div class="p-1 rounded-xl bg-surface-container-low flex items-center justify-between shadow-sm">
+<div class="flex items-center space-x-1 w-full">
+<button class="flex-1 py-1.5 px-2 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm flex items-center justify-center gap-1.5 font-bold" type="button">
+<span>All Pending</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary text-on-primary text-[10px]">5</span>
+</button>
+<button class="flex-1 py-1.5 px-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1" type="button">
+<span>Ready (3)</span>
+</button>
+<button class="flex-1 py-1.5 px-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Flagged (2)</span>
+</button>
+<button class="hidden sm:flex flex-1 py-1.5 px-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm items-center justify-center" type="button">
+<span>Approved</span>
+</button>
+</div>
+</div>
+<!-- Merchant Application Cards List -->
+<div class="flex flex-col space-y-space-sm">
+<!-- Merchant 1: SELECTED ACTIVE INSPECTION ITEM -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-md relative transition-all cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary rounded-l-xl"></div>
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-title-md">
+                LE
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Lumbini Electronics &amp; Gadgets</span>
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Suresh Ghimire • Butwal Ward-4, Rupandehi</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> 98% Match
+            </span>
+</div>
+<div class="mt-3 grid grid-cols-2 gap-2 text-body-sm font-body-sm bg-surface-container-low p-2 rounded-lg">
+<div>
+<span class="text-secondary font-label-sm text-label-sm block">IRD PAN/VAT</span>
+<span class="font-mono font-semibold text-on-surface">604928102</span>
+<span class="text-[10px] text-emerald-700 block font-medium">✓ DVO Butwal Verified</span>
+</div>
+<div>
+<span class="text-secondary font-label-sm text-label-sm block">Sector &amp; License</span>
+<span class="font-semibold text-on-surface truncate block">Mobiles &amp; Electronics</span>
+<span class="text-[10px] text-primary font-bold block">NTA MDMS Enforced</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Applied 2 hours ago</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-bold">Dashain Rush</span>
+</div>
+<span class="text-primary font-bold flex items-center gap-0.5">
+              Inspecting Now <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</span>
+</div>
+</div>
+<!-- Merchant 2: Ready for 1-click Approval -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center font-bold text-title-md">
+                MO
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Mustang Organic Herbals &amp; Cashmere</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dolma Gurung • Jomsom-2, Mustang (Gandaki)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+              Artisan Subsidized
+            </span>
+</div>
+<div class="mt-3 grid grid-cols-2 gap-2 text-body-sm font-body-sm bg-surface-container-low p-2 rounded-lg">
+<div>
+<span class="text-secondary font-label-sm text-label-sm block">Gharelu / Cottage Reg.</span>
+<span class="font-mono font-semibold text-on-surface">301984210</span>
+<span class="text-[10px] text-emerald-700 block">✓ Local Ward Approved</span>
+</div>
+<div>
+<span class="text-secondary font-label-sm text-label-sm block">Store Category</span>
+<span class="font-semibold text-on-surface">Nepali Handloom &amp; Agro</span>
+<span class="text-[10px] text-secondary block">Zero Commission Tier</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Applied 5 hrs ago
+            </span>
+<button class="px-2.5 py-1 rounded bg-emerald-600 text-white font-label-sm text-label-sm hover:bg-emerald-700 font-bold flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">done</span>
+<span>Quick Approve</span>
+</button>
+</div>
+</div>
+<!-- Merchant 3: Flagged Discrepancy -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-error-container text-error flex items-center justify-center font-bold text-title-md">
+                AM
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Annapurna Mobile &amp; IT Center</span>
+<span class="material-symbols-outlined text-error text-[16px]">warning</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Roshan Baral • Pokhara-8, Srijana Chowk</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-error font-label-sm text-label-sm font-bold flex items-center gap-1">
+              Name Mismatch
+            </span>
+</div>
+<div class="mt-2.5 p-2 rounded-lg bg-error/5 text-body-sm font-body-sm text-error flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[16px] mt-0.5">error</span>
+<div>
+<span class="font-bold">IRD Ledger Alert:</span> Reg name in IRD is <span class="font-semibold underline">Baral Traders</span>, applicant entered "Annapurna Mobile". Manual audit required.
+            </div>
+</div>
+<div class="mt-3 flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-mono text-secondary">PAN: 609823412</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high font-medium" type="button">
+              Audit Differences
+            </button>
+</div>
+</div>
+<!-- Merchant 4: Document OCR Verified -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center font-bold text-title-md">
+                MA
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Mithila Art &amp; Clay Crafts</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sunita Yadav • Janakpurdham Ward-7, Madhesh</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+              OCR Passed
+            </span>
+</div>
+<div class="mt-3 flex items-center justify-between text-body-sm font-body-sm bg-surface-container-low p-2 rounded-lg">
+<span class="font-mono text-on-surface">PAN: 305819204 (Janakpur DVO)</span>
+<span class="text-secondary font-medium">Traditional Handicrafts</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fact_check</span> 4 of 4 Docs Clean
+            </span>
+<span class="text-primary font-medium hover:underline">Review &amp; Sign</span>
+</div>
+</div>
+<!-- Merchant 5: Cheque Pending -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center font-bold text-title-md">
+                HY
+              </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Himalayan Yak Cheese &amp; Dairy Co-op</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tenzing Sherpa • Namche Bazaar, Solukhumbu</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-bold">
+              Cheque Pending
+            </span>
+</div>
+<div class="mt-3 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-secondary font-mono">PAN: 102948192</span>
+<span class="text-secondary">Awaiting clear void cheque</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Deep Merchant Inspection Workspace (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col space-y-space-md">
+<!-- Primary Inspection Container -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col">
+<!-- Inspection Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md border-b border-surface-container-high">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">Active Audit</span>
+<span class="font-label-sm text-label-sm text-secondary">Application #JC-KYC-2081-0941</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 font-extrabold">Lumbini Electronics &amp; Gadgets Pvt. Ltd.</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Applicant: Suresh Ghimire | +977-9801234567 | Butwal Sub-Metropolitan-4, Kalikanagar</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download Full KYC Dossier" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Contact Applicant via SMS/Call" type="button">
+<span class="material-symbols-outlined text-[20px]">sms</span>
+</button>
+</div>
+</div>
+<!-- Section: Real-time Nepal IRD Verification Banner -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">Nepal IRD Taxpayer Verification: PASSED</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">API 200 OK</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Taxpayer matched with Inland Revenue Department database. No outstanding VAT arrears.
+                </p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-mono text-title-md font-bold text-on-surface block">PAN: 604928102</span>
+<span class="font-label-sm text-label-sm text-secondary">DVO: Butwal (Lumbini Zone)</span>
+</div>
+</div>
+<!-- Micro Tax Attribute Matrix -->
+<div class="mt-3 pt-3 border-t border-surface-dim grid grid-cols-2 sm:grid-cols-4 gap-2 text-body-sm font-body-sm">
+<div>
+<span class="text-secondary font-label-sm text-label-sm block">Registered Legal Name</span>
+<span class="font-bold text-on-surface truncate block">Lumbini Electronics Pvt Ltd</span>
+</div>
+<div>
+<span class="text-secondary font-label-sm text-label-sm block">Registration Date</span>
+<span class="font-medium text-on-surface">2074-05-12 B.S.</span>
+</div>
+<div>
+<span class="text-secondary font-label-sm text-label-sm block">Tax Filing Status</span>
+<span class="text-emerald-700 font-bold">Up to Date (2080/81)</span>
+</div>
+<div>
+<span class="text-secondary font-label-sm text-label-sm block">OCR Field Match</span>
+<span class="text-emerald-700 font-bold">99.4% Match</span>
+</div>
+</div>
+</div>
+<!-- Section: Document OCR Inspection Workbench with Tabs -->
+<div class="mt-space-lg flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<span class="font-title-md text-title-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">document_scanner</span>
+              Document OCR &amp; Compliance Audit
+            </span>
+<span class="font-label-sm text-label-sm text-secondary">Click tabs to view scanned files</span>
+</div>
+<!-- Document Selector Tabs -->
+<div class="flex items-center space-x-2 border-b border-surface-container-high pb-2 overflow-x-auto">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1.5 shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+<span>1. PAN/VAT Certificate</span>
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1.5 shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>2. Company Reg (OCR 99%)</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1.5 shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+<span>3. NIC Asia Void Cheque</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1.5 shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">cell_tower</span>
+<span>4. NTA MDMS Importer Lic.</span>
+</button>
+</div>
+<!-- Document Display & OCR Extract Grid -->
+<div class="mt-4 grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Scanned Preview Left (5 cols) -->
+<div class="md:col-span-5 rounded-lg bg-surface-container-low p-2 flex flex-col justify-between">
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container-highest shadow-inner flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Official Nepal Government Inland Revenue Department PAN VAT Certificate paper on clean desk with coat of arms seal, red official stamps, and sharp devanagari script for business authentication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-gQOvKqLDkFGAcZRwkHKNGgOzNfnH1s2RiPSG8GQy0npbRaAfplMvHd_AB4idEtTJJwN89j5hFBzEWBSsVPIUOIikr1CBm0frNlU6e1rhenvnnn93JNQ8UQZYlZrcXRGljYBB2qAX3LbsoltlGoZ3MB2McdNUFgDeEzEpWFbOuSxBEFnviY84yk_vntFoigVechhaiKiumfTnt2g5ZfI0XSjL4Pfb0yxza4u0d8UzxjPlSsO-emm_0A"/>
+<div class="absolute bottom-2 right-2 bg-on-background/80 backdrop-blur px-2 py-0.5 rounded text-white font-label-sm text-[10px]">
+                  Scanned 300 DPI
+                </div>
+</div>
+<div class="mt-2 flex items-center justify-between text-label-sm font-label-sm px-1">
+<span class="text-secondary font-mono">pan_vat_cert_lumbini.pdf</span>
+<button class="text-primary font-bold hover:underline flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Zoom In
+                </button>
+</div>
+</div>
+<!-- OCR Extracted Fields Comparison (7 cols) -->
+<div class="md:col-span-7 flex flex-col justify-between space-y-2">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase">Field Extraction vs. User Input</span>
+<span class="px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">100% Text Match</span>
+</div>
+<div class="flex flex-col space-y-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between items-center py-1 border-b border-surface-dim">
+<span class="text-secondary">Tax ID:</span>
+<span class="font-mono font-bold text-on-surface">604928102 (Valid PAN)</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-surface-dim">
+<span class="text-secondary">Entity Name:</span>
+<span class="font-medium text-on-surface text-right">Lumbini Electronics &amp; Gadgets</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-surface-dim">
+<span class="text-secondary">Tax Office:</span>
+<span class="font-medium text-on-surface">आन्तरिक राजस्व कार्यालय, बुटवल</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-secondary">Citizenship No:</span>
+<span class="font-mono font-medium text-on-surface">48-01-72-09412 (Rupandehi)</span>
+</div>
+</div>
+</div>
+<!-- NTA MDMS Specialized Audit Card -->
+<div class="p-2.5 rounded-lg bg-primary-fixed/30 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">security</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-primary-fixed">NTA MDMS Mobile Import Compliance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Verified authorized importer code under Nepal Telecommunications Authority. Seller is legally permitted to list IMEIs. Valid till Chaitra 2082.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Bank & Settlement Validation -->
+<div class="mt-space-lg p-space-md rounded-xl bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-title-md text-title-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">payments</span>
+              Payout Bank Verification (NCHL-IPS Direct Credit)
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified</span> Account Active
+            </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-body-sm font-body-sm mt-1">
+<div class="p-2 bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Bank Partner</span>
+<span class="font-bold text-on-surface">NIC Asia Bank Ltd.</span>
+<span class="text-[11px] text-secondary">Branch: Butwal Main</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Account Number</span>
+<span class="font-mono font-bold text-on-surface">2984019284102</span>
+<span class="text-[11px] text-emerald-700">Name Match 100%</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Settlement Schedule</span>
+<span class="font-bold text-on-surface">Bi-Weekly (Tues &amp; Fri)</span>
+<span class="text-[11px] text-secondary">NCHL ConnectIPS Ready</span>
+</div>
+</div>
+</div>
+<!-- Section: Commission & Tier Configuration -->
+<div class="mt-space-lg grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col">
+<label class="font-label-md text-label-md font-bold text-on-surface mb-1">Assigned Commission Tier</label>
+<div class="relative">
+<select class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface appearance-none focus:outline-none">
+<option selected="">Electronics &amp; Mobiles - Standard (8.0% Take Rate)</option>
+<option>Dashain Promotional Fast-Track (6.5%)</option>
+<option>Artisan / Made in Nepal (0.0% Subsidized)</option>
+<option>Large Appliances &amp; Hardware (10.0%)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary pointer-events-none text-[18px]">expand_more</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Standard rate includes IRD e-billing fee and gateway absorption.</span>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md font-bold text-on-surface mb-1">Fulfillment Logistics Option</label>
+<div class="relative">
+<select class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface appearance-none focus:outline-none">
+<option selected="">JanakCart Express Hub (Drop-off at Butwal DC)</option>
+<option>Merchant Self-Ship (Pre-approved Courier Partners)</option>
+<option>Kathmandu Valley Dedicated Shuttle</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary pointer-events-none text-[18px]">expand_more</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Hub location: Kalikanagar Highway Crossing Hub #4</span>
+</div>
+</div>
+<!-- Section: Final Decision & Action Command Bar -->
+<div class="mt-space-xl pt-space-md border-t border-surface-container-high flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Rejection / Revision Dropdown -->
+<div class="flex items-center gap-2 w-full md:w-auto">
+<div class="relative flex-1 md:flex-initial">
+<select class="w-full md:w-56 px-3 py-2 bg-error-container/40 text-on-surface rounded-lg font-label-sm text-label-sm appearance-none focus:outline-none">
+<option disabled="" selected="">Reject with Reason...</option>
+<option>Invalid / Suspended PAN Status</option>
+<option>Blurry or Cropped Document Scan</option>
+<option>Business Name Mismatch with IRD</option>
+<option>Missing Ward Commercial Certificate</option>
+<option>NTA Telecommunication Permit Missing</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-secondary pointer-events-none text-[16px]">expand_more</span>
+</div>
+<button class="px-3 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors whitespace-nowrap" type="button">
+              Request Resubmission (SMS)
+            </button>
+</div>
+<!-- Approve Buttons -->
+<div class="flex items-center gap-2 w-full md:w-auto justify-end">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-secondary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+              Hold Application
+            </button>
+<button class="px-5 py-2.5 rounded-lg bg-emerald-600 text-white font-label-md text-label-md hover:bg-emerald-700 transition-all font-bold flex items-center gap-2 shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+<span>Approve &amp; Activate Seller</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Compliance Audit Trail Card below workspace -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wider">Automated Audit &amp; Event Stream</span>
+<span class="font-label-sm text-label-sm text-secondary">Session ID: audit_849204_ne</span>
+</div>
+<div class="flex flex-col space-y-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant py-1 border-b border-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+<span class="font-medium text-on-surface">IRD PAN Validation Success</span>
+<span class="font-mono text-secondary text-[11px]">POST /ird/v2/taxpayer-query [Status: ACTIVE]</span>
+</div>
+<span class="text-secondary text-[11px]">10:24 AM</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant py-1 border-b border-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+<span class="font-medium text-on-surface">OCR Tesseract-NE Parse Complete</span>
+<span class="font-mono text-secondary text-[11px]">Confidence 98.7% across 4 docs</span>
+</div>
+<span class="text-secondary text-[11px]">10:25 AM</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant py-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-medium text-on-surface">Admin Manual Inspection Initiated</span>
+<span class="text-secondary text-[11px]">Assigned to: Bikash Adhikari (Ops Super Admin)</span>
+</div>
+<span class="text-secondary text-[11px]">Just Now</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

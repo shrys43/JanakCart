@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#ffb3b1","surface-container-high":"#e2e7ff","on-error":"#ffffff","surface-dim":"#d2d9f4","tertiary-container":"#8e5900","on-secondary":"#ffffff","primary-container":"#c8102e","tertiary":"#6d4400","surface":"#faf8ff","surface-variant":"#dae2fd","secondary-fixed-dim":"#b4c7ef","surface-tint":"#bf0229","tertiary-fixed":"#ffddb8","on-primary-fixed":"#410007","on-secondary-container":"#495c7f","on-tertiary":"#ffffff","inverse-surface":"#283044","on-background":"#131b2e","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#ffb95f","on-secondary-fixed":"#041b3b","secondary":"#4c5f82","on-primary":"#ffffff","on-tertiary-container":"#ffddb8","inverse-on-surface":"#eef0ff","on-primary-container":"#ffdad8","surface-container-highest":"#dae2fd","primary":"#9e001f","surface-bright":"#faf8ff","primary-fixed":"#ffdad8","secondary-fixed":"#d7e3ff","on-tertiary-fixed-variant":"#653e00","error-container":"#ffdad6","background":"#faf8ff","primary-fixed-dim":"#ffb3b1","outline":"#906f6e","on-primary-fixed-variant":"#92001c","surface-container-low":"#f2f3ff","error":"#ba1a1a","on-secondary-fixed-variant":"#344769","on-surface":"#131b2e","outline-variant":"#e5bdbb","on-error-container":"#93000a","surface-container":"#eaedff","secondary-container":"#c2d5fe","on-surface-variant":"#5c403f","on-tertiary-fixed":"#2a1700"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","gutter":"1rem","gutter-mobile":"0.5rem","margin":"1.5rem","space-md":"1rem","margin-mobile":"0.75rem","space-lg":"1.5rem","space-xs":"0.25rem","space-xl":"2rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"price-strikethrough":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"700"}],"price-display":["22px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"800"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","fontWeight":"700"}],"title-lg":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"800"}],"price-strikethrough":["13px",{"lineHeight":"16px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md tracking-tight shadow-[0_2px_6px_rgba(200,16,46,0.25)]">J</div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface tracking-tight leading-none">JanakCart</span><span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider mt-0.5">Admin Portal</span></div></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Ops v2.4</span></div><nav class="flex flex-col px-space-sm py-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-label-md rounded-lg shadow-[0_2px_8px_rgba(158,0,31,0.2)]"><div class="px-space-sm pt-space-xs pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Main • मुख्य</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="dashboard-overview" href="#">Dashboard Overview (ड्यासबोर्ड)</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="platform-analytics" href="#">Platform Analytics (विश्लेषण)</a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Merchants • विक्रेता</p></div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="seller-approvals-and-kyc" href="#"><span>Seller Approvals &amp; KYC</span><span class="px-1.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold">5</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="seller-directory" href="#">Seller Directory (सूची)</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="commission-and-tier-rules" href="#">Commission &amp; Tiers</a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Catalog &amp; Orders • सामान र अर्डर</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="product-moderation" href="#">Product Moderation</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="orders-and-shipments" href="#">Orders &amp; Shipments</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="returns-and-disputes" href="#">Returns &amp; Disputes</a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Financials • वित्तीय</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="payment-gateway-settlement" href="#">Payment Gateways</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="payout-batches" href="#">Payout Batches (निकासा)</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="tax-and-ird-nepal-audit" href="#">IRD Tax &amp; Audit</a><div class="px-space-sm pt-space-sm pb-0.5"><p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">System • प्रणाली</p></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="staff-access-and-roles" href="#">Staff Access &amp; Roles</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="audit-logs" href="#">Audit Logs (लगहरू)</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="platform-settings" href="#">Settings (सेटिङहरू)</a></nav></div><div class="p-space-sm m-space-sm rounded-xl bg-surface-container"><div class="flex items-center justify-between mb-1.5"><span class="font-label-sm text-label-sm text-secondary font-bold">Cluster Gateway</span><span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span></div><p class="font-body-sm text-body-sm text-on-surface-variant">eSewa • Khalti • Fonepay • NCHL IPS</p><div class="mt-2 pt-2 border-t border-surface-dim flex items-center justify-between text-secondary font-label-sm text-label-sm"><span>Sync Status</span><span class="text-primary font-bold">Normal</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative w-full max-w-lg"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search staff, role permissions, PAN/VAT, audit logs..." type="text"/></div><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span>Cluster Latency: 18ms (KTM-DC01)</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center p-0.5 rounded-lg bg-surface-container"><button class="px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.05)]" type="button">EN</button><button class="px-2 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">🇳🇵 नेपाली</button></div><button class="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-[0_2px_6px_rgba(158,0,31,0.2)]" type="button"><span class="material-symbols-outlined text-[16px]">person_add</span><span>+ Invite Staff</span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary rounded-full font-label-sm text-[10px] flex items-center justify-center font-bold leading-none">3</span></button><div class="h-8 w-px bg-surface-dim mx-0.5"></div><div class="flex items-center gap-2 pl-1"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight">Bikash Adhikari</div><div class="font-label-sm text-label-sm text-secondary">Super Admin (Ops)</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-md font-bold">BA</div></div></div></header><main class="relative pt-16 min-h-screen bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary mb-1">
+<span>Admin Portal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>System &amp; Security</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Staff Access &amp; Role Management (कर्मचारी भूमिका तथा पहुँच व्यवस्थापन)</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Staff Roles &amp; Permission Management</h1>
+<span class="font-label-md text-label-md px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">RBAC Security Engine v4.2</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+          NCHL-IPS 2FA Active
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-4xl">
+        Configure role-based access control (RBAC), multi-factor maker-checker authorization limits, provincial ops jurisdiction, and session security policies across JanakCart operations.
+      </p>
+</div>
+<!-- Top Action Buttons -->
+<div class="flex items-center gap-space-sm self-start md:self-center shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Security Audit Log</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span>+ Create Custom Role</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm hover:bg-primary transition-all shadow-[0_2px_8px_rgba(200,16,46,0.25)]" type="button">
+<span class="material-symbols-outlined text-[16px]">group_add</span>
+<span>+ Invite Staff Member</span>
+</button>
+</div>
+</div>
+<!-- KPI Summary Cards (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1: Total Active Staff -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Active Staff</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">कुल सक्रिय कर्मचारी</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-secondary-container/50 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">48 Members</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">+3 Ashwin</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">verified_user</span>
+<span>12 Security Cleared 2FA • 6 Departments</span>
+</p>
+</div>
+</div>
+<!-- Stat 2: Roles Configured -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Configured Roles</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">प्रणालीगत भूमिकाहरू</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed/60 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">8 RBAC Roles</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-container px-1.5 py-0.5 rounded font-bold">5 Custom</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">lock</span>
+<span>3 System Predefined (Locked)</span>
+</p>
+</div>
+</div>
+<!-- Stat 3: Maker-Checker Threshold -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-amber-500/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Dual Maker-Checker Limit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">भुक्तानी अनुमोदन सीमा</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">NPR 500,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-600">gavel</span>
+<span>NCHL-IPS dual 2FA signoff threshold</span>
+</p>
+</div>
+</div>
+<!-- Stat 4: Security Posture -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-emerald-500/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Privilege &amp; Access Status</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">सुरक्षा अडिट स्थिति</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-800">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-emerald-700">0 Breaches</span>
+<span class="font-label-sm text-label-sm text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded font-bold">Optimal</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-600">pending</span>
+<span>TLS 1.3 Strict • 2 PW rotations due</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Main 2-Column Workspace Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Roles & Staff Directory (5 cols ~ 41.6%) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- List Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<!-- Tab Selector -->
+<div class="flex items-center justify-between p-1 bg-surface-container rounded-lg mb-space-md">
+<button class="flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface shadow-sm font-bold" id="tab-roles-btn" onclick="switchLeftTab('roles')">
+            Configured Roles (8)
+          </button>
+<button class="flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all text-secondary hover:text-on-surface" id="tab-staff-btn" onclick="switchLeftTab('staff')">
+            Staff Directory (48)
+          </button>
+</div>
+<!-- Filter & Search within Roles -->
+<div class="relative mb-space-sm">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-secondary text-[16px]">filter_list</span>
+<input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Filter by permission tag, title, or Nepali alias..." type="text"/>
+</div>
+<!-- Role List Items Container -->
+<div class="flex flex-col gap-1.5 max-h-[580px] overflow-y-auto pr-1" id="roles-list-container">
+<!-- Role 1: Super Admin -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield_person</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Super Admin</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">System Predefined</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm">पूर्ण प्रशासक • 3 Members</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">ALL_MUTATIONS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Unrestricted infrastructure access across all database clusters, auth secrets, &amp; IRD keys.</p>
+</div>
+<!-- Role 2: Finance Controller & Payout Checker (ACTIVE SELECTED) -->
+<div class="p-3 rounded-lg bg-primary/5 shadow-sm transition-all cursor-pointer relative overflow-hidden flex flex-col gap-1.5">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">account_balance</span>
+<span class="font-title-md text-title-md text-primary font-bold">Finance Controller &amp; Payout Checker</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold">Active Role</span>
+</div>
+<div class="flex items-center justify-between text-secondary pl-1">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">वित्तीय नियन्त्रक तथा भुक्तानी चेकर • 4 Members</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 font-bold">Maker-Checker</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-1">NCHL-IPS batch authorization, IRD 1.5% TDS statutory filing, escrow releases &gt; NPR 500k.</p>
+<div class="flex items-center gap-2 mt-0.5 pl-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold">Dual 2FA Signoff</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-secondary-container">Nationwide Scope</span>
+</div>
+</div>
+<!-- Role 3: Merchant KYC & IRD Compliance Officer -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Merchant KYC &amp; IRD Officer</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">Province-Scoped</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm">विक्रेता प्रमाणीकरण अधिकृत • 7 Members</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">PAN_VAT_OCR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">PAN/VAT OCR validation, NTA MDMS inspection, merchant seller agreement approvals.</p>
+</div>
+<!-- Role 4: Catalog & Dispute Arbitrator -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">balance</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Catalog &amp; Dispute Arbitrator</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary font-medium">Custom Role</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm">सामग्री तथा विवाद मध्यस्थ • 12 Members</span>
+<span class="font-label-sm text-label-sm text-secondary">Limit: ≤ NPR 25,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Product listing moderation, IMEI grey-market check, buyer return approvals.</p>
+</div>
+<!-- Role 5: Logistics & Hub Dispatch Operator -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_shipping</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Logistics &amp; Hub Dispatch Operator</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary font-medium">Ops Level-2</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm">ढुवानी तथा हब सञ्चालक • 15 Members</span>
+<span class="font-label-sm text-label-sm text-secondary">3 Main Hubs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Baluwatar, Pokhara, Butwal manifests, rider delivery OTP override and sorting bags.</p>
+</div>
+<!-- Role 6: Read-Only Auditor / IRD Tax Inspector -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">receipt_long</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Read-Only Auditor / IRD Inspector</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">Read-Only</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm">लेखापरीक्षक • 3 Members</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">AUDIT_RO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">External compliance auditors, statutory VAT ledger exports without mutation privileges.</p>
+</div>
+<!-- Role 7: Regional Terai Ops Lead -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">pin_drop</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Regional Terai Ops Lead</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold">Province 1 &amp; 2</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm">प्रदेश २ / मधेश अपरेसन • 2 Members</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">MADHESH_KOSHI</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Janakpur &amp; Biratnagar dispatch network, local merchant tier exceptions.</p>
+</div>
+<!-- Role 8: Junior Customer Support Tier-1 -->
+<div class="p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-all cursor-pointer group flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">support_agent</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Junior Customer Support Tier-1</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary font-medium">Restricted</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm">ग्राहक सहायता • 2 Members</span>
+<span class="font-label-sm text-label-sm text-secondary">Ticket PII Masked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Basic ticketing inquiries, masked customer tracking lookup, zero wallet disbursal rights.</p>
+</div>
+</div>
+<!-- Staff Directory Hidden Panel (switchable via tabs) -->
+<div class="hidden flex-col gap-2 max-h-[580px] overflow-y-auto pr-1" id="staff-list-container">
+<div class="p-3 rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">SS</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Sita Sharma</p>
+<p class="font-body-sm text-body-sm text-secondary">Finance Controller • Babarmahal NOC</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold">2FA FIDO2 Active</span>
+</div>
+<div class="p-3 rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-xs">BA</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Bikash Adhikari</p>
+<p class="font-body-sm text-body-sm text-secondary">Super Admin &amp; Co-Checker</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold">2FA FIDO2 Active</span>
+</div>
+<div class="p-3 rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs">PK</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Pradeep Karki</p>
+<p class="font-body-sm text-body-sm text-secondary">Treasury Analyst (Payout Checker)</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold">Hardware Token</span>
+</div>
+<div class="p-3 rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center font-bold text-xs">RT</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Ritu Thapa</p>
+<p class="font-body-sm text-body-sm text-secondary">Senior Reconciliation Specialist</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-bold">SMS OTP (Upgrade Due)</span>
+</div>
+</div>
+</div>
+<!-- Bottom Card: Session Security & 2FA Enforcement -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">security_update_good</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">Session &amp; Token Enforcement</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">ISO-27001 Aligned</span>
+</div>
+<div class="space-y-2.5">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Hardware FIDO2 / Sparrow SMS 2FA</span>
+<span class="font-body-sm text-body-sm text-secondary">Mandatory for high-value NCHL disbursements</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">Strictly Enforced</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Idle Session Auto-Termination</span>
+<span class="font-body-sm text-body-sm text-secondary">Revokes auth cookies after 15 minutes of inactivity</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold">15 Mins</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Whitelisted NOC CIDR Blocks</span>
+<span class="font-body-sm text-body-sm text-secondary">Babarmahal NOC, Baluwatar Central Server</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold">2 Subnets Locked</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Granular Permission Matrix & Policy Inspector (7 cols ~ 58.3%) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Role Specification Card Header -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<!-- Header Info & Actions -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm pb-space-sm bg-surface-container-low/50 p-space-md rounded-lg">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Finance Controller &amp; Payout Checker</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold">Level 4 Governance</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold">Maker-Checker Dual Signoff</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1">
+              Authorizes electronic fund transfers via NCHL-IPS, verifies statutory IRD 1.5% TDS withholding, and overrides disputed escrow reserves.
+            </p>
+<div class="flex items-center gap-4 mt-2 text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">groups</span>
+<span class="font-bold text-on-surface">4 Assigned Staff:</span>
+<span>Sita Sharma, Bikash Adhikari, Pradeep Karki, Ritu Thapa</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0 self-start">
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" title="Edit Definition" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" title="Duplicate as Custom Role" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-error hover:bg-error-container transition-colors" title="Deactivate Role" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</div>
+<!-- Maker-Checker Governance Rail Highlight -->
+<div class="p-space-md rounded-xl bg-amber-500/10 flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-700 text-[20px]">verified_user</span>
+<span class="font-title-md text-title-md font-bold text-amber-900">Maker-Checker Financial Guardrail Active</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-amber-200 text-amber-900 font-bold">NRB Regulatory Standard</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm text-on-surface">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest/80 shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Segregation of Duties</span>
+<span class="font-body-sm text-body-sm font-semibold mt-0.5 text-on-surface">Cannot authorize self-initiated batches</span>
+<span class="font-label-sm text-label-sm text-emerald-700 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Strict Enforced
+              </span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest/80 shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Single-Batch Ceiling</span>
+<span class="font-body-sm text-body-sm font-semibold mt-0.5 text-on-surface">NPR 25,000,000 per Release</span>
+<span class="font-label-sm text-label-sm text-secondary mt-1">Exceeding requires Super Admin key</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest/80 shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Authorization Cryptography</span>
+<span class="font-body-sm text-body-sm font-semibold mt-0.5 text-on-surface">FIDO2 Hardware or Sparrow OTP</span>
+<span class="font-label-sm text-label-sm text-emerald-700 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Hardware Preferred
+              </span>
+</div>
+</div>
+</div>
+<!-- Granular Module Permissions Matrix -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg font-bold text-on-surface">Granular Module Permissions Matrix</h2>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary">Capability Keys:</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono">V: View</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono">C: Create</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono">A: Approve</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono">D: Delete</span>
+</div>
+</div>
+<!-- Section 1: Financials & Payouts -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">attach_money</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">1. Financials &amp; Payouts (वित्तीय तथा भुक्तानी)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">Primary Scope</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<!-- Item 1.1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Settlement Batches (NCHL-IPS)</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-bold">2FA Dual Signoff</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Execute automated clearinghouse batches to commercial bank partner accounts</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> View
+                  </span>
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Create
+                  </span>
+<span class="px-2 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">fingerprint</span> Approve
+                  </span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium line-through">
+                    Delete
+                  </span>
+</div>
+</div>
+<!-- Item 1.2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">IRD Tax &amp; TDS Ledgers (आन्तरिक राजस्व)</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container text-on-secondary-container">1.5% TDS Rule</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Export compliant withholding reports for Inland Revenue Department Nepal audits</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> View
+                  </span>
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">download</span> Export
+                  </span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium line-through">
+                    Amend
+                  </span>
+</div>
+</div>
+<!-- Item 1.3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Gateway Reconciliation (eSewa / Khalti / Fonepay)</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Match IPN callback webhook logs against merchant escrow wallets</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> View
+                  </span>
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span> Reconcile
+                  </span>
+</div>
+</div>
+<!-- Item 1.4 -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Commission Matrix Overrides</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container text-error font-bold">Super Admin Reserved</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Adjust standard category commission % (e.g. 8% Electronics to 5%)</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> View
+                  </span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium line-through">
+                    Edit
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Merchant Operations & KYC -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">store</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">2. Merchant Operations &amp; KYC (विक्रेता सञ्चालन)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Secondary Audit</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Merchant Bank Account Modification</span>
+<p class="font-body-sm text-body-sm text-secondary">Approve seller payout IBAN/account update requests</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Approve (2FA Req)
+                  </span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Seller Payout Hold / Dispute Freeze</span>
+<p class="font-body-sm text-body-sm text-secondary">Halt immediate payouts upon fraud alerts or consumer court filings</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Full Permission
+                  </span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Merchant Business KYC Verification</span>
+<p class="font-body-sm text-body-sm text-secondary">Validate company registration certificate &amp; VAT documents</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> View Only
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Catalog & Orders -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">shopping_bag</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">3. Catalog &amp; Orders (सामग्री तथा अर्डरहरू)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Scoped Disbursals</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Order Disbursals &amp; High-Value Refund Releases</span>
+<p class="font-body-sm text-body-sm text-secondary">Authorize customer bank transfers above NPR 50,000 for canceled orders</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Full Authority (&gt; NPR 50k)
+                  </span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Product Catalog Editing &amp; Moderation</span>
+<p class="font-body-sm text-body-sm text-secondary">Price adjustments, title corrections, inventory overrides</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium">
+                    No Access (Hidden)
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: System & Security Administration -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock_person</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">4. System &amp; Security Administration (प्रणाली तथा सुरक्षा)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Audit Only</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Staff Access &amp; Permission Modification</span>
+<p class="font-body-sm text-body-sm text-secondary">Create or grant staff roles, reset 2FA hardware devices</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-surface-container text-secondary/60 font-label-sm text-label-sm font-medium">
+                    No Access
+                  </span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Security Audit Logs (प्रणाली अडिट लग)</span>
+<p class="font-body-sm text-body-sm text-secondary">Review cryptographic hash chains and IP session trail</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> View Only
+                  </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Provincial Jurisdiction Scope -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Regional Provincial Jurisdiction Scope (प्रादेशिक क्षेत्राधिकार)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-bold shadow-sm">All 7 Provinces (Nationwide Clearing)</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+            Finance Controllers hold nationwide clearance for settlement clearing batches across all administrative hubs and banks in Nepal.
+          </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 mt-2">
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Koshi</span>
+<span class="font-body-sm text-[10px] text-secondary">कोशी प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Madhesh</span>
+<span class="font-body-sm text-[10px] text-secondary">मधेश प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Bagmati</span>
+<span class="font-body-sm text-[10px] text-secondary">बागमती प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Gandaki</span>
+<span class="font-body-sm text-[10px] text-secondary">गण्डकी प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Lumbini</span>
+<span class="font-body-sm text-[10px] text-secondary">लुम्बिनी प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Karnali</span>
+<span class="font-body-sm text-[10px] text-secondary">कर्णाली प्रदेश</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Sudurpashchim</span>
+<span class="font-body-sm text-[10px] text-secondary">सुदूरपश्चिम</span>
+</div>
+</div>
+</div>
+<!-- Recent Audit Trail for this role -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-bold text-on-surface">Recent Role Mutations &amp; Approvals (हालैका अडिट गतिविधि)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold hover:underline cursor-pointer">View Complete Hash Chain</span>
+</div>
+<div class="space-y-2 mt-1">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-start justify-between gap-2 shadow-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-emerald-600 text-[20px] mt-0.5">verified</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">
+                    NCHL Batch Approval Release: #NCHL-2081-KTM-084 (NPR 12.42M)
+                  </div>
+<p class="font-body-sm text-body-sm text-secondary">
+                    Authorized by <span class="text-on-surface font-semibold">Sita Sharma</span> via FIDO2 Token 2FA • IP: 103.235.192.4 (Babarmahal NOC)
+                  </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary whitespace-nowrap">14 mins ago</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-start justify-between gap-2 shadow-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">tune</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">
+                    Ceiling Calibration: Adjusted Batch Release Cap to NPR 25,000,000
+                  </div>
+<p class="font-body-sm text-body-sm text-secondary">
+                    Configured by <span class="text-on-surface font-semibold">Bikash Adhikari</span> (Super Admin dual sign-off confirmed)
+                  </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary whitespace-nowrap">Yesterday 16:42</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchLeftTab(tab) {
+    const rolesBtn = document.getElementById('tab-roles-btn');
+    const staffBtn = document.getElementById('tab-staff-btn');
+    const rolesList = document.getElementById('roles-list-container');
+    const staffList = document.getElementById('staff-list-container');
+
+    if (tab === 'roles') {
+      rolesBtn.className = 'flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface shadow-sm font-bold';
+      staffBtn.className = 'flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all text-secondary hover:text-on-surface';
+      rolesList.classList.remove('hidden');
+      rolesList.classList.add('flex');
+      staffList.classList.add('hidden');
+      staffList.classList.remove('flex');
+    } else {
+      staffBtn.className = 'flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface shadow-sm font-bold';
+      rolesBtn.className = 'flex-1 py-1.5 text-center rounded-md font-label-md text-label-md transition-all text-secondary hover:text-on-surface';
+      staffList.classList.remove('hidden');
+      staffList.classList.add('flex');
+      rolesList.classList.add('hidden');
+      rolesList.classList.remove('flex');
+    }
+  }
+</script></main></div></body></html>

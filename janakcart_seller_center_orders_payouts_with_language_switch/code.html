@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#344769", "outline": "#906f6e", "surface-container-highest": "#dae2fd", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed": "#041b3b", "outline-variant": "#e5bdbb", "on-secondary-container": "#495c7f", "inverse-primary": "#ffb3b1", "primary-fixed": "#ffdad8", "on-error": "#ffffff", "surface-variant": "#dae2fd", "background": "#faf8ff", "error": "#ba1a1a", "surface-dim": "#d2d9f4", "secondary-fixed-dim": "#b4c7ef", "inverse-on-surface": "#eef0ff", "surface-tint": "#bf0229", "on-primary-fixed": "#410007", "on-background": "#131b2e", "on-tertiary-fixed": "#2a1700", "secondary-container": "#c2d5fe", "surface-bright": "#faf8ff", "on-surface-variant": "#5c403f", "surface-container-low": "#f2f3ff", "tertiary-fixed": "#ffddb8", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#93000a", "surface": "#faf8ff", "inverse-surface": "#283044", "tertiary": "#6d4400", "on-tertiary-container": "#ffddb8", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "primary-fixed-dim": "#ffb3b1", "surface-container-lowest": "#ffffff", "on-primary-container": "#ffdad8", "on-primary-fixed-variant": "#92001c", "primary-container": "#c8102e", "secondary-fixed": "#d7e3ff", "secondary": "#4c5f82", "tertiary-container": "#8e5900", "primary": "#9e001f", "surface-container": "#eaedff", "surface-container-high": "#e2e7ff", "on-primary": "#ffffff", "on-surface": "#131b2e", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "0.5rem", "space-xs": "0.25rem", "margin": "1.5rem", "gutter": "1rem", "space-sm": "0.5rem", "margin-mobile": "0.75rem", "space-xl": "2rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "price-display": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "title-lg": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "price-strikethrough": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-md": [ "20px", { "lineHeight": "26px", "fontWeight": "700" } ], "price-display": [ "22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" } ], "title-lg": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" } ], "price-strikethrough": [ "13px", { "lineHeight": "16px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "title-md": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "800" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md tracking-tight">J</div><div><div class="font-title-md text-title-md text-primary tracking-tight">JanakCart</div><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Seller Center</div></div></div><span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">NEPAL</span></div><div class="px-space-md py-space-sm bg-surface-container-low"><div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Active Merchant</span><span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary"><span class="material-symbols-outlined text-[14px]">verified</span>VN-88421</span></div><div class="font-title-md text-title-md text-on-surface truncate mt-0.5">Himalayan Gadgets Hub</div><div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5"><span class="material-symbols-outlined text-[13px]">domain</span>PAN: 602819201</div></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Operations</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-lg"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard-overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-title-md text-title-md">Dashboard Overview</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders-and-dispatch" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-title-md text-title-md">Orders &amp; Dispatch</span></div><span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">24 New</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="product-catalog-and-inventory" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-title-md text-title-md">Product Catalog</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-and-claims" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">assignment_return</span><span class="font-title-md text-title-md">Returns &amp; Claims</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="logistics-and-shipping-slips" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-title-md text-title-md">Logistics &amp; Slips</span></div></a></nav><div class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Settlements &amp; Store</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-lg"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payouts-and-statements" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-title-md text-title-md">Payouts &amp; Statements</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="store-settings-and-bank-kyc" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-title-md text-title-md">Settings &amp; Bank KYC</span></div></a></nav></div><div class="p-space-md bg-surface-container-low"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-body-sm text-body-sm text-on-surface">Kathmandu Hub Sync</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">99.8% OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><span class="font-label-lg text-label-lg text-on-surface">Himalayan Gadgets Hub</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden lg:flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Valley 24h Express: ACTIVE</span></div><div class="flex items-center p-0.5 rounded-full bg-surface-container-low"><button class="px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors"><span class="text-[14px]">🇳🇵</span><span>नेपाली</span></button><span class="text-[11px] text-on-surface-variant/40">|</span><button class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-bold font-label-sm text-label-sm shadow-sm transition-colors">EN</button></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2"><a class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors" data-path="product-catalog-and-inventory" href="#"><span class="material-symbols-outlined text-[16px]">add</span>Add Product</a><a class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" data-path="logistics-and-shipping-slips" href="#"><span class="material-symbols-outlined text-[16px]">print</span>Print Manifest</a></div><div class="relative"><button class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute 1 top-1 right-1 w-2 h-2 rounded-full bg-primary-container"></span></div><div class="flex items-center gap-2 pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:block text-left"><div class="font-label-md text-label-md text-on-surface leading-tight">Suresh Shrestha</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Store Manager</div></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Level Notification & Dashain Festival Banner -->
+<div class="px-space-lg py-space-sm bg-gradient-to-r from-primary-container via-primary to-primary-container text-on-primary flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="inline-flex items-center justify-center p-1 rounded-full bg-surface-container-lowest text-primary text-[14px]">
+<span class="material-symbols-outlined text-[16px]">celebration</span>
+</span>
+<span class="font-label-md text-label-md tracking-wide uppercase font-bold text-tertiary-fixed">Dashain &amp; Tihar Mega Dhamaka 2024</span>
+<span class="hidden md:inline text-surface-container-highest/60">•</span>
+<span class="font-body-sm text-body-sm truncate text-on-primary">Kathmandu Valley Express 24h pickup active until 6:00 PM. Same-day settlements processed via NCHL-IPS.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 backdrop-blur font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span> Valley Hub Online
+      </span>
+<button class="font-label-sm text-label-sm underline hover:text-tertiary-fixed transition-colors">Dispatch Protocols</button>
+</div>
+</div>
+<div class="p-space-lg space-y-space-lg">
+<!-- Executive Metrics & Fulfillment KPI Bar -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-md">
+<!-- KPI 1: Today's Orders / Dispatch Pressure -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Today's Dispatch Queue</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl text-on-surface">42</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Sub-Orders</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">inventory</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<!-- Stacked bar progress -->
+<div class="h-2 w-full rounded-full bg-surface-container flex overflow-hidden">
+<div class="bg-primary h-full" style="width: 33%" title="14 Pending Dispatch"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 14%" title="6 Ready to Handover"></div>
+<div class="bg-secondary h-full" style="width: 53%" title="22 In Transit"></div>
+</div>
+<div class="flex items-center justify-between mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span>14 Pack</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim inline-block"></span>6 Ready</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>22 Transit</span>
+</div>
+</div>
+</div>
+<!-- KPI 2: Gross Weekly Sales -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Gross Sales (This Week)</div>
+<div class="mt-1 font-headline-xl text-headline-xl text-on-surface tracking-tight">रू २,४८,६००</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">north_east</span> +18.4%
+          </span>
+<span>vs. Previous Cycle (रू २,०९,८००)</span>
+</div>
+</div>
+<!-- KPI 3: Net Seller Earnings -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Net Realized Earnings</div>
+<div class="mt-1 font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">रू २,२१,२५६</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Net of 8% Comm &amp; 13% VAT</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-bold text-on-surface">Auto-Settled</span>
+</div>
+</div>
+<!-- KPI 4: Next Bank Settlement -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Next Payout Disbursal</div>
+<div class="mt-1 font-headline-xl text-headline-xl text-on-surface">रू १,४५,२८०</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">assured_workload</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-0.5">
+<div class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">event_upcoming</span> Fri, 12th Kartik (Nabil Bank)
+          </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">NCHL-IPS Direct Crediting</span>
+</div>
+</div>
+<!-- KPI 5: Merchant SLA & Quality Index -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">JanakCart SLA Score</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl text-on-surface">99.2%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Platinum</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span> Top Rated Merchant
+          </span>
+<span class="font-bold text-on-surface">0.4% Cancel Rate</span>
+</div>
+</div>
+</section>
+<!-- Operational View Switcher & Action Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-md">
+<!-- Top Level Tabs -->
+<div class="flex flex-wrap items-center justify-between gap-space-md border-b-0 pb-1">
+<div class="flex items-center gap-2 p-1 bg-surface-container-low rounded-lg">
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-2" id="tab-orders">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>Orders &amp; Fulfillment Queue</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest text-primary text-[11px] font-bold">42</span>
+</button>
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-2" id="tab-settlements">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Payouts &amp; Commission Ledger</span>
+</button>
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-2" id="tab-manifests">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>Dispatch Manifests &amp; AWB</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span> Export CSV
+          </button>
+<button class="px-3 py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">print</span> Print Shipping Slips
+          </button>
+<button class="px-3.5 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span> Mark As Packed (Batch)
+          </button>
+</div>
+</div>
+<!-- Filters & Multi-Parameter Search -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-space-sm pt-2">
+<div class="lg:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" placeholder="Search Master Order ID, Sub-Order (#JC-SUB-..), Customer or SKU..." type="text"/>
+</div>
+<div class="lg:col-span-3">
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest">
+<option>All Fulfillment Stages (42 Active)</option>
+<option>Awaiting Merchant Packing (14)</option>
+<option>Ready for Courier Pickup (6)</option>
+<option>Out for Valley Delivery (12)</option>
+<option>Dispatched Outside Valley (10)</option>
+</select>
+</div>
+<div class="lg:col-span-3">
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest">
+<option>Campaign: Dashain Dhamaka 2024</option>
+<option>Today: Kartik 09, 2081</option>
+<option>Past 7 Days</option>
+<option>Custom Date Range</option>
+</select>
+</div>
+<div class="lg:col-span-2">
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest">
+<option>All Payment Modes</option>
+<option>eSewa Wallet Verified</option>
+<option>Khalti Digital Payment</option>
+<option>Fonepay QR Direct</option>
+<option>Cash on Delivery (COD with OTP)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Main Content Area: Split View (Orders Queue + Settlement/Partner Sidebar) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT: High-Density Fulfillment Queue Table (Cols: 8) -->
+<div class="xl:col-span-8 space-y-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-bold">Sub-Order Dispatch Manifest</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Live Sync: 32s ago</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm text-on-surface-variant">
+<span>Showing 4 of 42 Records</span>
+<button class="w-7 h-7 rounded bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Orders Processing Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead class="bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-3 px-space-md"><input class="rounded" type="checkbox"/></th>
+<th class="py-3 px-space-sm">Sub-Order &amp; Customer</th>
+<th class="py-3 px-space-sm">SKU Items &amp; Package</th>
+<th class="py-3 px-space-sm">Value &amp; Payment</th>
+<th class="py-3 px-space-sm">Fulfillment Status</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- ROW 1: Out for Delivery (Valley Express) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md align-top">
+<input class="rounded mt-1" type="checkbox"/>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="font-label-lg text-label-lg font-bold text-primary">#JC-SUB-98421-A</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Master: #JC-NP-9842109</div>
+<div class="mt-2 font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person</span> Bibek Adhikari
+                    </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> New Baneshwor, Ward 3, Kathmandu
+                    </div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="flex items-start gap-2">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="A premium high-end modern smartphone OnePlus Nord CE 4 in celadon marble glossy finish displayed against neutral studio lighting, sharp commercial product photo for ecommerce seller showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA86O18ELbmgEj3LwDl_0rk3Em0ISPDwBm8Jjl9auIMxBFwmfpolu9m3Mqoh-85AVi0dDYjx0Q2-ZCPJLFeoTK2nVOlvLyaBYWDtSw4vV0k5yarwZcDX_nTtTk7qqH0YZtn9hu53AftEwxrPh7K65HtYbU2-QGwiMGeRMu86LI38-lnJoX96wZrPsZOJKd961-h2FY4FB8kT7nklCjdViXZ4Wd1pB5wn7t9XhiCmaV5ELQZ0Yb3zTTPGw"/>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface line-clamp-1">OnePlus Nord CE 4 (128GB, Celadon Marble)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">SKU: OPN-CE4-CM-128 • Qty: 1 Unit</div>
+<span class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">verified</span> Serial Logged: 86492006129841
+                        </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="font-price-display text-price-display font-extrabold text-on-surface">रू ३४,९९९</div>
+<div class="mt-1 flex items-center gap-1">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-bold">eSewa Verified</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ref: ESW-TX-990214</div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> OUT FOR DELIVERY
+                    </span>
+<div class="mt-2 text-body-sm text-on-surface-variant space-y-0.5">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">two_wheeler</span> Ramesh Adhikari</div>
+<div class="font-label-sm text-label-sm text-on-surface font-semibold">BA 2 CHA 8841</div>
+<div class="text-[11px] text-tertiary">Valley 24h Express Slot</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right space-y-1.5">
+<button class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">description</span> View Slip
+                    </button>
+<button class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">call</span> Call Rider
+                    </button>
+</td>
+</tr>
+<!-- ROW 2: Awaiting Merchant Packing -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-4 px-space-md align-top">
+<input class="rounded mt-1" type="checkbox"/>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="font-label-lg text-label-lg font-bold text-primary">#JC-SUB-98442-B</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Master: #JC-NP-9844211</div>
+<div class="mt-2 font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person</span> Puja Gurung
+                    </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Pokhara-8, Srijana Chowk, Kaski
+                    </div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="flex items-start gap-2">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="OnePlus Bullets Wireless Z2 neckband earphones in black with magnetic earbuds along with an official fast dash wall charging adapter, studio tech product shot on clean surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7bfixeh9j4xn1qy4gVgELx99vthVFWpDvIStKeFplYrtqKFPb65l4wHkLBKeyj5Aty7hhhBfjW5bHnejYyrQrlKXEhLZUjKVPY5MkLMtpGlZNDh54WCeQdWZWVMkMqU17neureAhKuk7aLs5rX8K0od2ErRN3O_vv01QhdxJ_GZAl_kqxBcwjGAvgyJd7pA23vzTSXMjAGTX3OzPU5Ol1CUzxofXc9k7nPu3BpP6CnTvhOTt2Hc4axA"/>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface line-clamp-1">OnePlus Bullets Z2 + 80W Dash Charger Combo</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">SKU: OP-BZ2-COMBO • Qty: 2 Items</div>
+<span class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Dispatch SLA: 2h 15m remaining
+                        </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="font-price-display text-price-display font-extrabold text-on-surface">रू ६,४५०</div>
+<div class="mt-1 flex items-center gap-1">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-secondary font-bold">Khalti Paid</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ref: KHL-98214-P</div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span> AWAITING PACKING
+                    </span>
+<div class="mt-2 text-body-sm text-on-surface-variant">
+<div>Hub: Nepal Can Move (NCM Pokhara)</div>
+<div class="text-[11px] text-on-surface font-medium">Box Size: Small Parcel (0.4 kg)</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right space-y-1.5">
+<button class="w-full px-2.5 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center gap-1 hover:bg-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[15px]">inventory_2</span> Pack &amp; AWB
+                    </button>
+<button class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">print</span> Print Slip
+                    </button>
+</td>
+</tr>
+<!-- ROW 3: Ready For Pickup (COD with OTP) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md align-top">
+<input class="rounded mt-1" type="checkbox"/>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="font-label-lg text-label-lg font-bold text-primary">#JC-SUB-98450-C</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Master: #JC-NP-9845002</div>
+<div class="mt-2 font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person</span> Saurav Shrestha
+                    </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Patan Dhoka, Lalitpur Metro
+                    </div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="flex items-start gap-2">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="Realme 12 Plus 5G smartphone in luxury pioneer green faux leather back design resting beside its retail packaging, detailed studio lighting on clean backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUQ_uU7jgVoGMr859CMYR4OSvBOQlFcaX1wlSgq8cVVmeoFNEM71yNxhzxDhFYakSIuxBfSyMy5N5X8kWC7NctPzdnc6Yj0rKsgZ3kUaEaS6WjV4jKPtm41itWRD6ANN-lqQE44assVpXnNgCqkZqR0mbWNEUu55I8IP3lryE5kWH5pPLcdaS-3JPO842nlcmeFcK5wpPeTeG6tF_kql12hXYMFrFVe9t5xwfIdZCevJTnr1idhgS5DQ"/>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface line-clamp-1">Realme 12+ 5G (Pioneer Green, 256GB)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">SKU: RLM-12P-PG-256 • Qty: 1 Unit</div>
+<span class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">security</span> High Value Item Verification
+                        </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="font-price-display text-price-display font-extrabold text-on-surface">रू ३४,९९९</div>
+<div class="mt-1 flex items-center gap-1">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-bold">COD (OTP Required)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Collect Cash at Patan</div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> READY FOR PICKUP
+                    </span>
+<div class="mt-2 text-body-sm text-on-surface-variant">
+<div>Handover: Baluwatar Courier Depot</div>
+<div class="font-label-sm text-label-sm text-on-surface font-medium">Van Arrival: 2:00 PM Today</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right space-y-1.5">
+<button class="w-full px-2.5 py-1.5 rounded-lg bg-tertiary text-on-tertiary font-label-sm text-label-sm flex items-center justify-center gap-1 hover:bg-tertiary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[15px]">qr_code_2</span> Handover Code
+                    </button>
+<button class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">receipt</span> Manifest
+                    </button>
+</td>
+</tr>
+<!-- ROW 4: Dispatched (Regional Line Haul) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md align-top">
+<input class="rounded mt-1" type="checkbox"/>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="font-label-lg text-label-lg font-bold text-primary">#JC-SUB-98418-D</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Master: #JC-NP-9841804</div>
+<div class="mt-2 font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person</span> Anisha Maharjan
+                    </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Thamel, Ward 26, Kathmandu
+                    </div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="flex items-start gap-2">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="Poco X6 Pro 5G smartphone in vibrant yellow vegan leather finish angled view on sleek tech backdrop, e-commerce catalog image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiWhv96YyUQ-1_-LubFaH1jRsHsDcMHnTnf7woqjGvaac5AIfh3t4bE-ocVRO9qefR4rCefS-xJU8-YoZBJAql8vHidco6fW7xQCXwhASMjZVfEUNn8CT4UgFxNLuVlpVeRrjKpw2QysgvpbVAk4Pw80NPxrooEPhSI_7iGk1zeead_IEo38ZnAAds9AFEccgW5IB2PfbtyI3lklnRNMcUF8BPnK2UZcAPqmUrUfuM8kcpYt3NzdBHOQ"/>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface line-clamp-1">Poco X6 Pro 5G (Yellow, 256GB)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">SKU: PC-X6P-YL-256 • Qty: 1 Unit</div>
+<span class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                          AWB #JKC-EXP-99214
+                        </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<div class="font-price-display text-price-display font-extrabold text-on-surface">रू ३८,९९९</div>
+<div class="mt-1 flex items-center gap-1">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-bold">Fonepay QR</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ref: FNP-88319-K</div>
+</td>
+<td class="py-4 px-space-sm align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> DISPATCHED
+                    </span>
+<div class="mt-2 text-body-sm text-on-surface-variant">
+<div>Carrier: Sundar Express Air</div>
+<div class="text-[11px] text-secondary font-medium">In Transit • Destination Hub</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right space-y-1.5">
+<button class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">track_changes</span> Track Parcel
+                    </button>
+<button class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">receipt_long</span> Invoice
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Bar -->
+<div class="px-space-md py-3 bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Rows per page:</span>
+<select class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface border-0 focus:outline-none">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+<span>Page 1 of 5 (42 Total Sub-Orders)</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-surface-container disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary-container text-on-primary font-bold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container">2</button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container">3</button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container">4</button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section: Real-time Dispatch Manifest & Courier Depot Activity -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<div class="font-title-lg text-title-lg text-on-surface font-bold">Depot Handover &amp; Telematics Sync</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Merchant Pickup Depot: Baluwatar Hub, Kathmandu (Gairidhara Lane)</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Slot: 2:00 PM Arrival
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-bold text-on-surface">JanakCart Van #04</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Driver: Krishna Thapa (BA 1 JA 9924)</div>
+<div class="font-label-sm text-label-sm text-primary font-semibold mt-1">Status: 1.4 km away (Approaching)</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container-high text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-bold text-on-surface">Nepal Can Move (NCM)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Regional Out-of-Valley Cargo</div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold mt-1">Handover Batch: 10 Parcels Ready</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container text-on-surface flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-bold text-on-surface">OTP Handover Protocol</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Verification Required on Driver Device</div>
+<div class="font-label-sm text-label-sm text-on-surface font-semibold mt-1">Master OTP: 4920</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: Payouts, Commission Breakdown & Bank KYC (Cols: 4) -->
+<div class="xl:col-span-4 space-y-space-lg">
+<!-- Financial Breakdown & JanakCart Fee Architecture Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-md">
+<div class="flex items-center justify-between border-b-0 pb-1">
+<div>
+<div class="font-title-md text-title-md text-on-surface font-bold">Commission &amp; Fee Transparency</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Standard Electronics &amp; Mobile Tier (8%)</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-bold">Audited</span>
+</div>
+<!-- Formula Card Box -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Sample Calculation (Single Phone @ रू ३४,९९९)</div>
+<div class="space-y-2 text-body-md text-body-md">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Gross Customer Price</span>
+<span class="font-bold text-on-surface">रू ३४,९९९.००</span>
+</div>
+<div class="flex items-center justify-between text-primary">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px]">remove</span> JanakCart Commission (8.00%)
+                </span>
+<span class="font-semibold">- रू २,७९९.९२</span>
+</div>
+<div class="flex items-center justify-between text-primary">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px]">remove</span> 13% Nepal VAT on Commission
+                </span>
+<span class="font-semibold">- रू ३६३.९९</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px]">remove</span> Gateway &amp; Logistics Service Fee
+                </span>
+<span class="font-semibold">- रू ७५.००</span>
+</div>
+<div class="pt-2 border-t-0 bg-surface-container-lowest p-2.5 rounded-lg flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Net Remittance to Merchant</div>
+<div class="font-price-display text-price-display font-extrabold text-primary">रू ३१,७६०.०९</div>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">90.7% Payout</span>
+</div>
+</div>
+</div>
+<!-- Verified Bank Account Info -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">account_balance</span>
+<span>Bank Disbursal Account</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> KYC Active
+              </span>
+</div>
+<div class="mt-2 space-y-1 font-body-sm text-body-sm text-on-surface">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Nabil Bank Limited</div>
+<div class="text-on-surface-variant">Branch: New Road, Kathmandu (Branch Code: 019)</div>
+<div class="font-mono text-on-surface font-semibold tracking-wider">A/C: 01901017500392</div>
+<div class="text-on-surface-variant">Beneficiary: Himalayan Gadgets Hub Pvt. Ltd.</div>
+<div class="font-label-sm text-label-sm text-tertiary mt-1">Disbursal Frequency: Bi-Weekly (Every Tuesday &amp; Friday)</div>
+</div>
+</div>
+<!-- Settlement History / Recent Batches -->
+<div class="space-y-space-sm pt-1">
+<div class="flex items-center justify-between">
+<div class="font-label-md text-label-md font-bold text-on-surface">Recent Settlement Batches</div>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">Download Tax Invoices</button>
+</div>
+<div class="space-y-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">रू २,८०,४२०.००</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Kartik 05, 2081 • NCHL-IPS #8849201</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-label-sm text-label-sm font-bold">Credited</span>
+<button class="w-7 h-7 rounded bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">रू १,९२,१५०.००</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Ashwin 29, 2081 • NCHL-IPS #8731994</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-label-sm text-label-sm font-bold">Credited</span>
+<button class="w-7 h-7 rounded bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Integrated Nepal Logistics & Telematics Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="font-title-md text-title-md text-on-surface font-bold">Logistics &amp; Courier Telematics</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">3 Providers Linked</span>
+</div>
+<!-- Map Preview for Kathmandu Courier Transit -->
+<div class="relative rounded-lg overflow-hidden">
+<div class="w-full h-36 bg-cover bg-center" data-location="Kathmandu, Nepal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXiUGvXEd51FV1YHcJkKDJo7Kw2FrshlcYK1hHLFna_9tm_-7_Xqp1fBSqLAM4o__IWnXhQ8x8I-RGl5n6TF9MhE87WvhHxSdK5-wiSy-S634yqc8uTxvCtF7V3o6FD5_Hph0PACt5oa5wSgE6hOYrNY6437-bVoaWdBgZksezjXF8a0vfoA8KD7XTtd98S04kTNaaBkDLRSniOATzSWM71DRXjYf2FHsqjNKtt38-qEUmzBCNKo-NZQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent flex items-end p-3">
+<div class="text-inverse-on-surface">
+<div class="font-label-md text-label-md font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary-fixed text-[16px]">location_on</span> Kathmandu Valley Grid (Inside Ring Road)
+                </div>
+<div class="font-body-sm text-body-sm opacity-90">Average dispatch turnaround: 3.2 hours</div>
+</div>
+</div>
+</div>
+<!-- Courier Integration Health Checks -->
+<div class="space-y-2">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">electric_moped</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">JanakCart Express Fleet</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">Active (24h SLA)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_shipping</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Nepal Can Move (NCM)</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant">Connected (Air Cargo)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">navigation</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Sundar Express Logistics</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant">Connected (Terai Belt)</span>
+</div>
+</div>
+</div>
+<!-- Vendor Compliance, PAN & Tax Documentation -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm text-body-sm text-body-sm">
+<div class="flex items-center justify-between font-label-md text-label-md font-bold text-on-surface">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[18px]">shield</span> Compliance Profile</span>
+<span class="text-tertiary font-bold text-[12px]">IRD Nepal Linked</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant pt-1 font-body-sm">
+<div>
+<span class="block text-[11px] uppercase font-bold text-on-surface-variant">VAT / PAN Registration</span>
+<span class="font-mono text-on-surface font-semibold">602819201</span>
+</div>
+<div>
+<span class="block text-[11px] uppercase font-bold text-on-surface-variant">Merchant Identifier</span>
+<span class="font-mono text-on-surface font-semibold">VN-88421</span>
+</div>
+<div>
+<span class="block text-[11px] uppercase font-bold text-on-surface-variant">Company Reg. No</span>
+<span class="font-mono text-on-surface font-semibold">189204/078/079</span>
+</div>
+<div>
+<span class="block text-[11px] uppercase font-bold text-on-surface-variant">City Authority</span>
+<span class="text-on-surface font-semibold">Kathmandu Ward 3</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tab micro-interactions
+  const tabOrders = document.getElementById('tab-orders');
+  const tabSettlements = document.getElementById('tab-settlements');
+  const tabManifests = document.getElementById('tab-manifests');
+
+  const tabs = [tabOrders, tabSettlements, tabManifests];
+
+  function setActive(activeTab) {
+    tabs.forEach(tab => {
+      if (tab === activeTab) {
+        tab.className = "px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-2";
+      } else {
+        tab.className = "px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-2";
+      }
+    });
+  }
+
+  if (tabOrders) tabOrders.addEventListener('click', () => setActive(tabOrders));
+  if (tabSettlements) tabSettlements.addEventListener('click', () => setActive(tabSettlements));
+  if (tabManifests) tabManifests.addEventListener('click', () => setActive(tabManifests));
+</script></main></div></body></html>
