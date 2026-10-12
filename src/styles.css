@@ -1,0 +1,63 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* JanakCart palette: sindoor vermilion, marigold, Mithila ink & paper cream */
+  --color-sindoor-50: #fdf1ee;
+  --color-sindoor-100: #fadcd4;
+  --color-sindoor-500: #d8432a;
+  --color-sindoor-600: #c2321c;
+  --color-sindoor-700: #9e2615;
+  --color-sindoor-900: #5a1409;
+  --color-marigold-100: #fff1cc;
+  --color-marigold-300: #ffd166;
+  --color-marigold-400: #f7b928;
+  --color-marigold-500: #e89d00;
+  --color-ink-900: #1c1830;
+  --color-ink-700: #3a3552;
+  --color-ink-500: #6b6684;
+  --color-ink-300: #b9b5c9;
+  --color-paper: #fbf5ec;
+  --color-paper-dark: #f3e9da;
+  --color-leaf-600: #1f7a4d;
+  --color-leaf-50: #e8f5ee;
+}
+
+html {
+  background: var(--color-paper);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mithila-inspired triangle border used as a brand accent */
+.mithila-border {
+  height: 10px;
+  background:
+    linear-gradient(135deg, var(--color-sindoor-600) 25%, transparent 25%) -5px 0 / 10px 10px,
+    linear-gradient(225deg, var(--color-sindoor-600) 25%, transparent 25%) -5px 0 / 10px 10px,
+    linear-gradient(315deg, var(--color-marigold-400) 25%, transparent 25%) 0 0 / 10px 10px,
+    linear-gradient(45deg, var(--color-marigold-400) 25%, transparent 25%) 0 0 / 10px 10px;
+  background-color: var(--color-ink-900);
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-rise {
+  animation: rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
